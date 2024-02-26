@@ -1,7 +1,8 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 // import { Link } from 'react-scroll'
-import logo from '../../images/logo.png';
+
 // import Link from '../Link';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -20,7 +21,7 @@ const NavBar = () => {
   //   }, []);
   const [nav, setNav] = useState(false);
   //   const [ad, setAd] = useState(true);
-  //   const [isModalVisible, setModalVisible] = useState(false);
+  const [isModalVisible, setModalVisible] = useState(false);
   //   const { runningAds } = useSelector((state) => state.ad);
   //   const { loading, navClasses, runningClasses } = useSelector(
   //     (state) => state.classroom
@@ -63,17 +64,35 @@ const NavBar = () => {
       subLink: null,
     },
   ];
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   // console.log(navClasses);
   // console.log(runningAds.thumbnailImage)
   return (
     <div className='fixed z-50 w-screen'>
-      <div className='flex justify-between items-center w-screen h-[70px]  text-black bg-opacity-80  bg-white shadow-md backdrop-blur-md fixed px-6  font-Dax'>
+      <div
+        className={`flex justify-between items-center w-screen h-[70px] text-black fixed px-6 font-Dax ${
+          isScrolled ? 'bg-white' : 'bg-transparent'
+        }`}
+      >
         <div className='md:ml-0 lg:ml-10'>
           {/* <h1 className='text-xl font-logo ml-4 mt-2 hover:cursor-pointer'>Mikias</h1> */}
           <Link href='/'>
             {/* <Image src={logo} alt='gobeze logo' height={40} width={40} /> */}
             <img
-              src='/logo.png'
+              src='/images/logo.png'
               alt='gobeze logo'
               className='md:h-[78.26px] md:w-[180px] h-16 w-[147.68px] -mt-2'
             />
@@ -90,13 +109,15 @@ const NavBar = () => {
                 href={link}
                 smooth
                 duration={500}
-                className='no-underline tracking-normal font-Dax text-gray-600 md:text-xs lg:text-base font-semibold flex items-end'
+                className={`no-underline tracking-normal font-Dax ${
+                  isScrolled ? 'text-black' : 'text-white'
+                } md:text-xs lg:text-base font-semibold flex items-end`}
               >
                 <span>{name}</span>
                 <span className='group-hover:rotate-90 duration-300 ml-1'>
                   <MdOutlineKeyboardArrowRight
                     size={20}
-                    className='text-gray-500'
+                    className={`${isScrolled ? 'text-black' : 'text-white'}`}
                   />
                 </span>
               </Link>
@@ -126,26 +147,26 @@ const NavBar = () => {
                         </a>
                       </div>
                       <div className='text-center'>
-                        {loading ? (
-                          // Render loading indicator
-                          <div className='flex items-center justify-center  w-30 h-1/2'>
-                            <LineWave
-                              visible={true}
-                              height='100'
-                              width='100'
-                              color='#FF7F00'
-                              ariaLabel='line-wave-loading'
-                              wrapperStyle={{}}
-                              wrapperClass=''
-                              firstLineColor='#FF7F00'
-                              middleLineColor='#FF7F00'
-                              lastLineColor='#FF7F00'
-                            />
-                          </div>
-                        ) : (
+                        {/* {loading ? ( */}
+
+                        <div className='flex items-center justify-center  w-30 h-1/2'>
+                          <LineWave
+                            visible={true}
+                            height='100'
+                            width='100'
+                            color='#FF7F00'
+                            ariaLabel='line-wave-loading'
+                            wrapperStyle={{}}
+                            wrapperClass=''
+                            firstLineColor='#FF7F00'
+                            middleLineColor='#FF7F00'
+                            lastLineColor='#FF7F00'
+                          />
+                        </div>
+                        {/* ) : (
                           // Render content
                           <div className='text-center my-20 w-[400px] flex flex-row gap-8'></div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                   </div>
