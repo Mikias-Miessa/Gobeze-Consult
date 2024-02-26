@@ -131,8 +131,8 @@ const ImagesSlider = ({
               Helping Good People WIN.
             </h1>
           </div>
-          <div className='bg-black opacity-70 h-[180px] relative md:left-20 left-10'>
-            <p className='text-white pt-12 px-10 md:text-2xl text-xl font-medium '>
+          <div className='bg-black opacity-70 h-fit relative md:left-20 left-10'>
+            <p className='text-white pt-12 px-10 pb-5 md:text-2xl text-xl font-medium '>
               What does Abebe Bikila and the Battle of Adwa have in common?
               Underdogs, good people winning{' '}
             </p>
