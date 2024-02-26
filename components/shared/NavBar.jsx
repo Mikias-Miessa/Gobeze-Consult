@@ -90,12 +90,19 @@ const NavBar = () => {
         <div className='md:ml-0 lg:ml-10'>
           {/* <h1 className='text-xl font-logo ml-4 mt-2 hover:cursor-pointer'>Mikias</h1> */}
           <Link href='/'>
-            {/* <Image src={logo} alt='gobeze logo' height={40} width={40} /> */}
-            <img
-              src='/images/logo.png'
-              alt='gobeze logo'
-              className='md:h-[78.26px] md:w-[180px] h-16 w-[147.68px] -mt-2'
-            />
+            {isScrolled ? (
+              <img
+                src='/images/orangelogo.png'
+                alt='scrolled logo'
+                className='md:h-[78.26px] md:w-[180px] h-16 w-[147.68px] -mt-2'
+              />
+            ) : (
+              <img
+                src='/images/whitelogo.png'
+                alt='gobeze logo'
+                className='md:h-[78.26px] md:w-[180px] h-16 w-[147.68px] -mt-2'
+              />
+            )}
           </Link>
         </div>
         <ul className='hidden md:flex items-center gap-8 mr-28'>
@@ -111,7 +118,7 @@ const NavBar = () => {
                 duration={500}
                 className={`no-underline tracking-normal font-Dax ${
                   isScrolled ? 'text-black' : 'text-white'
-                } md:text-xs lg:text-base font-semibold flex items-end`}
+                } md:text-xs lg:text-sm font-semibold flex items-end`}
               >
                 <span>{name}</span>
                 <span className='group-hover:rotate-90 duration-300 ml-1'>

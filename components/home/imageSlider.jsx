@@ -125,14 +125,14 @@ const ImagesSlider = ({
       }}
     >
       {areImagesLoaded && (
-        <div className='z-10 w-[50%] flex flex-col absolute'>
-          <div className='flex justify-center items-center z-10 h-32 bg-orange-500 relative -bottom-10'>
-            <h1 className='text-white text-4xl font-semibold'>
+        <div className='z-10 md:w-[50%] w-[90%] flex flex-col absolute'>
+          <div className='flex justify-center items-center z-10 md:h-32 h-24 bg-orange-500 relative -bottom-10'>
+            <h1 className='text-white md:text-4xl text-2xl font-semibold'>
               Helping Good People WIN.
             </h1>
           </div>
-          <div className='bg-black opacity-70 h-[180px] relative left-20'>
-            <p className='text-white pt-12 px-10 text-2xl font-medium '>
+          <div className='bg-black opacity-70 h-fit relative md:left-20 left-10'>
+            <p className='text-white pt-12 px-10 pb-5 md:text-2xl text-xl font-medium '>
               What does Abebe Bikila and the Battle of Adwa have in common?
               Underdogs, good people winning{' '}
             </p>
