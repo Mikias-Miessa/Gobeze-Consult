@@ -60,7 +60,7 @@ const SecondSec = () => {
             {data.map((item, index) => (
               <div
                 key={item.id}
-                className='flex flex-col mb-5'
+                className='flex flex-col pb-5'
                 onMouseEnter={() => handleHover(index)}
                 onMouseLeave={handleMouseLeave}
               >
