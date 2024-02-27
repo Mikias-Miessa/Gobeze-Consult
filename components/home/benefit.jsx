@@ -7,12 +7,12 @@ function Feature() {
     <div>
       {/* Feature 2 */}
       <div className='bg-black'>
-        <div className='grid grid-cols-1 md:grid-cols-5 gap-2 pb-10 md:pl-10'>
-          <div className='md:col-span-2 mt-10 md:ml-16 mb-4 md:mb-24 h-96 w-full md:w-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-5 gap-2 pb-10 md:pl-10 mx-20'>
+          <div className='md:col-span-2 mt-10 md:m mb-4 md:mb-24 h-96 w-full md:w-auto'>
             <Image src={ImgFea} className='h-100 w-full md:w-96' />
           </div>
 
-          <div className='text-white md:col-span-3 md:ml-14 mt-3'>
+          <div className='text-white md:col-span-3 md:ml-10 mt-3'>
             <div>
               <h1 className='text-white md:mt-20 mt-20 font-extrabold text-2xl'>THE BENEFITS</h1>
               
