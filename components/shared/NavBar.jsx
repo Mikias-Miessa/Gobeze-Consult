@@ -14,6 +14,10 @@ import { FaArrowLeftLong } from 'react-icons/fa6';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { LineWave } from 'react-loader-spinner';
 import { FaUserCircle } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaInstagram } from 'react-icons/fa';
 const NavBar = () => {
   //   const dispatch = useDispatch();
   //   useEffect(() => {
@@ -46,21 +50,33 @@ const NavBar = () => {
   const links = [
     {
       id: 1,
-      link: '/trainings',
-      name: 'Our Programs',
+      link: '/#',
+      name: 'Our Work',
       subLink: 1,
     },
 
     {
       id: 2,
-      link: '/learners',
-      name: 'For Learners',
+      link: '/#',
+      name: 'Our Story',
       subLink: 2,
     },
     {
       id: 3,
-      link: '/enterprise',
-      name: 'For Enterprise',
+      link: '/#',
+      name: 'Our Community',
+      subLink: null,
+    },
+    {
+      id: 4,
+      link: '/#',
+      name: 'Insights',
+      subLink: null,
+    },
+    {
+      id: 5,
+      link: '/#',
+      name: 'Contact Us',
       subLink: null,
     },
   ];
@@ -94,13 +110,13 @@ const NavBar = () => {
               <img
                 src='/images/orangelogo.png'
                 alt='scrolled logo'
-                className='md:h-[78.26px] md:w-[180px] h-16 w-[147.68px] -mt-2'
+                className='md:h-[104.34px] md:w-[240px] h-16 w-[147.68px] -mt-2'
               />
             ) : (
               <img
                 src='/images/whitelogo.png'
                 alt='gobeze logo'
-                className='md:h-[78.26px] md:w-[180px] h-16 w-[147.68px] -mt-2'
+                className='md:h-[104.34px] md:w-[240px] h-16 w-[147.68px] -mt-2'
               />
             )}
           </Link>
@@ -121,17 +137,19 @@ const NavBar = () => {
                 } md:text-xs lg:text-sm font-semibold flex items-end`}
               >
                 <span>{name}</span>
-                <span className='group-hover:rotate-90 duration-300 ml-1'>
-                  <MdOutlineKeyboardArrowRight
-                    size={20}
-                    className={`${isScrolled ? 'text-black' : 'text-white'}`}
-                  />
-                </span>
+                {subLink && (
+                  <span className='group-hover:rotate-90 duration-300 ml-1'>
+                    <MdOutlineKeyboardArrowRight
+                      size={20}
+                      className={`${isScrolled ? 'text-black' : 'text-white'}`}
+                    />
+                  </span>
+                )}
               </Link>
 
               {subLink === 1 && (
                 <div
-                  className='absolute  -top-1 flex justify-start 2xl:-left-[550px] xl:-left-[420px] lg:-left-[340px] md:-left-[240px] transition group-hover:translate-y-5 translate-y-0
+                  className='absolute  -top-1 flex justify-start 2xl:-left-[550px] xl:-left-[380px] lg:-left-[340px] md:-left-[240px] transition group-hover:translate-y-5 translate-y-0
                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out
                             group-hover:transform z-50 min-w-fit transform w-screen h-fit font-Dax'
                 >
@@ -181,7 +199,7 @@ const NavBar = () => {
               )}
               {subLink === 2 && (
                 <div
-                  className='absolute  -top-1 flex justify-start 2xl:-left-[700px] xl:-left-[560px] lg:-left-[500px] md:-left-[400px] transition group-hover:translate-y-5 translate-y-0
+                  className='absolute  -top-1 flex justify-start 2xl:-left-[700px] xl:-left-[500px] lg:-left-[500px] md:-left-[400px] transition group-hover:translate-y-5 translate-y-0
                     opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out
                     group-hover:transform z-50 min-w-fit transform w-screen h-fit'
                 >
@@ -384,15 +402,30 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <div className='hidden md:flex gap-6 items-center'>
-          <a href='/login'>
-            <FaUserCircle size={30} className='text-gray-500' />{' '}
+        <div className='hidden md:flex gap-4 items-center mr-20'>
+          <a href='#'>
+            <FaFacebook
+              size={20}
+              className={`${isScrolled ? 'text-black' : 'text-white'}`}
+            />{' '}
           </a>
-          <a
-            href='/contact'
-            className=' border-orange-500 border hover:bg-orange-500 hover:text-white  px-4 py-2 font-normal text-orange-500 text-sm rounded h-9 md:mr-12 w-[130px] flex justify-center items-center'
-          >
-            Contact Us
+          <a href='#'>
+            <FaXTwitter
+              size={20}
+              className={`${isScrolled ? 'text-black' : 'text-white'}`}
+            />{' '}
+          </a>
+          <a href='#'>
+            <FaTiktok
+              size={20}
+              className={`${isScrolled ? 'text-black' : 'text-white'}`}
+            />{' '}
+          </a>
+          <a href='#'>
+            <FaInstagram
+              size={20}
+              className={`${isScrolled ? 'text-black' : 'text-white'}`}
+            />{' '}
           </a>
         </div>
         <div
@@ -404,15 +437,24 @@ const NavBar = () => {
         {nav && (
           <ul className='flex flex-col items-start absolute top-16 left-0 w-full h-fit bg-opacity-90 z-50 bg-gray-50 shadow-md font-Montserrat'>
             <div className='flex justify-between px-4 w-full border-b border-orange-500 pb-4 items-center'>
-              <a href='/login'>
-                <FaUserCircle size={30} className='text-gray-500' />{' '}
+              <a href='#'>
+                <FaFacebook size={30} className='text-gray-500' />{' '}
               </a>
-              <a
+              <a href='#'>
+                <FaXTwitter size={30} className='text-gray-500' />{' '}
+              </a>
+              <a href='#'>
+                <FaTiktok size={30} className='text-gray-500' />{' '}
+              </a>
+              <a href='#'>
+                <FaInstagram size={30} className='text-gray-500' />{' '}
+              </a>
+              {/* <a
                 href='/contact'
                 className=' border-orange-500 border hover:bg-orange-500 hover:text-white  px-4 py-2 font-light text-orange-500 text-sm rounded h-9 md:mr-12 w-[130px] flex justify-center items-center'
               >
                 Contact Us
-              </a>
+              </a> */}
             </div>
             {links.map(({ id, name, subLink }) => (
               <li
