@@ -100,7 +100,7 @@ const NavBar = () => {
     <div className='fixed z-50 w-screen'>
       <div
         className={`flex justify-between items-center w-screen h-[70px] text-black fixed px-6 font-Dax ${
-          isScrolled ? 'bg-white' : 'bg-transparent'
+          isScrolled ? 'bg-white shadow' : 'bg-transparent'
         }`}
       >
         <div className='md:ml-0 lg:ml-10'>
