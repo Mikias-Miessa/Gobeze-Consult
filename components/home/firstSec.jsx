@@ -22,12 +22,12 @@ const data = [
 function Feature() {
   return (
     <div>
-      <div className='md:mx-32 md:my-20 mx-0 my-0'>
+      <div className='md:mx-40 md:my-20 mx-0 my-0'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-0 bg-black rounded-2xl'>
           <div className='pl-20 text-white'>
             <h1 className='pt-20  text-3xl font-semibold '>FEATURED VIEWS</h1>
-            <h2 className='pb-8 text-gray-400 text-2xl '>Some of the views</h2>
-            <h3 className='text-gray-400 text-xl'>
+            <h2 className='pb-8 text-gray-300 text-2xl '>Some of the views</h2>
+            <h3 className='text-gray-300 text-xl'>
               Present the job matching service that connect talent with creative
               industry opportunties.
             </h3>
