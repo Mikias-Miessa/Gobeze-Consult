@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import Faces from "@/public/images/faces.png"
-import Community1 from "@/public/images/Community_one.png"
-import Community2 from "@/public/images/Community_two.png"
-import Community3 from "@/public/images/Community-three.png"
+import Community1 from "@/public/images/community_one.png"
+import Community2 from "@/public/images/community_two.png"
+import Community3 from "@/public/images/community-three.png"
 import Community4 from "@/public/images/Community_four.png"
 
 function Feature3() {
@@ -16,14 +16,14 @@ function Feature3() {
                 <div>
                     <div className='bg-black px-5 pb-3 pt-5 m-5 '>
                         <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
-                        <Image src={Community1} className='mx-auto my-auto pt-4'/>
+                        <Image src={Community1} alt='community' className='mx-auto my-auto pt-4'/>
                         </div>
                         <p className='text-gray-400 text-center pt-4'>Present the job matching services that present the job matching services that.</p>
                     </div>
                     
                     <div className='bg-black px-5 pb-3 pt-5 m-5 mt-10 '>
                         <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
-                        <Image src={Community2} className='mx-auto my-auto pt-4'/>
+                        <Image src={Community2} alt='community' className='mx-auto my-auto pt-4'/>
                         </div>
                         <p className='text-gray-400 text-center pt-4'>Present the job matching services that present the job matching services that.</p>
                     </div>
@@ -33,14 +33,14 @@ function Feature3() {
 
                 <div className='bg-black px-5 pb-3 pt-5 m-5'>
                         <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
-                        <Image src={Community3} className='mx-auto my-auto pt-4'/>
+                        <Image src={Community3} alt='community' className='mx-auto my-auto pt-4'/>
                         </div>
                         <p className='text-gray-400 text-center pt-4'>Present the job matching services that present the job matching services that.</p>
                     </div>
 
                     <div className='bg-black px-5 pb-3 pt-5 m-5 mt-10'>
                         <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
-                        <Image src={Community4} className='mx-auto my-auto pt-4'/>
+                        <Image src={Community4} alt='community' className='mx-auto my-auto pt-4'/>
                         </div>
                         <p className='text-gray-400 text-center pt-4'>Present the job matching services that present the job matching services that.</p>
                     </div>
@@ -52,7 +52,7 @@ function Feature3() {
                 <div className='h-1 w-16 bg-orange-500 mt-1'></div>
                 <p className='text-xl text-gray-800 mt-6'>Present the job matching services that connect talent with creative industry opportunties loream epsum epsum opportunties loream epsum epsum.</p>
                 <button className='mb-16 mt-10 text-xl px-8 py-2 bg-gradient-to-r from-gray-100 to-black rounded'>Read More</button>
-                <div className='md:mt-10 mt-5 md:mb-0 mb-4 mr-8 md:py-14'><Image src={Faces} /></div>
+                <div className='md:mt-10 mt-5 md:mb-0 mb-4 mr-8 md:py-14'><Image src={Faces} alt='face' /></div>
             </div>
 
         </div>
