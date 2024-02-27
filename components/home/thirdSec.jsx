@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Faces from "@/public/images/faces.png"
-import Community1 from "@/public/images/Community_one.png"
-import Community2 from "@/public/images/Community_two.png"
-import Community3 from "@/public/images/Community-three.png"
-import Community4 from "@/public/images/Community_four.png"
+import Community1 from "@/public/images/community_one.png"
+import Community2 from "@/public/images/community_two.png"
+import Community3 from "@/public/images/community_three.png"
+import Community4 from "@/public/images/community_four.png"
 
 function Feature3() {
   return (
@@ -50,7 +50,7 @@ function Feature3() {
             <div className='ml-10 mx-4 mt-5'>
                 <h1 className='text-3xl font-extrabold '>THIRD SECTION FEATURES</h1>
                 <div className='h-1 w-16 bg-orange-500 mt-1'></div>
-                <p className='text-xl text-gray-800 mt-6'>Present the job matching services that connect talent with creative industry opportunties loream epsum epsum opportunties loream epsum epsum.</p>
+                <p className='text- text-gray-800 mt-6'>Present the job matching services that connect talent with creative industry opportunties loream epsum epsum opportunties loream epsum epsum.</p>
                 <button className='mb-16 mt-10 text-xl px-8 py-2 bg-gradient-to-r from-gray-100 to-black rounded'>Read More</button>
                 <div className='md:mt-10 mt-5 md:mb-0 mb-4 mr-8 md:py-14'><Image src={Faces} /></div>
             </div>
