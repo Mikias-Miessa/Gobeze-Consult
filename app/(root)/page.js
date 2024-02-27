@@ -6,8 +6,8 @@ import Feature2 from '@/components/home/Feature';
 const Hero = () => {
   return (
     <div>
-      <Landing />
-      <SecondSec />
+      <Landing/>
+      <SecondSec/>
       <Feature2/>
     </div>
   );
