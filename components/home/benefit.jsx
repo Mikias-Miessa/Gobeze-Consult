@@ -21,7 +21,7 @@ function Feature() {
               </div>
 
               <div className='grid grid-cols-1 md:grid-cols-2 mt-20'>
-                <div className='md:mr-8'>
+                <div className='md:mr-10'>
                   <div>
                     <h1 className='text-xl mb-4 font-semibold'>Present the Job1</h1>
                     <p className='text-gray-400'>Lorem ipsum amet consectetur elit dolor sit amet consectetur elit.</p>
@@ -31,10 +31,10 @@ function Feature() {
                     <p className='text-gray-400'>Lorem ipsum dolor amet consectetur elit sit adipisicing elit  amet consectetur elit.</p>
                   </div>
                 </div>
-                <div className='md:mr-8'>
-                  <div className='mt-10'>
+                <div className='md:mr-10'>
+                  <div className=''>
                     <h1 className='text-xl mb-4 font-semibold'>Present the Job3</h1>
-                    <p className='text-gray-400'>Lorem ipsum dolor sit amet consectetur .</p>
+                    <p className='text-gray-400'>Lorem ipsum dolor sit amet consectetur sit adipisicing elit  amet consectetur elit .</p>
                   </div>
                   <div className='mt-10'>
                     <h1 className='text-xl mb-4 font-semibold'>Present the Job4</h1>
