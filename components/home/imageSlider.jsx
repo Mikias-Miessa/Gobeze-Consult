@@ -125,7 +125,7 @@ const ImagesSlider = ({
       }}
     >
       {areImagesLoaded && (
-        <div className='z-10 md:w-[50%] w-[90%] flex flex-col absolute'>
+        <div className='z-10 md:w-[50%] w-[90%] flex flex-col absolute pt-52'>
           <div className='flex justify-center items-center z-10 md:h-32 h-24 bg-orange-500 relative -bottom-10'>
             <h1 className='text-white md:text-4xl text-2xl font-semibold'>
               Helping Good People WIN.
