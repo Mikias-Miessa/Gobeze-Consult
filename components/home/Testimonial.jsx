@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Rectangle1 from '@/public/testimonial/Rectangle1.png';
 import Rectangle2 from '@/public/testimonial/Rectangle2.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import SectionTitle from '../shared/sectionTitle';
 
 const test = [
   {
@@ -28,12 +29,13 @@ const test = [
 
 const Testimonial = () => {
   return (
-    <div className='my-10'>
-      <div className='ml-24'>
-        <div className='relative'>
+    <div className='my-10 '>
+      <div className='md:ml-24'>
+        {/* <div className='relative'>
           <div className='font-bold text-3xl pb-2'>TESTIMONIAL</div>
           <div className='absolute w-16 h-1 bg-orange-500 bottom-0 left-0 ml-1'></div>
-        </div>
+        </div> */}
+        <SectionTitle color={'black'} title={'TESTIMONIALS'} />
       </div>
 
       <div className=''>

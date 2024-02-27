@@ -4,6 +4,7 @@ import SecondSec from '@/components/home/SecondSec';
 import Benefit from '@/components/home/benefit';
 import LogoSection from '@/components/home/logoSection';
 import Testimonial from '@/components/home/Testimonial';
+import OurTeam from '@/components/home/ourTeam';
 
 const Hero = () => {
   return (
@@ -15,6 +16,9 @@ const Hero = () => {
         <LogoSection />
       </div>
       <Testimonial />
+      <div className='felx justify-center'>
+        <OurTeam />
+      </div>
     </div>
   );
 };
