@@ -29,8 +29,8 @@ const test = [
 
 const Testimonial = () => {
   return (
-    <div className='max-w-screen-lg mx-auto'>
-      <div className='ml-24  pt-28'>
+    <div className='max-w-screen-lg mx-auto mt-10'>
+      <div className='ml-20'>
         <SectionTitle color={'black'} title={'TESTIMONIALS'} />
       </div>
 
