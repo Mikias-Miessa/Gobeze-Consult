@@ -5,9 +5,9 @@ import Featureppl from "@/public/images/feappl.png"
 function Feature() {
   return (
     <div>
-      <div className='md:mx-40 md:my-20 mx-0 my-0'>
+      <div className='md:mx-32 md:my-20 mx-0 my-0'>
 
-<div className='grid grid-cols-1 md:grid-cols-2 gap-0 bg-black rounded-lg'>
+<div className='grid grid-cols-1 md:grid-cols-2 gap-0 bg-black rounded-2xl'>
 
   <div className='pl-20 text-white'>
     <h1 className='pt-20  text-3xl font-semibold '>FEATURED VIEWS</h1>
