@@ -75,6 +75,7 @@ const LogoSection = () => {
               </div>
             );
           })}
+          
         </div>
       </div>
     </div>

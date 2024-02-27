@@ -149,7 +149,7 @@ const NavBar = () => {
 
               {subLink === 1 && (
                 <div
-                  className='absolute  -top-1 flex justify-start 2xl:-left-[550px] xl:-left-[380px] lg:-left-[340px] md:-left-[240px] transition group-hover:translate-y-5 translate-y-0
+                  className='absolute  -top-1 flex justify-start 2xl:-left-[550px] xl:-left-[410px] lg:-left-[340px] md:-left-[240px] transition group-hover:translate-y-5 translate-y-0
                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out
                             group-hover:transform z-50 min-w-fit transform w-screen h-fit font-Dax'
                 >
@@ -199,7 +199,7 @@ const NavBar = () => {
               )}
               {subLink === 2 && (
                 <div
-                  className='absolute  -top-1 flex justify-start 2xl:-left-[700px] xl:-left-[500px] lg:-left-[500px] md:-left-[400px] transition group-hover:translate-y-5 translate-y-0
+                  className='absolute  -top-1 flex justify-start 2xl:-left-[700px] xl:-left-[530px] lg:-left-[500px] md:-left-[400px] transition group-hover:translate-y-5 translate-y-0
                     opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out
                     group-hover:transform z-50 min-w-fit transform w-screen h-fit'
                 >
