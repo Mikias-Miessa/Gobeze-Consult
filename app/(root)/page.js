@@ -1,7 +1,7 @@
 import React from 'react';
 import Landing from '@/components/home/hero';
 import SecondSec from '@/components/home/SecondSec';
-import Feature2 from '@/components/home/Feature';
+import Benefit from '@/components/home/benefit';
 import LogoSection from '@/components/home/logoSection';
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
     <div>
       <Landing />
       <SecondSec />
-      <Feature2 />
+      <Benefit />
       <div className='flex justify-center pt-28 bg-black'>
         <LogoSection />
       </div>
