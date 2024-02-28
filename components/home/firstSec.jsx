@@ -23,11 +23,11 @@ function Feature() {
   return (
     <div>
       <div className='md:mx-40 md:my-20 mx-0 my-0'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-0 bg-black md:rounded-2xl'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-0 bg-black md:rounded-2xl'>
           <div className='md:pl-20 pl-10 text-white'>
             <h1 className='pt-20  text-3xl font-semibold '>FEATURED VIEWS</h1>
             <h2 className='pb-10 pt-2 text-gray-400 text-2xl '>Some of the views</h2>
-            <h3 className='text-gray-300 text-xl'>
+            <h3 className='text-gray-300 text-base'>
               Present the job matching service that connect talent with creative 
               industry opportunties.
             </h3>
@@ -38,16 +38,17 @@ function Feature() {
             </button>
           </div>
 
-          <div className=''>
+          <div className='col-span-2'>
             <Splide
               options={{
                 autoplay: true,
                 type: 'loop',
-                interval: 3000,
+                interval: 2000,
                 perPage: 1,
                 pagination: false,
                 gap: '',
                 arrows: false,
+                padding: { right: '20%' }
               }}
             >
               {data.length > 0 &&
@@ -57,7 +58,7 @@ function Feature() {
                       key={item.id}
                       className=' bg-white rounded-lg md:mr-40 md:mt-32 ml-10 mr-40 mt-5 mb-20'
                     >
-                      <div className='grid grid-cols-2 gap-2 ml-4 '>
+                      <div className='grid grid-cols-2 gap-2 ml-4'>
                         <div className='pt-2 '>
                           <h1 className='md:text-xl text-sm font-bold pt-5 pb-3'>
                             {item.text}

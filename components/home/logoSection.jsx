@@ -10,6 +10,7 @@ const LogoSection = () => {
     { id: 5, image: '/images/image2.png' },
     { id: 6, image: '/images/image3.png' },
   ];
+  
   return (
     <div className='bg-black w-[1920px] overflow-hidden pb-20'>
       {/* <SectionTitle title={'Our Students Work Here'} /> */}

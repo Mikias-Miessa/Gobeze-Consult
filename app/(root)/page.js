@@ -9,6 +9,7 @@ import Testimonial from '@/components/home/Testimonial';
 import OurTeam from '@/components/home/ourTeam';
 import NewsLetter from '@/components/home/newsLetter';
 import Transition from '@/components/home/transition';
+import ContactUs from '@/components/home/contactUs';
 
 const Hero = () => {
   return (
@@ -32,6 +33,9 @@ const Hero = () => {
       <div className='flex justify-center py-10'>
         <OurTeam />
         {/* <Transition/> */}
+      </div>
+      <div className='flex justify-center'>
+        <ContactUs />
       </div>
     </div>
   );
