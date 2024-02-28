@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Rectangle1 from '@/public/testimonial/Rect1.png';
 import Rectangle2 from '@/public/testimonial/Rect2.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import SectionTitle from '../shared/sectionTitle';
 
 const test = [
   {
@@ -28,12 +29,9 @@ const test = [
 
 const Testimonial = () => {
   return (
-    <div className='max-w-screen-lg mx-auto'>
-      <div className='ml-24 pt-28'>
-        <div className='relative'>
-          <div className='font-bold text-3xl pb-2'>TESTIMONIAL</div>
-          <div className='absolute w-16 h-1 bg-orange-500 bottom-0 left-0 ml-1'></div>
-        </div>
+    <div className='max-w-screen-lg mx-auto mt-10'>
+      <div className='ml-20'>
+        <SectionTitle color={'black'} title={'TESTIMONIALS'} />
       </div>
 
       <div className='-mt-20'>
@@ -41,7 +39,7 @@ const Testimonial = () => {
           options={{
             autoplay: true,
             type: 'loop',
-            interval: 3000,
+            interval: 4000,
             perPage: 1,
             padding: { left: 30, right: 30 },
             pagination: false,

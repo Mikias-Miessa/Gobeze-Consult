@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Rectangle from '@/public/secondSec/Rectangle.png';
@@ -47,7 +47,7 @@ const SecondSec = () => {
   };
 
   return (
-    <div className='h-screen bg-black text-white overflow-x-hidden'>
+    <div className='md:h-screen h-fit py-24 md:py-0 bg-black text-white overflow-x-hidden'>
       <div className='text-center font-bold text-4xl py-5 px-1'>
         Second Features Section
       </div>
@@ -68,7 +68,9 @@ const SecondSec = () => {
                   <div className='mr-5 mt-1'>
                     <IoMdRadioButtonOn
                       className='text-3xl'
-                      style={{ color: hoverIndex === index ? 'orange' : 'white' }}
+                      style={{
+                        color: hoverIndex === index ? 'orange' : 'white',
+                      }}
                     />
                   </div>
                   <div className='md:w-56'>
