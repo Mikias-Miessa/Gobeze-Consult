@@ -18,7 +18,7 @@ const LogoSection = () => {
         <div className='h-2 w-20 bg-orange-500'></div>
       </div> */}
       <div className='flex md:justify-center'>
-        <div className='md:w-[70%]'>
+        <div className='md:w-[70%] pl-20 md:pl-0'>
           <SectionTitle color={'white'} title={'OUR PARTNERS'} />
         </div>
       </div>

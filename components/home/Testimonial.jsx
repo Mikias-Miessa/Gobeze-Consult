@@ -39,7 +39,7 @@ const Testimonial = () => {
           options={{
             autoplay: true,
             type: 'loop',
-            interval: 3000,
+            interval: 4000,
             perPage: 1,
             padding: { left: 30, right: 30 },
             pagination: false,
