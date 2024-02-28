@@ -7,6 +7,7 @@ import Benefit from '@/components/home/benefit';
 import LogoSection from '@/components/home/logoSection';
 import Testimonial from '@/components/home/Testimonial';
 import OurTeam from '@/components/home/ourTeam';
+import Transition from '@/components/home/transition';
 
 const Hero = () => {
   return (
@@ -22,9 +23,11 @@ const Hero = () => {
       <Testimonial />
       <div className='felx justify-center'>
         <OurTeam />
+        <Transition/>
       </div>
     </div>
   );
 };
+
 
 export default Hero;
