@@ -31,6 +31,7 @@ const Hero = () => {
       </div>
       <div className='flex justify-center py-10'>
         <OurTeam />
+        {/* <Transition/> */}
       </div>
     </div>
   );
