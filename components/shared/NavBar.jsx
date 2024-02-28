@@ -130,7 +130,6 @@ const NavBar = () => {
             >
               <Link
                 href={link}
-                smooth
                 duration={500}
                 className={`no-underline tracking-normal font-Dax ${
                   isScrolled ? 'text-black' : 'text-white'
