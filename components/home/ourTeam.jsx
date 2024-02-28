@@ -77,7 +77,7 @@ const OurTeam = () => {
               teams.map(
                 (team, index) =>
                   team && (
-                    <SplideSlide>
+                    <SplideSlide key={team.id}>
                       <Image
                         quality={100}
                         src={team.image}
