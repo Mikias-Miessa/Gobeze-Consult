@@ -8,7 +8,7 @@ function Feature() {
     <div>
       {/* Feature 2 */}
       <div className='bg-black'>
-        <div className='grid grid-cols-1 md:grid-cols-5 gap-2 pb-10 md:pl-10 mx-20'>
+        <div className='grid grid-cols-1 md:grid-cols-5 gap-2 pb-10 md:pl-10 md:mx-20 mx-10'>
           <div className='md:col-span-2 mt-10 md:m mb-4 md:mb-24 h-96 w-full md:w-auto'>
             <Image alt='benfit' src={ImgFea} className='h-100 w-full md:w-96' />
           </div>
@@ -45,8 +45,13 @@ function Feature() {
                 </div>
                 <div className='md:mr-10'>
                   <div className=''>
-                    <h1 className='text-xl md:mt-0 mt-4 mb-4 font-semibold'>Present the Job3</h1>
-                    <p className='text-gray-400'>Lorem ipsum dolor sit amet consectetur sit adipisicing elit  amet consectetur elit .</p>
+                    <h1 className='text-xl md:mt-0 mt-4 mb-4 font-semibold'>
+                      Present the Job3
+                    </h1>
+                    <p className='text-gray-400'>
+                      Lorem ipsum dolor sit amet consectetur sit adipisicing
+                      elit amet consectetur elit .
+                    </p>
                   </div>
                   <div className='mt-10'>
                     <h1 className='text-xl mb-4 font-semibold'>
