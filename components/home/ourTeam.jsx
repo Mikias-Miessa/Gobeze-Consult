@@ -67,7 +67,7 @@ const OurTeam = () => {
                 },
                 760: {
                   perPage: 1,
-                  width: '50%',
+                  width: '100%',
                   padding: { left: 50, right: 20 },
                 },
               },
