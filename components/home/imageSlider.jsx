@@ -52,30 +52,20 @@ const ImagesSlider = ({
       .catch((error) => console.error('Failed to load images', error));
   };
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === 'ArrowRight') {
-        handleNext();
-      } else if (event.key === 'ArrowLeft') {
-        handlePrevious();
-      }
-    };
+ useEffect(() => {
+   // autoplay
+   let interval;
+   if (autoplay) {
+     interval = setInterval(() => {
+       handleNext();
+     }, 5000);
+   }
 
-    window.addEventListener('keydown', handleKeyDown);
-
-    // autoplay
-    let interval;
-    if (autoplay) {
-      interval = setInterval(() => {
-        handleNext();
-      }, 5000);
-    }
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      clearInterval(interval);
-    };
-  }, []);
+   return () => {
+     clearInterval(interval);
+   };
+ }, [autoplay]);
+// Make sure to include 'autoplay' in the dependency array if it's being referenced inside useEffect
 
   useEffect(() => {}, []);
 

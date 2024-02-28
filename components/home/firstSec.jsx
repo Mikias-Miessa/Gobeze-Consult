@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Featureppl from '@/public/images/feappl.png';
@@ -22,9 +22,9 @@ const data = [
 function Feature() {
   return (
     <div>
-      <div className='md:mx-40 md:my-20 mx-0 my-0'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-0 bg-black rounded-2xl'>
-          <div className='pl-20 text-white'>
+      <div className='md:mx-32 md:my-20 mx-0 my-0'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-0 bg-black md:rounded-2xl'>
+          <div className='md:pl-20 pl-10 text-white'>
             <h1 className='pt-20  text-3xl font-semibold '>FEATURED VIEWS</h1>
             <h2 className='pb-8 text-gray-300 text-2xl '>Some of the views</h2>
             <h3 className='text-gray-300 text-xl'>
@@ -47,7 +47,7 @@ function Feature() {
                 perPage: 1,
                 pagination: false,
                 gap: '',
-                arrows: false
+                arrows: false,
               }}
             >
               {data.length > 0 &&
