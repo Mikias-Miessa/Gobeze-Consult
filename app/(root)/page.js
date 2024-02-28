@@ -9,8 +9,6 @@ import Testimonial from '@/components/home/Testimonial';
 import OurTeam from '@/components/home/ourTeam';
 import NewsLetter from '@/components/home/newsLetter';
 import Transition from '@/components/home/transition';
-import NewsLetter from '@/components/home/newsLetter';
-import Transition from '@/components/home/transition';
 
 const Hero = () => {
   return (
