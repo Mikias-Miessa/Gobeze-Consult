@@ -8,7 +8,8 @@
   font-weight: normal;
   font-style: normal;
 } */
-.active {
-  transform: scale(1.2); /* Adjust the scale as per your requirement */
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+.middle-slide img {
+  width: 400px; /* Adjust the width as needed */
+  height: 500px;
+  /* Adjust the height as needed */
 }
