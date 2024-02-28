@@ -16,7 +16,7 @@ function Feature() {
             <div>
               <h1 className='text-white md:mt-20 mt-20 mb-3 font-extrabold text-3xl'>THE BENEFITS</h1>
               
-              <div className='h-1 w-20 bg-orange-500 '></div>
+              <div className='h-1 w-20 bg-orange-500'></div>
 
               <div className='grid grid-cols-1 md:grid-cols-2 mt-20'>
                 <div className='md:mr-10'>
