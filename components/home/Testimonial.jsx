@@ -5,6 +5,7 @@ import Rectangle1 from '@/public/testimonial/Rect1.png';
 import Rectangle2 from '@/public/testimonial/Rect2.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import SectionTitle from '../shared/sectionTitle';
+import { FaQuoteRight } from 'react-icons/fa';
 
 const test = [
   {
@@ -65,19 +66,22 @@ const Testimonial = () => {
                               />
                             </div>
                             <div className='w-full md:w-6/12 xl:w-8/12 md:ml-4'>
-                              <div className='px-6 py-12 md:px-12 rounded-b-lg'>
-                                <p className='mb-1 text-neutral-400'>
-                                  {tes.title}
-                                </p>
-                                <p className='mb-4 text-sm text-neutral-400'>
-                                  {tes.description}
-                                </p>
-                                <h2 className='text-xl text-neutral-300 font-bold text-primary'>
-                                  {tes.name}
-                                </h2>
-                                <p className='mb-2 text-base text-neutral-400'>
-                                  {tes.job}
-                                </p>
+                              <div className='px-6 py-12 md:px-2 rounded-b-lg'>
+                                <FaQuoteRight className='text-neutral-600 text-6xl' />
+                                <div className='-mt-7'>
+                                  <p className='mb-1 text-neutral-400'>
+                                    {tes.title}
+                                  </p>
+                                  <p className='mb-4 text-sm text-neutral-400'>
+                                    {tes.description}
+                                  </p>
+                                  <h2 className='text-xl text-neutral-300 font-bold text-primary'>
+                                    {tes.name}
+                                  </h2>
+                                  <p className='mb-2 text-base text-neutral-400'>
+                                    {tes.job}
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>

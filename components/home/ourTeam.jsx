@@ -4,7 +4,7 @@ import { LampDemo } from './lampeffetc';
 import SectionTitle from '../shared/sectionTitle';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { DirectionAwareHover } from '../shared/card';
 
 const OurTeam = () => {
@@ -36,7 +36,10 @@ const OurTeam = () => {
     },
   ];
   return (
-    <div className=' w-[1920px] h-fit '>
+    <div
+      className='flex w-[1920px] h-screen bg-cover bg-center items-center'
+      style={{ backgroundImage: `url('/images/Team_Section.png')` }}
+    >
       {/* <LampDemo /> */}
       <div className='flex justify-center '>
         <div className='w-[80%]'>
@@ -51,7 +54,7 @@ const OurTeam = () => {
               arrows: false,
               interval: 4000,
               perPage: 3,
-              padding: { left: 90, right: 20 },
+              padding: { left: 20, right: 20 },
               pagination: false,
               pauseOnHover: true,
               perMove: 1,
@@ -74,24 +77,23 @@ const OurTeam = () => {
             }}
           >
             {teams.length > 0 &&
-              teams.map(
-                (team, index) =>
-                  team && (
-                    <SplideSlide>
-                      <Image
-                        quality={100}
-                        src={team.image}
-                        alt='person'
-                        width={200}
-                        height={300}
-                        className='hover:scale-110 duration-200'
-                      />
-                      {/* <DirectionAwareHover
-                        key={team.id}
-                        imageUrl={team.image}
-                      /> */}
-                    </SplideSlide>
-                  )
+              teams.map((team, index) =>
+                team ? (
+                  <SplideSlide key={team.id}>
+                    <Image
+                      quality={100}
+                      src={team.image}
+                      alt='person'
+                      width={300}
+                      height={400}
+                      className='hover:scale-110 duration-200'
+                    />
+                    {/* <DirectionAwareHover
+                key={team.id}
+                imageUrl={team.image}
+              /> */}
+                  </SplideSlide>
+                ) : null
               )}
           </Splide>
         </div>

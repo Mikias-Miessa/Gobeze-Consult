@@ -110,13 +110,13 @@ const NavBar = () => {
               <img
                 src='/images/orangelogo.png'
                 alt='scrolled logo'
-                className='md:h-[104.34px] md:w-[240px] h-16 w-[147.68px] -mt-2'
+                className='md:h-[104.34px] md:w-[245.355px] h-[64px] w-[150.5px] -mt-2'
               />
             ) : (
               <img
                 src='/images/whitelogo.png'
                 alt='gobeze logo'
-                className='md:h-[104.34px] md:w-[240px] h-16 w-[147.68px] -mt-2'
+                className='md:h-[104.34px] md:w-[245.355px] h-[64px] w-[150.5px] -mt-2'
               />
             )}
           </Link>
