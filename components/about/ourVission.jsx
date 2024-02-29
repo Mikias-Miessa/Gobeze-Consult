@@ -2,18 +2,18 @@ import React from 'react'
 import Image from 'next/image'
 import ImageGirl from "@/public/outVission/girl_behind_trees.png"
 import Community from "@/public/outVission/community_one.png"
-import SecondPerson from "@/public/outVission/Second_image.png"
+import SecondPerson from "@/public/outVission/second_image.png"
 
 const featuresData = [
   {
     id: 1,
-    imageSrc: Community1,
+    imageSrc: Community,
     description:
       'Present the job matching services that present the job matching services that.',
   },
   {
     id: 2,
-    imageSrc: Community2,
+    imageSrc: Community,
     description:
       'Present the job matching services that present the job matching services that.',
   },
