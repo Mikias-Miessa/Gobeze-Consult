@@ -31,10 +31,10 @@ const Footer = () => {
         <div className='pt-10'><Image src={LogoF} alt="LogoFooter" height={200} width={200} /></div>
         <div className='pt-16 text-gray-400'>@ 2018 - 2024 Gobeze Consult</div>
         <div className='pt-16 flex flex-row gap-4'>
-          <div><FaInstagram size={20}/></div>
-          <div><FaFacebookSquare size={20}/></div>
-          <div><FaXTwitter size={20}/></div>
-          <div><FaTiktok size={20}/></div>
+          <div><FaInstagram size={20} style={{ color: '#e4405f'}}/></div>
+          <div><FaFacebookSquare size={20} style={{ color: '#1877f2' }}/></div>
+          <div><FaXTwitter size={20} /></div>
+          <div><FaTiktok size={20} style={{ color: '#ff3857' }} /></div>
         </div>
       </div>
       <div className='py-10 text-gray-400'><hr className='text-gray-400'/></div>
