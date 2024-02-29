@@ -20,6 +20,9 @@ const Hero = () => {
       <SecondSec />
       <ThirdSec />
       <Benefit />
+      <div className='flex justify-center py-10'>
+        <OurTeam />
+      </div>
       <div className='flex justify-center pt-28 bg-black'>
         <LogoSection />
       </div>
@@ -29,14 +32,13 @@ const Hero = () => {
         <NewsLetter />
       </div>
       <div className='flex justify-center'>
-        <Transition />
-      </div>
-      <div className='flex justify-center py-10'>
-        <OurTeam />
-      </div>
-      <div className='flex justify-center'>
         <ContactUs />
       </div>
+      <div className='flex justify-center'>
+        <Transition />
+      </div>
+      
+      
     </div>
   );
 };
