@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function ourVission() {
   return (
-    <div>ourVission</div>
-  )
+    <div id='vision' className='h-screen'>
+      ourVission
+    </div>
+  );
 }
 
-export default ourVission
+export default ourVission;

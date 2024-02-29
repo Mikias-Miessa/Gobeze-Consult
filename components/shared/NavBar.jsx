@@ -211,16 +211,16 @@ const NavBar = () => {
                               Career Services
                             </h1>
                             <a
-                              href='/learners#career'
+                              href='/about#about'
                               className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
-                              Coaching
+                              About us
                             </a>
                             <a
-                              href='/learners#hero'
+                              href='/about#vision'
                               className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
-                              Mentorship
+                              Our vision
                             </a>
                             <a
                               href='/learners#gosra'
