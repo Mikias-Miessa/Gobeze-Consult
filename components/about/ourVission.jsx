@@ -45,4 +45,4 @@ function ourVission() {
   )
 }
 
-export default ourVission
+export default ourVission;
