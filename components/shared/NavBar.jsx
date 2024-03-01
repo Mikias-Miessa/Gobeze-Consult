@@ -152,45 +152,130 @@ const NavBar = () => {
                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out
                             group-hover:transform z-50 min-w-fit transform w-screen h-fit font-Dax'
                 >
-                  <div className='relative top-6 p-6 bg-white rounded shadow-xl flex flex-row  w-screen h-fit 2xl:gap-16 xl:gap-14 lg:gap-10 md:gap-6 justify-center'>
+                    <div className='relative top-6 p-6 bg-white rounded shadow-xl flex flex-row w-screen h-fit 2xl:gap-16 xl:gap-14 lg:gap-10 md:gap-6 justify-evenly'>
                     <div className='relative -left-[30px] w-[70%] h-[700px] flex justify-evenly -mt-16'>
-                      <div className=' my-20 border-r flex flex-col gap-4 pl:10 xl:pl-0 xl:pr-6 pr-10 lg:w-[500px] w-[240px] '>
-                        <h1 className='font-bold lg:text-lg text-base '>
-                          Course
-                        </h1>
-                        <p className='py-2  text-left lg:text-base text-sm font-semibold text-gray-800'>
-                          Get in demand tech & creative skills and transform
-                          your career with our industry accredited courses
-                        </p>
-                        <a
-                          href='/trainings'
-                          className='px-1 lg:px-4 py-2 gobeze-secondary-bg rounded-sm hover:scale-105 hover:duration-300 text-white font-medium text-sm lg:text-lg lg:w-48 w-32 text-center'
-                        >
-                          {' '}
-                          Explore Courses
-                        </a>
-                      </div>
-                      <div className='text-center'>
-                        {/* {loading ? ( */}
-
-                        <div className='flex items-center justify-center  w-30 h-1/2'>
-                          <LineWave
-                            visible={true}
-                            height='100'
-                            width='100'
-                            color='#FF7F00'
-                            ariaLabel='line-wave-loading'
-                            wrapperStyle={{}}
-                            wrapperClass=''
-                            firstLineColor='#FF7F00'
-                            middleLineColor='#FF7F00'
-                            lastLineColor='#FF7F00'
-                          />
+                      <div className=' my-20 flex flex-col gap-4 pl-10  '>
+                        <div className='flex flex-col gap-8 ml-8 mt-5 '>
+                          <div className='flex flex-col items-start gap-2 text-start'>
+                            <h1 className='font-bold lg:text-lg text-base'>
+                              Career Services
+                            </h1>
+                            <a
+                              href='/work#work'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Our Work
+                            </a>
+                            <a
+                              href='/about#vision'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Our vision
+                            </a>
+                            <a
+                              href='/about#visionSecond'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Our Vision Second
+                            </a>
+                            <a
+                              href='/about#training'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Training
+                            </a>
+                          </div>
                         </div>
-                        {/* ) : (
-                          // Render content
-                          <div className='text-center my-20 w-[400px] flex flex-row gap-8'></div>
-                        )} */}
+                      </div>
+                      <div className='border-r h-[60%] w-1 self-center'></div>
+                      <div className=' text-center my-20'>
+                        <div className='flex flex-col gap-8  mt-4 '>
+                          <div className='flex flex-col items-start gap-4 text-start'>
+                            <h1 className='font-bold lg:text-lg text-base'>
+                              Learning Paths
+                            </h1>
+                            <h1 className='text-black text-base opacity-90 font-medium'>
+                              Entrepreneurship Track
+                            </h1>
+                            <a
+                              href='/learners#learningpath'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
+                            >
+                              Become a Tech Entrepreneur
+                            </a>
+                            <a
+                              href='/learners#learningpath'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
+                            >
+                              Become a Creative Entrepreneur
+                            </a>
+                            <h1 className='text-black text-base opacity-90 font-medium'>
+                              Career Track
+                            </h1>
+                            <a
+                              href='/learners#learningpath'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
+                            >
+                              Software Engineer
+                            </a>
+                            <a
+                              href='/learners#learningpath'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
+                            >
+                              Data Analyst
+                            </a>
+                            <a
+                              href='/learners#learningpath'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
+                            >
+                              Creative Director
+                            </a>
+                            <h1 className='text-black text-base opacity-90 font-medium'>
+                              Gig Economy Track
+                            </h1>
+                            <a
+                              href='/learners#learningpath'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
+                            >
+                              Become a Freelance
+                            </a>
+                            {/* <a href="#" className='text-gray-700 text-base opacity-60 hover:opacity-100 ml-5'>Become a Creative Entrepreneur</a> */}
+                          </div>
+                        </div>
+                      </div>
+                      <div className='border-r h-[60%] w-1 self-center'></div>
+                      <div className='col-span-1 text-center  my-20'>
+                        <div className='flex flex-col gap-8  mt-4'>
+                          <div className='flex flex-col items-start gap-4 text-start'>
+                            <h1 className='font-bold lg:text-lg text-base'>
+                              ALUMNI
+                            </h1>
+                            <a
+                              href='/learners#alumni'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Volunteer
+                            </a>
+                            <a
+                              href='/learners#events'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Events
+                            </a>
+                            <a
+                              href='/learners#alumni'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Career resources
+                            </a>
+                            <a
+                              href='/learners#alumni'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Verify a certificate
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
