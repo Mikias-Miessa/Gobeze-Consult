@@ -228,6 +228,12 @@ const NavBar = () => {
                             >
                               Job matching
                             </a>
+                            <a
+                              href='/about#someSection'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Some Section
+                            </a>
                           </div>
                         </div>
                       </div>
