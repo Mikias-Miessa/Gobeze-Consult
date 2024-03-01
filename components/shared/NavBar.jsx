@@ -223,10 +223,16 @@ const NavBar = () => {
                               Our vision
                             </a>
                             <a
-                              href='/learners#gosra'
+                              href='/about#visionSecond'
                               className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
-                              Job matching
+                              Our Vision Second
+                            </a>
+                            <a
+                              href='/about#training'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Training
                             </a>
                             <a
                               href='/about#someSection'
