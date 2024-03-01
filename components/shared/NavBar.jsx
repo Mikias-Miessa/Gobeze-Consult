@@ -228,6 +228,12 @@ const NavBar = () => {
                             >
                               Our Vision Second
                             </a>
+                            <a
+                              href='/about#training'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Training
+                            </a>
                           </div>
                         </div>
                       </div>
