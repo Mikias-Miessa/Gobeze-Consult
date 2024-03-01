@@ -1,15 +1,17 @@
 import React from 'react';
 import About from '@/components/about/about';
-import OurVission from '@/components/about/ourVission';
+import OurVision from '@/components/about/ourVission';
 import OurVisionSecond from '@/components/about/ourVisionSecond';
 import Training from '@/components/about/training';
+import SomeSection from '@/components/about/someSection';
 
 const page = () => {
   return (
     <div>
       <About />
-      <OurVission />
+      <OurVision />
       <OurVisionSecond />
+      <SomeSection/>
       <Training />
     </div>
   );
