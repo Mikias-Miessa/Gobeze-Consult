@@ -41,19 +41,30 @@ const data = [
 
 const Training = () => {
   return (
-    <div id='training' className='max-w-screen-lg mx-auto flex justify-center items-center flex-wrap'>
-      {data.map((item) => (
-        <div key={item.id} className='w-1/2 md:w-1/3 p-1 md:p-4'>
-          <div
-            className='bg-cover bg-center h-96 overflow-hidden relative'
-            style={{ backgroundImage: `url(${item.imageSrc})` }}
-          >
-            <div className='absolute bottom-0 left-0 right-0 flex justify-center items-end bg-red-50 bg-opacity-50'>
-              <p className='text-center py-5'>{item.desc}</p>
+    <div>
+      <div
+        id='training'
+        className='max-w-screen-lg mx-auto flex justify-center items-center flex-wrap'
+      >
+        {data.map((item) => (
+          <div key={item.id} className='w-1/2 md:w-1/3 p-1 md:p-4'>
+            <div
+              className='bg-cover bg-center h-96 overflow-hidden relative'
+              style={{ backgroundImage: `url(${item.imageSrc})` }}
+            >
+              <div className='absolute bottom-0 left-0 right-0 flex justify-center items-end bg-red-50 bg-opacity-50'>
+                <p className='text-center py-5'>{item.desc}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      <div className='flex justify-center items-center my-5'>
+        <button className='px-8 py-2 text-base font-semibold border-gray-600 border text-center text-black'>
+          Read More
+        </button>
+      </div>
     </div>
   );
 };
