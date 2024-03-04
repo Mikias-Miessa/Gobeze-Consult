@@ -12,10 +12,10 @@ function SomeSection() {
             <button className='text-gray-900 bg-white border border-gray-900 font-bold text-xl px-10 py-3 mt-6'>Read More</button>
           </div>
           <div className='bg-black rounded-xl h-72 w-80 md:mx-0 mx-10'>
-           <p className='text-white pt-28 px-5 text-sm text-center justify-center'>Present the job matching services that connect talent with creative industry opportunities.</p>
+           <p className='text-white pt-32 px-5 text-sm text-center justify-center'>Present the job matching services that connect talent with creative industry opportunities.</p>
           </div>
-          <div className='bg-black rounded-xl h-72 w-72 md:mt-72 mt-5 md:mx-0 mx-10'>
-           <p className='text-white pt-28 px-5 text-sm text-center justify-center'>Present the job matching services that connect talent with creative industry opportunities.</p>
+          <div className='bg-black rounded-xl h-72 w-72 md:mt-80 mt-5 md:mx-0 mx-10'>
+           <p className='text-white pt-28 px-5 text-sm text-center justify-center'>Present the job matching services that connect talent with creative industry opportunitiess.</p>
           </div>           
         </div>
     </div>

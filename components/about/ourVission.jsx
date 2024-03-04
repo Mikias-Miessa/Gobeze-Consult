@@ -48,18 +48,19 @@ function OurVission() {
         </div>
 
         <div>
-          <Image src={SecondPerson} alt='VisionPerson' className='h-72 w-full  m-20 md:my-0 '/>
+          <Image src={SecondPerson} alt='VisionPerson'  className='h-72 w-full m-20 md:my-0 '/>
         </div>
 
       </div>
 
       <div className='col-span-2'>
-        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:w-96 w-64 md:h-fit h-96 md md:ml-0 ml-24 my-4'/>
+        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='absolute md:w-96 w-64 md:h-fit h-96 md md:ml-0 ml-24 my-4'/>
       </div>
 
     </div>
     </div>
   )
+
 }
 
 export default OurVission;
