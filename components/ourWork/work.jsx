@@ -31,20 +31,20 @@ const Work = () => {
   return (
     <div
       id='work'
-      className='bg-cover bg-center bg-no-repeat min-h-screen flex justify-center items-center w-full'
+      className='bg-cover bg-center bg-no-repeat min-h-screen flex justify-center items-center w-full overflow-hidden'
       style={{ backgroundImage: `url("/images/work/Why.png")` }}
     >
-      <div className='max-w-screen-lg mx-auto'>
-        <div className='text-8xl font-semibold text-orange-500 pb-28'>
+      <div className='max-w-screen-lg mx-auto px-5'>
+        <div className='md:text-8xl text-xl font-semibold text-orange-500 pb-10 md:pb-28'>
           <h1>Why We Do It?</h1>
         </div>
 
         <div>
-          <div className='flex gap-20'>
+          <div className='flex flex-col md:flex-row md:gap-20'>
             {data.map((items) => (
               <div
                 key={items.id}
-                className='w-1/3 p-6 text-center flex flex-col items-center bg-neutral-400 bg-opacity-50'
+                className='w-full md:w-1/3 p-6 text-center flex flex-col items-center bg-neutral-400 bg-opacity-50 mb-8 md:mb-0'
               >
                 <div className='flex justify-between items-center w-full mb-2'>
                   <div className=''>
@@ -52,7 +52,9 @@ const Work = () => {
                       {items.title}
                     </h5>
                   </div>
-                  <div className='text-center text-orange-500 text-3xl'>{items.icon}</div>
+                  <div className='text-center text-orange-500 text-3xl'>
+                    {items.icon}
+                  </div>
                 </div>
                 <p className='mb-3 text-base text-start text-gray-700'>
                   {items.description}
