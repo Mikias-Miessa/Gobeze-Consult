@@ -173,7 +173,7 @@ const NavBar = () => {
                               Our vision
                             </a>
                             <a
-                              href='/about#workspace'
+                              href='/work#workspace'
                               className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
                               Workspace meeting and conference

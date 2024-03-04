@@ -5,7 +5,7 @@ import WorkSpace from '@/components/ourWork/workspace';
 const page = () => {
   return (
     <div>
-      <Work />
+      <Work/>
       <WorkSpace/>
     </div>
   );
