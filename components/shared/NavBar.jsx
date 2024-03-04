@@ -167,10 +167,10 @@ const NavBar = () => {
                               Our Work
                             </a>
                             <a
-                              href='/work#consultancy'
+                              href='/about#vision'
                               className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
-                              Consultancy
+                              Our vision
                             </a>
                             <a
                               href='/work#workspace'
