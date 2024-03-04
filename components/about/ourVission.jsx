@@ -54,7 +54,7 @@ function OurVission() {
       </div>
 
       <div className='col-span-2'>
-        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='absolute md:w-96 w-64 md:h-fit h-96 md md:ml-0 ml-24 my-4'/>
+        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:absolute md:w-96 w-64 md:h-fit h-96 md md:ml-0 ml-24 my-4'/>
       </div>
 
     </div>
