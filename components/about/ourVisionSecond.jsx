@@ -37,8 +37,8 @@ const OurVisionSecond = () => {
       </div>
 
       <div className='flex justify-center items-center -mt-40 mb-10'>
-        <Image src={visionHuman} alt='human' width={350} />
-        <div className='max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow -ml-12'>
+        <Image src={visionHuman} alt='human' width={350} className='hidden md:block' />
+        <div className='max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow md:-ml-12'>
           <div>
             <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 '>
               Present the job matching services that present the job matching.
@@ -48,8 +48,8 @@ const OurVisionSecond = () => {
             Present the job matching services that present the job matching
             services that.
           </p>
-          <button className='px-8 py-2 text-sm font-medium text-center text-white bg-orange-500 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300'>
-            More
+          <button className='px-8 py-2 text-base font-semibold border-gray-600 border text-center text-black'>
+            Read More
           </button>
         </div>
       </div>
@@ -58,7 +58,7 @@ const OurVisionSecond = () => {
         {data.map((items) => (
           <div
             key={items.id}
-            className='w-1/5 p-6 text-center flex flex-col items-center'
+            className='md:w-1/5 md:p-6 p-2 text-center flex flex-col items-center'
           >
             <div className='text-center text-5xl'>{items.icon}</div>
             <div>

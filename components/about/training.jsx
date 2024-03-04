@@ -43,7 +43,7 @@ const Training = () => {
   return (
     <div id='training' className='max-w-screen-lg mx-auto flex justify-center items-center flex-wrap'>
       {data.map((item) => (
-        <div key={item.id} className='w-1/3 p-4'>
+        <div key={item.id} className='w-1/2 md:w-1/3 p-1 md:p-4'>
           <div
             className='bg-cover bg-center h-96 overflow-hidden relative'
             style={{ backgroundImage: `url(${item.imageSrc})` }}
