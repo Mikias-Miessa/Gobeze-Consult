@@ -2,6 +2,7 @@ import React from 'react';
 import Work from '@/components/ourWork/work';
 import WorkSpace from '@/components/ourWork/workspace';
 import Consultancy from '@/components/ourWork/consultancy';
+import Recuritment from "@/components/ourWork/recruitmentJobMatch"
 
 const page = () => {
   return (
@@ -9,6 +10,7 @@ const page = () => {
       <Work />
       <Consultancy />
       <WorkSpace/>
+      <Recuritment/>
     </div>
   );
 };

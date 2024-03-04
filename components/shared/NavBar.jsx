@@ -179,10 +179,10 @@ const NavBar = () => {
                               Workspace meeting and conference
                             </a>
                             <a
-                              href='/about#training'
+                              href='/work#recruitment'
                               className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
-                              Training
+                              Recruitment and job matching
                             </a>
                           </div>
                         </div>
