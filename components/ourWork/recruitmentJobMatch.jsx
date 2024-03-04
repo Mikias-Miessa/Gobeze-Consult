@@ -10,7 +10,7 @@ function RecruitmentJobMatch() {
         <h3 className='text-center text-sm text-gray-600'>Gobeze Consult is radically improving the hiring process for candidates, recruiters and employers.</h3>
         </div>
 
-        <div className='grid grid-cols-2 mt-5'>
+        <div className='grid md:grid-cols-2 grid-cols-1 mt-5'>
         <div className='bg-black text-white pl-14 pr-8'>
           <h1 className='font-extrabold pt-5 text-3xl'>RECRUITMENT</h1>
           <h1 className='font-extrabold text-3xl'>SERVICES</h1>
