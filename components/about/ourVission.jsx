@@ -22,14 +22,14 @@ const featuresData = [
 function OurVission() {
   return (
     <div id='vision'>
-    <div className='grid md:grid-cols-7 grid-cols-1 mr-24 mt-20 mb-5'>
+    <div className='grid md:grid-cols-7 grid-cols-1 md:mr-24 mr-0 md:mt-20 mt-4 mb-5'>
       <div className='col-span-5'>
       <h1 className='md:text-7xl text-4xl md:font-bold font-medium'>
         <span className='bg-orange-500 pl-28 text-white'>our </span>vision
       </h1>
-        <div className='grid md:grid-cols-2 grid-cols-1 ml-24 mb-4 mt-7'>
+        <div className='grid md:grid-cols-2 grid-cols-1 md:ml-24 ml-4 mb-4 mt-7'>
           <div className='col-span-'>
-          <div className='bg-black px-5 pb-3 pt-5 m-5 '>
+          <div className='bg-black md:px-5 pb-3 pt-5 m-5 '>
               <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
                 <Image src={Community} alt='community' className='mx-auto my-auto pt-4'/>
               </div>
@@ -37,7 +37,7 @@ function OurVission() {
           </div>
           </div>
           <div className='col-span-'>
-          <div className='bg-black px-5 pb-3 pt-5 m-5 '>
+          <div className='bg-black md:px-5 pb-3 pt-5 m-5 '>
               <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
                 <Image src={Community} alt='community' className='mx-auto my-auto pt-4'/>
               </div>
@@ -54,7 +54,7 @@ function OurVission() {
       </div>
 
       <div className='col-span-2'>
-        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:absolute md:visible hidden md:w-96 w-80 md:h-fit h-96 md md:ml-0 ml-16 md:my-4 my-1'/>
+        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:absolute md:visible md:w-96 w-80 md:h-fit h-96 md md:ml-0 ml-16 md:my-4 my-1'/>
       </div>
 
     </div>

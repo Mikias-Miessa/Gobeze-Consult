@@ -3,7 +3,7 @@ import Image from "next/image"
 
 function SomeSection() {
   return (
-    <div id='someSection' className='md:mx-60 mx-28 md:my-6 my-2'>
+    <div id='someSection' className='md:mx-60 mx-4 md:my-6 my-2'>
         <div className='grid md:grid-cols-3 grid-cols-1'>
           <div className='md:mt-0 mt-5 md:mb-0 mb-5 md:mx-0 mx-10 md:ml-0 ml-28'>
             <h3 className='text-xl font-bold pb-2'>present</h3>

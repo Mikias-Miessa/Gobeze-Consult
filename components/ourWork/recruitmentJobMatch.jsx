@@ -3,7 +3,7 @@ import React from 'react'
 function RecruitmentJobMatch() {
   
   return (
-      <div id='recruitment' className='mx-32 mb-8 mt-12'>
+      <div id='recruitment' className='md:mx-32 mx-4 mb-8 mt-12'>
         <div className=''>
         <h1 className='text-center font-extrabold mb-3 mt-3'>Recruitment</h1>
         <h1 className='text-center text-2xl font-semibold mb-2'>Radically Better Hiring</h1>

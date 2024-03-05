@@ -37,8 +37,8 @@ const featuresData = [
 function Feature3() {
   return (
     <div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-0 md:my-20 mx-40'>
-        <div className='text-white grid md:grid-cols-2 grid-cols-1 mx-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-0 md:my-20 md:mx-40 md:mr-0 mr-2'>
+        <div className='text-white grid md:grid-cols-2 grid-cols-1'>
           {featuresData.map((feature) => (
             <div key={feature.id}>
               <div className='bg-black px-5 pb-3 pt-5 m-5 '>
