@@ -41,20 +41,20 @@ function OurVission() {
               <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
                 <Image src={Community} alt='community' className='mx-auto my-auto pt-4'/>
               </div>
-              <p className='text-gray-400 text-center pt-4'>Present the job matching services that present the job matching services that.</p>
+              <p className='text-gray-400 text-center pt-4'>lPresent the job matching services that present the job matching services that.</p>
           </div>
           </div>
 
         </div>
 
         <div>
-          <Image src={SecondPerson} alt='VisionPerson'  className='h-72 w-full md:m-20 m-8 md:my-0 '/>
+          <Image src={SecondPerson} alt='VisionPerson'  className='h-72 md:w-full w-80 md:m-20 m-8 md:my-0 '/>
         </div>
 
       </div>
 
       <div className='col-span-2'>
-        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:absolute md:visible md:w-96 w-80 md:h-fit h-96 md md:ml-0 ml-16 md:my-4 my-1'/>
+        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:absolute md:visible hidden md:w-96 w-80 md:h-fit h-96 md md:ml-0 ml-16 md:my-4 my-1'/>
       </div>
 
     </div>
