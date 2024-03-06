@@ -35,8 +35,10 @@ const Consultancy = () => {
         <div className='w-full md:w-1/2 md:flex items-center gap-5 z-40 my-5'>
           <div className='w-full md:w-1/2'>
             <div className='p-6 text-center border-orange-300 border flex flex-col items-center bg-slate-50 mb-5 justify-center h-72'>
-              <div className='text-center text-5xl mb-3'>
-                <HiOutlineEmojiHappy />
+              <div className='text-center mb-3'>
+                <div className='bg-gray-300 rounded-full p-4'>
+                  <HiOutlineEmojiHappy className='text-5xl' />
+                </div>
               </div>
               <div className='mb-3'>
                 <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900'>
@@ -51,8 +53,10 @@ const Consultancy = () => {
             </div>
 
             <div className='p-6 border-orange-300 border text-center flex flex-col items-center bg-slate-50 mb-5 justify-center  h-72'>
-              <div className='text-center text-5xl mb-3'>
-                <HiOutlineEmojiHappy />
+              <div className='text-center mb-3'>
+                <div className='bg-gray-300 rounded-full p-4'>
+                  <HiOutlineEmojiHappy className='text-5xl' />
+                </div>
               </div>
               <div className='mb-3'>
                 <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900'>
@@ -69,8 +73,10 @@ const Consultancy = () => {
 
           <div className='w-full md:w-1/2'>
             <div className='p-6 border-orange-300 border text-center flex flex-col items-center bg-slate-50 h-72'>
-              <div className='text-center text-5xl'>
-                <HiOutlineEmojiHappy />
+              <div className='text-center mb-3'>
+                <div className='bg-gray-300 rounded-full p-4'>
+                  <HiOutlineEmojiHappy className='text-5xl' />
+                </div>
               </div>
               <div>
                 <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900'>
