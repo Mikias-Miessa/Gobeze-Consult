@@ -26,9 +26,11 @@ function Feature() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-0 bg-black'>
           <div className='md:pl-20 pl-10 text-white'>
             <h1 className='pt-20  text-3xl font-semibold '>FEATURED VIEWS</h1>
-            <h2 className='pb-10 pt-2 text-gray-400 text-2xl '>Some of the views</h2>
+            <h2 className='pb-10 pt-2 text-gray-400 text-2xl '>
+              Some of the views
+            </h2>
             <h3 className='text-gray-300 text-base'>
-              Present the job matching service that connect talent with creative 
+              Present the job matching service that connect talent with creative
               industry opportunties.
             </h3>
             <button className='mb-16 mt-12 text-xl px-8 py-2 bg-gradient-to-r from-gray-900 to-orange-500 rounded'>
@@ -46,7 +48,7 @@ function Feature() {
                 pagination: false,
                 gap: '',
                 arrows: false,
-                padding: { right: '20%' }
+                padding: { right: '20%' },
               }}
             >
               {data.length > 0 &&
@@ -54,7 +56,7 @@ function Feature() {
                   <SplideSlide key={item.id}>
                     <div
                       key={item.id}
-                      className=' bg-white rounded-lg md:mr-40 md:mt-32 ml-10 mr-40 mt-5 mb-20'
+                      className=' bg-white rounded-lg md:mr-40 md:mt-32 ml-10 mr-0 mt-5 mb-20'
                     >
                       <div className='grid grid-cols-2 gap-2 ml-4'>
                         <div className='pt-2 '>
