@@ -28,7 +28,7 @@ const jobsData = [
 
 function BusinessProcess() {
   return (
-    <div>
+    <div id='businesProcess'>
       <div className=''>
         <div className='grid grid-cols-1 md:grid-cols-5 gap-2 pb-10 md:pl-10 md:mx-40  '>
           <div className='md:col-span-2 mt-10 md:m mb-4 md:mb-24 h-96 w-full md:w-auto'>

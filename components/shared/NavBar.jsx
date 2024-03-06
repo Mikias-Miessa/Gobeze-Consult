@@ -184,6 +184,12 @@ const NavBar = () => {
                             >
                               Recruitment and job matching
                             </a>
+                            <a
+                              href='/work#businesProcess'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Business Process Outsourcing Solutions
+                            </a>
                           </div>
                         </div>
                       </div>
