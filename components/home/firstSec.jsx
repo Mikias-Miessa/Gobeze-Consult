@@ -31,8 +31,6 @@ function Feature() {
               Present the job matching service that connect talent with creative 
               industry opportunties.
             </h3>
-            {/* <h3 className='text-gray-400'>connect talent with creative industry </h3>
-     <h3 className='text-gray-400'>opportunties. </h3> */}
             <button className='mb-16 mt-12 text-xl px-8 py-2 bg-gradient-to-r from-gray-900 to-orange-500 rounded'>
               Read More
             </button>

@@ -24,6 +24,7 @@ const jobsData = [
     title: 'Present the Job',
     description: 'Present the job matching services that connect talent with creative industry opportunities.',
   },
+  
 ];
 
 function BusinessProcess() {

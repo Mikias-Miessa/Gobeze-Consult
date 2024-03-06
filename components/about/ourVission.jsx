@@ -48,13 +48,13 @@ function OurVission() {
         </div>
 
         <div>
-          <Image src={SecondPerson} alt='VisionPerson'  className='h-72 md:w-full w-80 md:m-20 m-8 md:my-0 '/>
+          <Image src={SecondPerson} alt='VisionPerson'  className='md:h-72 h-52 md:w-full w-80 md:m-20 m-8 md:my-0'/>
         </div>
 
       </div>
 
       <div className='col-span-2'>
-        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:absolute md:visible hidden md:w-96 w-80 md:h-fit h-96 md md:ml-0 ml-16 md:my-4 my-1'/>
+        <Image src={ImageGirl} alt='VissionGirlImage' height={100} className='md:absolute md:w-96 w-80 md:h-fit h-96 md md:ml-0 ml-10 md:my-4 my-1'/>
       </div>
 
     </div>

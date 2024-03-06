@@ -27,7 +27,8 @@ function RecruitmentJobMatch() {
           <p className="">Founded in 1998, The Christopher Group (TCG) has become one of the nation’s
              largest and most respected boutique Contained Executive HR Search firms and
               HR Direct Staffing Solutions firms. As an HR direct staffing agency, we specialize in the sourcing, assessment. </p>
-          <button className='border border-black text-black font-bold text-sm px-10 py-3 my-8'>Read More</button></div>
+          <button className='border border-black text-black font-bold text-sm px-10 py-3 my-8'>Read More</button>
+          </div>
         </div>
 
       </div>
