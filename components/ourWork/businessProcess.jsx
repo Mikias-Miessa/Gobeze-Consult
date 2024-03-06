@@ -6,23 +6,23 @@ import SectionTitle from '../shared/sectionTitle';
 const jobsData = [
   {
     id: 1,
-    title: 'Present the Job1',
-    description: 'Lorem ipsum amet consectetur elit dolor sit amet consectetur elit.',
+    title: 'Present the Job',
+    description: 'Present the job matching services that connect talent with creative industry opportunities.',
   },
   {
     id: 2,
-    title: 'Present the Job2',
-    description: 'Lorem ipsum dolor amet consectetur elit sit adipisicing elit amet consectetur elit.',
+    title: 'Present the Job',
+    description: 'Present the job matching services that connect talent with creative industry opportunities.',
   },
   {
     id: 3,
-    title: 'Present the Job3',
-    description: 'Lorem ipsum dolor sit amet consectetur sit adipisicing elit amet consectetur elit.',
+    title: 'Present the Job',
+    description: 'Present the job matching services that connect talent with creative industry opportunities.',
   },
   {
     id: 4,
-    title: 'Present the Job4',
-    description: 'Lorem ipsum dolor sit amet consectetur elit.',
+    title: 'Present the Job',
+    description: 'Present the job matching services that connect talent with creative industry opportunities.',
   },
 ];
 
