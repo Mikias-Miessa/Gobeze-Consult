@@ -63,7 +63,7 @@ const NavBar = () => {
     },
     {
       id: 3,
-      link: '/#',
+      link: '/community',
       name: 'Our Community',
       subLink: null,
     },
