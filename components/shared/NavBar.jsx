@@ -190,6 +190,12 @@ const NavBar = () => {
                             >
                               Business Process Outsourcing Solutions
                             </a>
+                            <a
+                              href='/work#go'
+                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Go-Gobeze's
+                            </a>
                           </div>
                         </div>
                       </div>
