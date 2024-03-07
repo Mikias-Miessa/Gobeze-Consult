@@ -8,10 +8,10 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 function Go() {
   return (
-      <div id='recruitment' className='md:mx-32 mx-4 mb-8 mt-12'>
+      <div id='go' className='md:mx-32 mx-4 mb-8 md:mt-12 mt-5'>
 
 
-        <div className='col-span-2'>
+        <div className=''>
             <Splide
               options={{
                 autoplay: true,
@@ -69,3 +69,4 @@ function Go() {
 }
 
 export default Go;
+
