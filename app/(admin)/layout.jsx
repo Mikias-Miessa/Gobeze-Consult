@@ -2,7 +2,7 @@
 import React from 'react';
 import Sidebar from '@/components/shared/admin/sidebar';
 import Navbar from '@/components/shared/admin/navbar';
-import { Outlet } from 'react-router-dom';
+
 const Layout = ({ children }) => {
   return (
     <div className='flex flex-row bg-neutral-300 h-screen w-screen'>
