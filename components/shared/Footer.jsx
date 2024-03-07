@@ -26,7 +26,7 @@ const footerData = [
 
 const Footer = () => {
   return (
-    <footer className='footer bg-black px-32 pb-20'>
+    <footer className='footer bg-black md:px-32 px-14 pb-20'>
       <div className='container grid md:grid-cols-3 grid-cols-1 text-white'>
         <div className='pt-10'>
           <Image src={LogoF} alt='LogoFooter' height={200} width={200} />
