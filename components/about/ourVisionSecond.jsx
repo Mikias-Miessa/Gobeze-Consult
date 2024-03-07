@@ -60,7 +60,12 @@ const OurVisionSecond = () => {
             key={items.id}
             className='md:w-1/5 md:p-6 p-2 text-center flex flex-col items-center'
           >
-            <div className='text-center text-5xl'>{items.icon}</div>
+              <div className='text-center mb-3'>
+                <div className='bg-gray-300 rounded-full p-4'>
+                  <div className='text-5xl'>{items.icon}</div>
+                </div>
+              </div>
+            {/* <div className='text-center text-5xl'>{items.icon}</div> */}
             <div>
               <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900'>
                 {items.title}
