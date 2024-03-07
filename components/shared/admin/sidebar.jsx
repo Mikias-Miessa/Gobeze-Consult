@@ -50,7 +50,9 @@ function Sidebar() {
           <span className='text-2xl'>
             <HiOutlineLogout />
           </span>
-          <span className='hidden md:inline text-base font-bold'> Logout</span>
+          <span className='hidden md:inline text-base font-bold'>
+            <Link href='/api/auth/signout'>Logout</Link>{' '}
+          </span>
         </div>
       </div>
     </div>
