@@ -69,7 +69,7 @@ const NavBar = () => {
     },
     {
       id: 4,
-      link: '/#',
+      link: '/insights',
       name: 'Insights',
       subLink: null,
     },
