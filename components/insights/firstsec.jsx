@@ -10,10 +10,10 @@ function Firstsec() {
         backgroundImage: `url("/images/insights/bgInsights.png")`,
       }}>
         <div>
-        <SectionTitle className="text-" title={'Insights'} color={'white'} />
+        <SectionTitle className="text-5xl" title={'Insights'} color={'white'} />
         </div>
     </div>
   )
 }
 
-export default Firstsec
+export default Firstsec;
