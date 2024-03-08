@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import './font.css';
 import '@splidejs/splide/css';
+import StoreProvider from '@/store/storeProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body style={{ fontFamily: 'Dax' }} className={inter.className}>
-        {children}
+        <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
   );
