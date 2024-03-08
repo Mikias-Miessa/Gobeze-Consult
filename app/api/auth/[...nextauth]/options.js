@@ -1,4 +1,6 @@
 // import type { NextAuthOptions } from "next-auth";
+import axios from 'axios';
+import bcrypt from 'bcrypt';
 import CredentialsProvider from 'next-auth/providers/credentials';
 export const options = {
   providers: [
@@ -22,28 +24,24 @@ export const options = {
         },
       },
       async authorize(credentials, req) {
-        // You need to provide your own logic here that takes the credentials
-        // submitted and returns either a object representing a user or value
-        // that is false/null if the credentials are invalid.
-        // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
-        // You can also use the `req` object to obtain additional parameters
-        // (i.e., the request IP address)
-        // const res = await fetch('/your/endpoint', {
-        //   method: 'POST',
-        //   body: JSON.stringify(credentials),
-        //   headers: { 'Content-Type': 'application/json' },
+        // const response = axios.post('/user', credentials, {
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
         // });
-        // const user = await res.json();
-
-        // // If no error and we have user data, return it
-        // if (res.ok && user) {
-        //   return user;
+        // if (!response.ok) {
+        //   return null;
         // }
-        // // Return null if user data could not be retrieved
-        // return null;
-        const user = { id: '1', name: 'admin', password: '1234' };
+
+        // // Parse the response body as JSON
+        // const data = await response.json();
+
+        // // Extract the user data from the response
+        // const user = data.user;
+        // return user;
+        const user = { username: 'admin', password: '1234' };
         if (
-          user.name === credentials.username &&
+          user.username === credentials.username &&
           user.password === credentials.password
         ) {
           return user;
