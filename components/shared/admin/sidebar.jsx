@@ -44,10 +44,13 @@ function Sidebar() {
           return <SidebarLink key={item.key} item={item} />;
         })}
         <div
-          onClick={logoutHandler}
-          className={classNames('text-red-500 cursor-pointer', linkClasses)}
+          // onClick={logoutHandler}
+          className={classNames(
+            'text-slate-500 hover:text-slate-700 cursor-pointer pl-6',
+            linkClasses
+          )}
         >
-          <span className='text-2xl'>
+          <span className='text-xl'>
             <HiOutlineLogout />
           </span>
           <span className='hidden md:inline text-base font-bold'>
@@ -81,7 +84,7 @@ function SidebarLink({ item }) {
           onClick={toggleDropdown}
         >
           <div className='flex items-center'>
-            <span className='mr-2 text-xl text-blue-500'>{item.icon}</span>
+            <span className='mr-2 text-xl text-orange-500'>{item.icon}</span>
             <span className='hidden md:inline text-sm font-semibold'>
               {item.label}
             </span>
@@ -101,16 +104,16 @@ function SidebarLink({ item }) {
   }
 
   return (
-    <div className='hover:bg-slate-200'>
+    <div className='hover:bg-slate-200 duration-200'>
       <div
         className={classNames(
           'flex items-center justify-between px-6 py-2 cursor-pointer ',
-          { 'bg-white': isOpen }
+          { 'bg-slate-100': isOpen }
         )}
         onClick={toggleDropdown}
       >
         <div className='flex items-center'>
-          <span className='mr-2 text-xl text-blue-500'>{item.icon}</span>
+          <span className='mr-2 text-xl text-orange-500'>{item.icon}</span>
           <span className='hidden md:inline text-sm font-semibold'>
             {item.label}
           </span>
@@ -126,15 +129,15 @@ function SidebarLink({ item }) {
         )}
       </div>
       {isOpen && item.sublinks && item.sublinks.length > 0 && (
-        <div className='pl-8'>
+        <div className='pl-8 hover:bg-slate-100'>
           {item.sublinks.map((sublink) => (
             <Link
               key={sublink.key}
               href={sublink.path}
               className={classNames(
-                'block py-2 text-xs font-medium hover:bg-slate-100 pl-2',
+                'block py-2 text-xs font-medium hover:bg-slate-50 pl-2',
                 {
-                  'bg-neutral-200': pathname === sublink.path,
+                  'bg-slate-200': pathname === sublink.path,
                 }
               )}
             >

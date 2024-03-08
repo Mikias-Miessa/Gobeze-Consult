@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import { FaUser } from 'react-icons/fa';
+import { FaCircleUser } from 'react-icons/fa6';
 const Navbar = () => {
   return (
     <nav className='bg-white px-4 py-2  border-b'>
@@ -17,11 +19,11 @@ const Navbar = () => {
         </div>
         <div className='flex'>
           <a href='#' className='text-gray-800 mx-4'>
-            user
+            <FaCircleUser size={30} />
           </a>
-          <a href='#' className='text-gray-800 mx-4'>
+          {/* <a href='#' className='text-gray-800 mx-4'>
             profile
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>
