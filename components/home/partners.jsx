@@ -20,7 +20,13 @@ function Partners() {
       image: Rectangle1,
     },
     {
-        id: 2,
+        id: 3,
+        imageLogo: Logo1,
+        description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
+        image: Rectangle1,
+      },
+      {
+        id: 4,
         imageLogo: Logo1,
         description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
         image: Rectangle1,
@@ -35,7 +41,7 @@ function Partners() {
       <div className='grid md:grid-cols-2 grid-cols-1 gap-16 text-white mt-14'>
         {data.map((partner) => (
           <div key={partner.id} className='bg-white text-black border border-orange-500 grid grid-cols-5'>
-            <div className='col-span-3'>
+            <div className='col-span-3 h-full'>
               <Image src={partner.imageLogo} alt='companyLogo' className='pl-20 pt-4' />
               <h3 className='ml-5 mr-2 mt-4 pt-5 pl-5'>
                 <span className='font-extrabold'>First Consult</span> is a leading economic development consulting firm implementing projects in Ethiopia.
