@@ -75,7 +75,7 @@ const NavBar = () => {
     },
     {
       id: 5,
-      link: '/#',
+      link: '/contact',
       name: 'Contact Us',
       subLink: null,
     },

@@ -4,6 +4,20 @@ import img1 from "@/public/images/community/eye1.png"
 import img2 from "@/public/images/community/eye2.png"
 
 function Health() {
+
+    const data = [
+        {
+          id: '1',
+          text: 'We help sponsor a set number of cataract surgeries per year.',
+          image: img1,
+        },
+        {
+          id: '2',
+          text: 'We actively maintain the health care professionals and facilities rating platform - TiruHakim.com',
+          image: img2,
+        },
+      ];
+
   return (
     <div className='bg-black md:mx-0 mx-6'>
         <div className='grid md:grid-cols-6 grid-cols-2 md:pl-28 md:pr-64 md:pt-20 md:pb-4'>

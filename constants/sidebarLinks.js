@@ -12,7 +12,7 @@ export const DashboardTop = [
     key: 'Home',
     label: 'Home',
     path: '/dashboard',
-    icon: <HiOutlineHome />,
+    icon: < HiOutlineHome />,
     sublinks: [],
   },
   {
