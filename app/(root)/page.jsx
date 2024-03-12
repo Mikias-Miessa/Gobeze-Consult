@@ -21,7 +21,7 @@ const Hero = () => {
       <SecondSec />
       <ThirdSec />
       <Benefit />
-      <div className='flex justify-center py-10'>
+      <div className='flex justify-center'>
         <OurTeam />
       </div>
       {/* <div className='flex justify-center pt-28 bg-black'>

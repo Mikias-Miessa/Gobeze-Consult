@@ -34,12 +34,12 @@ function Feature() {
           <div className='md:col-span-2 mt-10 md:m mb-4 md:mb-24 h-96 w-full md:w-auto'>
             <Image alt='benefit' src={ImgFea} className='h-100 w-full md:w-96 ' />
           </div>
-
+          
           <div className='text-white md:col-span-3 mt-8 ml-10'>
-            <div>
+            <div className='pt-8'>
               <SectionTitle color={'white'} title={'THE BENEFITS'} />
 
-              <div className='grid grid-cols-1 md:grid-cols-2 mt-20'>
+              <div className='grid grid-cols-1 md:grid-cols-2 mt-16'>
                 {jobsData.map((job) => (
                   <div key={job.id} className='md:mr-10'>
                     <div>
