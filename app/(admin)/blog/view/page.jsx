@@ -1,8 +1,14 @@
 'use client';
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllBlogs, selectAllBlogs, selectLoading } from '@/store/blogSlice';
+import {
+  getAllBlogs,
+  selectAllBlogs,
+  selectLoading,
+  deleteBlog,
+} from '@/store/blogSlice';
 
 const ViewBlog = () => {
   const dispatch = useDispatch();
@@ -12,6 +18,12 @@ const ViewBlog = () => {
   useEffect(() => {
     dispatch(getAllBlogs());
   }, [dispatch]);
+
+  const handleDelete = (id) => {
+    dispatch(deleteBlog(id)).then(() => {
+      dispatch(getAllBlogs());
+    });
+  };
 
   if (loading) {
     return (
@@ -39,6 +51,20 @@ const ViewBlog = () => {
             </div>
             <div className='mb-7'>
               <p className='text-base'>{item.content}</p>
+            </div>
+            <div className='flex justify-center'>
+              <Link
+                href={`/blog/edit/${item._id}`}
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2 focus:outline-none focus:shadow-outline'
+              >
+                Edit
+              </Link>
+              <button
+                onClick={() => handleDelete(item._id)}
+                className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))}

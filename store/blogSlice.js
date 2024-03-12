@@ -34,11 +34,33 @@ export const getAllBlogs = createAsyncThunk(
 export const getBlogById = createAsyncThunk(
   'blog/getBlogById',
   async (blogId, thunkAPI) => {
-    console.log(blogId)
     try {
-      console.log("here")
       const response = await axios.get(`/api/blogs/${blogId}`);
       return response.data.blog;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+    }
+  }
+);
+
+export const updateBlog = createAsyncThunk(
+  'posts/updateBlog',
+  async ({ blogId, blogData }, thunkAPI) => {
+    try {
+      const response = await axios.put(`/api/blogs/${blogId}`, blogData);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+    }
+  }
+);
+
+export const deleteBlog = createAsyncThunk(
+  'posts/deleteBlog',
+  async (blogId, thunkAPI) => {
+    try {
+      await axios.delete(`/api/blogs/${blogId}`);
+      return blogId;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
     }
@@ -85,6 +107,28 @@ export const blogSlice = createSlice({
         state.blogs = [action.payload];
       })
       .addCase(getBlogById.rejected, (state, action) => {
+        state.loading = false;
+      })
+      .addCase(updateBlog.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(updateBlog.fulfilled, (state, action) => {
+        state.loading = false;
+        state.blogs = state.blogs.map((blog) =>
+          blog.id === action.payload.id ? action.payload : blog
+        );
+      })
+      .addCase(updateBlog.rejected, (state, action) => {
+        state.loading = false;
+      })
+      .addCase(deleteBlog.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(deleteBlog.fulfilled, (state, action) => {
+        state.loading = false;
+        state.blogs = state.blogs.filter((blog) => blog.id !== action.payload);
+      })
+      .addCase(deleteBlog.rejected, (state, action) => {
         state.loading = false;
       });
   },
