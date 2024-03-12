@@ -47,12 +47,12 @@ const ContactUs = () => {
   return (
     <div
       className='bg-cover bg-center bg-no-repeat flex justify-center items-center h-screen w-full'
-      style={{ backgroundImage: `url("/contactBg/contact.jpg")` }}
+      style={{ backgroundImage: `url("/contactBg/contactBG.png")` }}
     >
       <div className='backdrop-filter backdrop-blur-xl'>
         <div className='w-full max-w-7xl md:p-8 p-16 rounded-lg shadow-lg border'>
           <div className='relative'>
-            <h1 className='text-4xl text-center text-black font-bold mb-8 pb-2'>
+            <h1 className='text-4xl text-center text-white font-bold mb-8 pb-2'>
               Contact Us
             </h1>
             <div className='absolute w-14 h-1 bg-orange-500 bottom-0 left-1/2 transform -translate-x-1/2 ml-1'></div>
@@ -63,7 +63,7 @@ const ContactUs = () => {
                 {' '}
                 {/* Set input field width to full for small screens */}
                 <input
-                  className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-black focus:outline-none mb-4 md:mb-0 ${
+                  className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-white focus:outline-none mb-4 md:mb-0 ${
                     errors.name && 'border-red-500'
                   }`}
                   type='text'
@@ -80,7 +80,7 @@ const ContactUs = () => {
                 {' '}
                 {/* Set input field width to full for small screens */}
                 <input
-                  className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-black focus:outline-none ${
+                  className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-white focus:outline-none ${
                     errors.email && 'border-red-500'
                   }`}
                   type='email'
@@ -96,7 +96,7 @@ const ContactUs = () => {
             </div>
             <div className='mb-4'>
               <input
-                className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-black focus:outline-none ${
+                className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-white focus:outline-none ${
                   errors.subject && 'border-red-500'
                 }`}
                 type='text'
@@ -111,7 +111,7 @@ const ContactUs = () => {
             </div>
             <div className='mb-4'>
               <textarea
-                className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-black focus:outline-none ${
+                className={`w-full px-4 py-2 border bg-transparent border-gray-300 text-white focus:outline-none ${
                   errors.message && 'border-red-500'
                 }`}
                 rows='5'
@@ -124,7 +124,7 @@ const ContactUs = () => {
                 <p className='text-red-500 text-sm'>{errors.message}</p>
               )}
             </div>
-            <div className='text-center bg-orange-500 w-1/3'>
+            <div className='text-center bg-white w-1/3'>
               <button className='px-0 py-1 text-black mx-auto' type='submit'>
                 Submit
               </button>
