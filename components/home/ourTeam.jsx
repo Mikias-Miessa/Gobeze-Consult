@@ -41,7 +41,7 @@ const OurTeam = () => {
       style={{ backgroundImage: `url('/images/Team_Section.png')` }}
     >
       {/* <LampDemo /> */}
-      <div className='flex justify-center '>
+      <div className='flex justify-center'>
         <div className='w-[80%]'>
           <div className='mb-10'>
             <SectionTitle title={'OUR TEAM'} color={'black'} />
@@ -88,10 +88,6 @@ const OurTeam = () => {
                       height={400}
                       className='hover:scale-110 duration-200'
                     />
-                    {/* <DirectionAwareHover
-                key={team.id}
-                imageUrl={team.image}
-              /> */}
                   </SplideSlide>
                 ) : null
               )}
