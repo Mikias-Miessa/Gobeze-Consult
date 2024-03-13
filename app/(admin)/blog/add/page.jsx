@@ -1,11 +1,13 @@
 'use client';
 import React, { useState } from 'react';
 import FileBase64 from 'react-file-base64';
+import { useRouter } from 'next/navigation'
 import {useDispatch } from 'react-redux';
 import { addBlog } from '@/store/blogSlice';
 
 const AddBlog = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -29,6 +31,7 @@ const AddBlog = () => {
     };
 
     dispatch(addBlog(cardData));
+    router.push('/blog/view');
 
     setTitle('');
     setContent('');

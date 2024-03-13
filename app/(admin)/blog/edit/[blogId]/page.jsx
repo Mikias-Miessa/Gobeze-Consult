@@ -1,12 +1,19 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import FileBase64 from 'react-file-base64';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBlogById, selectBlogById, selectLoading } from '@/store/blogSlice';
+import {
+  getBlogById,
+  selectBlogById,
+  selectLoading,
+  updateBlog,
+} from '@/store/blogSlice';
 
 const editBlog = ({ params }) => {
   const { blogId } = params;
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const blog = useSelector((state) => selectBlogById(state, blogId));
   const loading = useSelector(selectLoading);
@@ -15,11 +22,17 @@ const editBlog = ({ params }) => {
     dispatch(getBlogById(blogId));
   }, [dispatch, blogId]);
 
-  console.log(blog);
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+  const [image, setImage] = useState('');
 
-  const [title, setTitle] = useState(blog?.title);
-  const [content, setContent] = useState(blog?.content);
-  const [image, setImage] = useState(blog?.image);
+  useEffect(() => {
+    if (blog) {
+      setTitle(blog.title || '');
+      setContent(blog.content || '');
+      setImage(blog.image || '');
+    }
+  }, [blog]);
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -32,13 +45,17 @@ const editBlog = ({ params }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const cardData = {
-      image,
-      content,
-      title,
+    const updatedBlogData = {
+      blogId: blogId,
+      blogData: {
+        title: title,
+        content: content,
+        image: image,
+      },
     };
 
-    dispatch(addBlog(cardData));
+    dispatch(updateBlog(updatedBlogData));
+    router.push('/blog/view');
 
     setTitle('');
     setContent('');
