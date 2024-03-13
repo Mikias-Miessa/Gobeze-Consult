@@ -19,18 +19,18 @@ function Partners() {
       description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
       image: Rectangle1,
     },
-    {
-        id: 3,
-        imageLogo: Logo1,
-        description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
-        image: Rectangle1,
-      },
-      {
-        id: 4,
-        imageLogo: Logo1,
-        description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
-        image: Rectangle1,
-      },
+    // {
+    //     id: 3,
+    //     imageLogo: Logo1,
+    //     description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
+    //     image: Rectangle1,
+    //   },
+    //   {
+    //     id: 4,
+    //     imageLogo: Logo1,
+    //     description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
+    //     image: Rectangle1,
+    //   },
   ];
 
   return (

@@ -49,7 +49,7 @@ const ContactUs = () => {
       className='bg-cover bg-center bg-no-repeat flex justify-center items-center h-screen w-full'
       style={{ backgroundImage: `url("/contactBg/contactBG.png")` }}
     >
-      <div className='backdrop-filter backdrop-blur-xl'>
+      <div className='backdrop-filter backdrop-blur-xl mt-20'>
         <div className='w-full max-w-7xl md:p-8 p-16 rounded-lg shadow-lg border'>
           <div className='relative'>
             <h1 className='text-4xl text-center text-white font-bold mb-8 pb-2'>
