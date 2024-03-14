@@ -24,21 +24,19 @@ export const options = {
         },
       },
       async authorize(credentials, req) {
-        // const response = axios.post('/user', credentials, {
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //   },
+        // console.log(credentials);
+        // const res = await axios.post('/api/user', credentials, {
+        //   headers: { 'Content-Type': 'application/json' },
         // });
-        // if (!response.ok) {
-        //   return null;
+        // console.log(res);
+        // const user = await res.json();
+
+        // // If no error and we have user data, return it
+        // if (res.ok && user) {
+        //   return user;
         // }
-
-        // // Parse the response body as JSON
-        // const data = await response.json();
-
-        // // Extract the user data from the response
-        // const user = data.user;
-        // return user;
+        // // Return null if user data could not be retrieved
+        // return null;
         const user = { username: 'admin', password: '1234' };
         if (
           user.username === credentials.username &&

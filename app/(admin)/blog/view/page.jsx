@@ -1,6 +1,9 @@
 'use client';
 import React, { useEffect } from 'react';
+import { Bars } from 'react-loader-spinner';
 import Image from 'next/image';
+import { FaEdit } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -27,17 +30,27 @@ const ViewBlog = () => {
 
   if (loading) {
     return (
-      <div className='text-2xl font-bold my-4 text-center'>Loading...</div>
+      <div className=' h-screen bg-white flex justify-center items-center'>
+        <Bars
+          height='40'
+          width='40'
+          color='#FF7F00'
+          ariaLabel='bars-loading'
+          wrapperStyle={{}}
+          wrapperClass=''
+          visible={true}
+        />
+      </div>
     );
   }
 
   return (
-    <div className='flex justify-center items-center py-10'>
+    <div className='bg-white flex justify-center items-center py-10'>
       <div className='flex flex-wrap justify-center items-center gap-10'>
         {blogs.map((item) => (
           <div
             key={item._id}
-            className='max-w-sm bg-white border border-gray-200 rounded-lg shadow'
+            className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
           >
             <Image
               className='rounded-t-lg'
@@ -50,20 +63,30 @@ const ViewBlog = () => {
               <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
                 {item.title}
               </h5>
-              <p className='mb-3 font-normal text-gray-700'>{item.content}</p>
-              <div className='flex justify-center gap-10'>
-                <Link
-                  href={`/blog/edit/${item._id}`}
-                  className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300'
-                >
-                  Edit
+              <div className='h-24 overflow-hidden'>
+                <p className='text-sm mb-3 font-normal text-gray-700 overflow-hidden overflow-ellipsis'>
+                  {item.content}
+                </p>
+              </div>
+
+              <div className='flex justify-between gap-10 mt-4'>
+                <Link href={`/blog/edit/${item._id}`} className=''>
+                  <FaEdit
+                    size={25}
+                    className='text-gray-500 hover:text-gray-700'
+                  />
                 </Link>
-                <button
+                <MdDelete
+                  size={25}
+                  onClick={() => handleDelete(item._id)}
+                  className='text-gray-500 hover:text-gray-700 cursor-pointer'
+                />
+                {/* <button
                   onClick={() => handleDelete(item._id)}
                   className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
                 >
                   Delete
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

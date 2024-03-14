@@ -9,6 +9,7 @@ import {
   selectLoading,
   updateBlog,
 } from '@/store/blogSlice';
+import { Bars } from 'react-loader-spinner';
 
 const editBlog = ({ params }) => {
   const { blogId } = params;
@@ -64,26 +65,36 @@ const editBlog = ({ params }) => {
 
   if (loading) {
     return (
-      <div className='text-2xl font-bold my-4 text-center'>Loading...</div>
+      <div className=' h-screen bg-white flex justify-center items-center'>
+        <Bars
+          height='40'
+          width='40'
+          color='#FF7F00'
+          ariaLabel='bars-loading'
+          wrapperStyle={{}}
+          wrapperClass=''
+          visible={true}
+        />
+      </div>
     );
   }
 
   return (
-    <div className='flex justify-center items-center bg-white py-10'>
-      <div className='max-w-md w-full px-4 py-8 bg-gray-100 rounded-lg shadow-lg'>
-        <h1 className='text-blue-500 font-bold text-2xl mb-4'>Edit Blog</h1>
+    <div className=' flex justify-start pl-10 items-center bg-white py-5'>
+      <div className='max-w-md  px-4 py-8 bg-white '>
+        <h1 className='text-black font-bold text-2xl mb-4'>Edit Blog</h1>
         <form onSubmit={handleSubmit}>
           <div className='mb-4'>
             <label
               htmlFor='title'
-              className='block text-gray-700 font-bold mb-2'
+              className='block text-orange-500 font-bold mb-2'
             >
               Title
             </label>
             <input
               type='text'
               id='title'
-              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              className='appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               placeholder='Enter title'
               value={title}
               onChange={handleTitleChange}
@@ -93,13 +104,13 @@ const editBlog = ({ params }) => {
           <div className='mb-4'>
             <label
               htmlFor='content'
-              className='block text-gray-700 font-bold mb-2'
+              className='block text-orange-500 font-bold mb-2'
             >
               Content
             </label>
             <textarea
               id='content'
-              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              className='appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               placeholder='Enter content'
               value={content}
               onChange={handleContentChange}
@@ -110,7 +121,7 @@ const editBlog = ({ params }) => {
           <div className='mb-4'>
             <label
               htmlFor='image'
-              className='block text-gray-700 font-bold mb-2'
+              className='block text-orange-500 font-bold mb-2'
             >
               Image URL
             </label>
@@ -124,12 +135,14 @@ const editBlog = ({ params }) => {
           <div>
             <img src={image} alt='' className='w-full p-2 rounded-md' />
           </div>
-          <button
-            type='submit'
-            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-          >
-            Submit
-          </button>
+          <div className=''>
+            <button
+              type='submit'
+              className='mt-6  bg-black hover:bg-orange-500 hover:text-black text-orange-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-36 tracking-wider'
+            >
+              Done
+            </button>
+          </div>
         </form>
       </div>
     </div>
