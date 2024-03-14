@@ -10,6 +10,7 @@ import OurTeam from '@/components/home/ourTeam';
 import NewsLetter from '@/components/home/newsLetter';
 import Transition from '@/components/home/transition';
 import ContactUs from '@/components/home/contactUs';
+import Partners from '@/components/home/partners';
 
 
 const Hero = () => {
@@ -20,12 +21,13 @@ const Hero = () => {
       <SecondSec />
       <ThirdSec />
       <Benefit />
-      <div className='flex justify-center py-10'>
+      <div className='flex justify-center'> 
         <OurTeam />
       </div>
-      <div className='flex justify-center pt-28 bg-black'>
+      {/* <div className='flex justify-center pt-28 bg-black'>
         <LogoSection />
-      </div>
+      </div> */}
+      <Partners/>
       <Testimonial />
 
       <div className='flex justify-center'>
