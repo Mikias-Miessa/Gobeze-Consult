@@ -23,7 +23,7 @@
 import bcrypt from 'bcrypt';
 import dbConnect from '@/utils/db';
 import { NextResponse } from 'next/server';
-import { User } from '@/models/User';
+import User  from '@/models/User';
 
 // export async function POST(request) {
 //   const { username, password } = await request.json();
