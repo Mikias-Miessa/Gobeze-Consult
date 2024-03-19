@@ -63,7 +63,7 @@ const blogs = () => {
               <p className='text-base'>{item.description}</p>
             </div>
             <div className='bg-black text-center'>
-              <button className='text-white text-2xl py-2'>Read More</button>
+              <a href='/insights/detail' className='text-white text-2xl py-2'>Read More</a>
             </div>
           </div>
         ))}
