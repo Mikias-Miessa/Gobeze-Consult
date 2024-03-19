@@ -74,8 +74,21 @@ const SecondSec = () => {
                     />
                   </div>
                   <div className='md:w-56'>
-                    <div className='mr-4 text-2xl'>{item.num}</div>
-                    <div>{item.theText}</div>
+                    <div
+                      className='mr-4 text-2xl'
+                      style={{
+                        color: hoverIndex === index ? 'orange' : 'white',
+                      }}
+                    >
+                      {item.num}
+                    </div>
+                    <div
+                      style={{
+                        color: hoverIndex === index ? 'orange' : 'white',
+                      }}
+                    >
+                      {item.theText}
+                    </div>
                   </div>
                 </div>
               </div>
