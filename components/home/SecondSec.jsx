@@ -64,7 +64,7 @@ const SecondSec = () => {
                 onMouseEnter={() => handleHover(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className='flex'>
+                <div className='flex cursor-pointer'>
                   <div className='mr-5 mt-1'>
                     <IoMdRadioButtonOn
                       className='text-3xl'
