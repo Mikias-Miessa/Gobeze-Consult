@@ -1,70 +1,31 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import FileBase64 from 'react-file-base64';
+import React, { useEffect } from 'react';
+import { Bars } from 'react-loader-spinner';
+import Image from 'next/image';
+import { FaEdit } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
+import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  getPartnerById,
-  selectPartnerById,
+  getAllPartners,
+  selectAllPartners,
   selectLoading,
-  updatePartner,
+  deletePartner,
 } from '@/store/partnerSlice';
-import { Bars } from 'react-loader-spinner';
 
-const editPartner = ({ params }) => {
-  const { partnerId } = params;
+const ViewPartner = () => {
   const dispatch = useDispatch();
-  const router = useRouter();
-
-  const partner = useSelector((state) => selectPartnerById(state, partnerId));
+  const partners = useSelector(selectAllPartners);
   const loading = useSelector(selectLoading);
 
   useEffect(() => {
-    dispatch(getPartnerById(partnerId));
-  }, [dispatch, partnerId]);
+    dispatch(getAllPartners());
+  }, [dispatch]);
 
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [image, setImage] = useState('');
-  const [logo, setLogo] = useState('');
-
-  useEffect(() => {
-    if (partner) {
-      setName(partner.name || '');
-      setDescription(partner.content || '');
-      setImage(partner.image || '');
-      setLogo(partner.logo || '');
-    }
-  }, [partner]);
-
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const updatedPartnerData = {
-      partnerId: partnerId,
-      partnerData: {
-        name: name,
-        description: description,
-        image: image,
-        logo: logo,
-      },
-    };
-
-    dispatch(updatePartner(updatedPartnerData));
-    router.push('/partner/view');
-
-    setName('');
-    setDescription('');
-    setImage('');
-    setLogo('');
+  const handleDelete = (id) => {
+    dispatch(deletePartner(id)).then(() => {
+      dispatch(getAllPartners());
+    });
   };
 
   if (loading) {
@@ -84,90 +45,63 @@ const editPartner = ({ params }) => {
   }
 
   return (
-    <div className=' flex justify-start pl-10 items-center bg-white py-5'>
-      <div className='max-w-md  px-4 py-8 bg-white '>
-        <h1 className='text-black font-bold text-2xl mb-4'>Edit Partner</h1>
-        <form onSubmit={handleSubmit}>
-          <div className='mb-4'>
-            <label
-              htmlFor='title'
-              className='block text-orange-500 font-bold mb-2'
-            >
-              Title
-            </label>
-            <input
-              type='text'
-              id='title'
-              className='appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-              placeholder='Enter title'
-              value={title}
-              onChange={handleNameChange}
-              required
+    <div className='bg-white flex justify-center items-center py-10'>
+      <div className='flex flex-wrap justify-center items-center gap-10'>
+        {partners.map((item) => (
+          <div
+            key={item._id}
+            className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
+          >
+
+            <Image
+              className='rounded-t-lg'
+              src={item.logo}
+              width={300}
+              height={200}
+              alt='the logo'
             />
-          </div>
-          <div className='mb-4'>
-            <label
-              htmlFor='content'
-              className='block text-orange-500 font-bold mb-2'
-            >
-              Description
-            </label>
-            <textarea
-              id='content'
-              className='appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-              placeholder='Enter content'
-              value={content}
-              onChange={handleDescriptionChange}
-              rows={8}
-              required
+            <Image
+              className='rounded-t-lg'
+              src={item.image}
+              width={500}
+              height={500}
+              alt='the image'
             />
+            <div className='p-5'>
+              <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
+                {item.name}
+              </h5>
+              <div className='h-24 overflow-hidden'>
+                <p className='text-sm mb-3 font-normal text-gray-700 overflow-hidden overflow-ellipsis'>
+                  {item.description}
+                </p>
+              </div>
+
+              <div className='flex justify-between gap-10 mt-4'>
+                <Link href={`/partner/edit/${item._id}`} className=''>
+                  <FaEdit
+                    size={25}
+                    className='text-gray-500 hover:text-gray-700'
+                  />
+                </Link>
+                <MdDelete
+                  size={25}
+                  onClick={() => handleDelete(item._id)}
+                  className='text-gray-500 hover:text-gray-700 cursor-pointer'
+                />
+                {/* <button
+                  onClick={() => handleDelete(item._id)}
+                  className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                >
+                  Delete
+                </button> */}
+              </div>
+            </div>
           </div>
-          <div className='mb-4'>
-            <label
-              htmlFor='image'
-              className='block text-orange-500 font-bold mb-2'
-            >
-              Logo URL
-            </label>
-            <FileBase64
-              type='file'
-              multiple={false}
-              onDone={({ base64 }) => setLogo(base64)}
-              className='w-full p-2 rounded-md'
-            />
-          </div>
-          <div>
-            <img src={logo} alt='' className='w-full p-2 rounded-md' />
-          </div>
-          <div className='mb-4'>
-            <label
-              htmlFor='image'
-              className='block text-orange-500 font-bold mb-2'
-            >
-              Image URL
-            </label>
-            <FileBase64
-              type='file'
-              multiple={false}
-              onDone={({ base64 }) => setImage(base64)}
-              className='w-full p-2 rounded-md'
-            />
-          </div>
-          <div>
-            <img src={image} alt='' className='w-full p-2 rounded-md' />
-          </div>
-          <div className=''>
-            <button
-              type='submit'
-              className='mt-6  bg-black hover:bg-orange-500 hover:text-black text-orange-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-36 tracking-wider'
-            >
-              Done
-            </button>
-          </div>
-        </form>
+        ))}
       </div>
     </div>
   );
 };
 
-export default editPartner;
+export default ViewPartner;
