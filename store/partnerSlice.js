@@ -4,7 +4,7 @@ import axios from 'axios';
 const initialState = {
   partners: [],
   loading: false,
-  newBlogAdded: null,
+  newPartnerAdded: null,
 };
 
 export const addPartner = createAsyncThunk(
@@ -114,7 +114,7 @@ export const partnerSlice = createSlice({
       })
       .addCase(updatePartner.fulfilled, (state, action) => {
         state.loading = false;
-        state.partners = state.partners.map((blog) =>
+        state.partners = state.partners.map((partner) =>
           partner.id === action.payload.id ? action.payload : partner
         );
       })
@@ -126,7 +126,7 @@ export const partnerSlice = createSlice({
       })
       .addCase(deletePartner.fulfilled, (state, action) => {
         state.loading = false;
-        state.partners = state.partners.filter((blog) => partner.id !== action.payload);
+        state.partners = state.partners.filter((partner) => partner.id !== action.payload);
       })
       .addCase(deletePartner.rejected, (state, action) => {
         state.loading = false;

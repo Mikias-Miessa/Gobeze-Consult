@@ -33,7 +33,7 @@ const AddPartner = () => {
     };
 
     dispatch(addPartner(cardData));
-    router.push('/partner/view');
+    router.push('/partners/view');
 
     setName('');
     setDescription('');
@@ -117,8 +117,7 @@ const AddPartner = () => {
           <div className=''>
             <button
               type='submit'
-              className='mt-6  bg-black hover:bg-orange-500 hover:text-black text-orange-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-36 tracking-wider'
-            >
+              className='mt-6  bg-black hover:bg-orange-500 hover:text-black text-orange-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-36 tracking-wider'>
               POST
             </button>
           </div>

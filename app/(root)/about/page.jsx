@@ -5,6 +5,7 @@ import OurVisionSecond from '@/components/about/ourVisionSecond';
 import Training from '@/components/about/training';
 import SomeSection from '@/components/about/someSection';
 import LastSec from '@/components/about/lastSec';
+import OurMission from '@/components/about/ourMission';
 
 const page = () => {
   return (
@@ -12,9 +13,11 @@ const page = () => {
       <About />
       <OurVision />
       <OurVisionSecond />
-      <SomeSection/>
+      <OurMission />
+      <SomeSection />
       <Training />
-      <LastSec/>
+      <LastSec />
+      
     </div>
   );
 };

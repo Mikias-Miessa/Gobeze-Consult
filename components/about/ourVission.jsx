@@ -48,7 +48,7 @@ function OurVission() {
         </div>
 
         <div>
-          <Image src={SecondPerson} alt='VisionPerson' className='md:h-72 h-52 md:w-full w-80 md:m-20 m-8 md:my-0'/>
+          <Image src={SecondPerson} alt='VisionPerson'  className='md:h-72 h-52 md:w-full w-80 md:m-20 m-8 md:my-0'/>
         </div>
 
       </div>
