@@ -86,7 +86,7 @@ const editBlog = ({ params }) => {
         <form onSubmit={handleSubmit}>
           <div className='mb-4'>
             <label
-              htmlFor='title'
+              htmlFor='name'
               className='block text-orange-500 font-bold mb-2'
             >
               Title
