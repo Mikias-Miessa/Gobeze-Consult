@@ -5,12 +5,14 @@ import OurVisionSecond from '@/components/about/ourVisionSecond';
 import Training from '@/components/about/training';
 import SomeSection from '@/components/about/someSection';
 import LastSec from '@/components/about/lastSec';
+import AboutSecond from '@/components/about/aboutSecond';
 import OurMission from '@/components/about/ourMission';
 
 const page = () => {
   return (
     <div>
       <About />
+      <AboutSecond />
       <OurVision />
       <OurVisionSecond />
       <OurMission />
