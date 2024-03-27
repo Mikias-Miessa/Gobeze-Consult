@@ -1,23 +1,27 @@
 import React from 'react';
 import Image from 'next/image';
 import SectionTitle from '@/components/shared/sectionTitle';
-import Rectangle1 from '@/public/images/partner1.png';
+import Rectangle1 from '@/public/images/firstConsult.png';
+import Rectangle2 from '@/public/images/firstconsult2.png';
 import Logo1 from '@/public/images/partnerLogo1.png';
+import Logo2 from '@/public/images/britishC.png';
 import { FiArrowRight } from 'react-icons/fi';
 
 function Partners() {
   const data = [
     {
       id: 1,
+      name: "First Consult",
       imageLogo: Logo1,
       description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
       image: Rectangle1,
     },
     {
       id: 2,
-      imageLogo: Logo1,
+      name: "British Council",
+      imageLogo: Logo2,
       description: 'First Consult is a leading economic development consulting firm implementing projects in Ethiopia.',
-      image: Rectangle1,
+      image: Rectangle2,
     },
     // {
     //     id: 3,
@@ -44,7 +48,7 @@ function Partners() {
             <div className='col-span-3 h-full'>
               <Image src={partner.imageLogo} alt='companyLogo' className='pl-20 pt-4' />
               <h3 className='ml-5 mr-2 mt-4 pt-5 pl-5'>
-                <span className='font-extrabold'>First Consult</span> is a leading economic development consulting firm implementing projects in Ethiopia.
+                <span className='font-extrabold'>{partner.name}</span> is a leading economic development consulting firm implementing projects in Ethiopia.
               </h3>
               <button className='bg-black text-white flex items-center w-full mt-28 px-5 py-4 pl-20'>
                 Learn More <FiArrowRight className='ml-3' size={20} />

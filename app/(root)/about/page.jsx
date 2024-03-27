@@ -6,6 +6,7 @@ import Training from '@/components/about/training';
 import SomeSection from '@/components/about/someSection';
 import LastSec from '@/components/about/lastSec';
 import AboutSecond from '@/components/about/aboutSecond';
+import OurMission from '@/components/about/ourMission';
 
 const page = () => {
   return (
@@ -15,8 +16,11 @@ const page = () => {
       <OurVisionSecond />
       <OurVision />
       {/* <SomeSection/> */}
+      <OurMission />
+      <SomeSection />
       <Training />
-      <LastSec/>
+      <LastSec />
+      
     </div>
   );
 };

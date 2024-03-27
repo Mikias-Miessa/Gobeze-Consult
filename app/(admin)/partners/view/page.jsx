@@ -56,16 +56,16 @@ const ViewPartner = () => {
             <Image
               className='rounded-t-lg'
               src={item.logo}
-              width={300}
-              height={200}
-              alt='the logo'
+              width={100}
+              height={100}
+              alt='Logo'
             />
             <Image
               className='rounded-t-lg'
               src={item.image}
               width={500}
               height={500}
-              alt='the image'
+              alt='Partner img'
             />
             <div className='p-5'>
               <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
@@ -89,12 +89,6 @@ const ViewPartner = () => {
                   onClick={() => handleDelete(item._id)}
                   className='text-gray-500 hover:text-gray-700 cursor-pointer'
                 />
-                {/* <button
-                  onClick={() => handleDelete(item._id)}
-                  className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                >
-                  Delete
-                </button> */}
               </div>
             </div>
           </div>

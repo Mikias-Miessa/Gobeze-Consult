@@ -17,7 +17,7 @@ const partnerSchema = new Schema({
   },
   image: {
     type: String,
-    require: true,
+    required: true,
   },
   createdAt: {
     type: Date,

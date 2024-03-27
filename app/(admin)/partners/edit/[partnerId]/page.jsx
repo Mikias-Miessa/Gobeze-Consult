@@ -59,7 +59,7 @@ const editPartner = ({ params }) => {
     };
 
     dispatch(updatePartner(updatedPartnerData));
-    router.push('/partner/view');
+    router.push('/partners/view');
 
     setName('');
     setDescription('');
@@ -137,7 +137,7 @@ const editPartner = ({ params }) => {
             />
           </div>
           <div>
-            <img src={logo} alt='' className='w-full p-2 rounded-md' />
+            <img src={logo} alt='' className='w-full p-2 rounded-md'/>
           </div>
           <div className='mb-4'>
             <label

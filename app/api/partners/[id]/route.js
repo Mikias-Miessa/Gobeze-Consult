@@ -27,3 +27,4 @@ export async function DELETE(request, { params }) {
   await Partner.findByIdAndDelete(id);
   return NextResponse.json({ message: 'Partner deleted' }, { status: 200 });
 }
+

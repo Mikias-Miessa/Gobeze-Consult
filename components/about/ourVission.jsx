@@ -72,13 +72,8 @@ function OurVission() {
           </div>
         </div>
 
-        <div className='col-span-2 mt-7'>
-          <Image
-            src={trainCenter1}
-            alt='VissionGirlImage'
-            height={90}
-            className='md:absolute md:w-96 w-80 md:h-fit h-96 md md:ml-0 ml-10 md:my-4 my-0'
-          />
+        <div>
+          <Image src={SecondPerson} alt='VisionPerson'  className='md:h-72 h-52 md:w-full w-80 md:m-20 m-8 md:my-0'/>
         </div>
       </div>
     </div>
