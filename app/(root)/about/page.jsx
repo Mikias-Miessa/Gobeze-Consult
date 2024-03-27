@@ -7,6 +7,8 @@ import SomeSection from '@/components/about/someSection';
 import LastSec from '@/components/about/lastSec';
 import AboutSecond from '@/components/about/aboutSecond';
 import OurMission from '@/components/about/ourMission';
+import Partners from '@/components/home/partners';
+import OurTeam from '@/components/home/ourTeam';
 
 const page = () => {
   return (
@@ -17,10 +19,13 @@ const page = () => {
       {/* <OurVision /> */}
       {/* <SomeSection/> */}
       <OurMission />
-      <SomeSection />
-      <Training />
+      {/* <SomeSection /> */}
+      {/* <Training /> */}
+      <div className='flex justify-center'>
+        <OurTeam />
+      </div>
+      <Partners />
       <LastSec />
-      
     </div>
   );
 };
