@@ -89,12 +89,6 @@ const ViewPartner = () => {
                   onClick={() => handleDelete(item._id)}
                   className='text-gray-500 hover:text-gray-700 cursor-pointer'
                 />
-                {/* <button
-                  onClick={() => handleDelete(item._id)}
-                  className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                >
-                  Delete
-                </button> */}
               </div>
             </div>
           </div>

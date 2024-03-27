@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from "@/public/images/about/abt_partner.png"
+import img1 from "@/public/images/about/groupPartner.png"
 import Image from "next/image"
 
 function LastSec() {
