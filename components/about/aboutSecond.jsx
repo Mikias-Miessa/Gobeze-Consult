@@ -4,11 +4,11 @@ import aboutImg from '@/public/images/about/aboutS.png';
 
 const AboutSecond = () => {
   return (
-    <div className='md:flex items-center max-w-screen-lg mx-auto gap-14 md:pt-24 overflow-hidden p-10 md:h-[30rem]'>
+    <div className='md:flex items-center max-w-screen-lg mx-auto gap-14 overflow-hidden p-10  h-screen'>
       <div className='md:w-1/2'>
-        <Image src={aboutImg} alt='aster' className='' />
+        <Image src={aboutImg} alt='aster' className='h-[25rem]' />
       </div>
-      <div className='md:w-1/2 mt-5'>
+      <div className='md:w-1/2'>
         <div className='mb-5'>
           <h1 className='text-5xl md:text-8xl font-bold text-center md:text-start bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 inline-block text-transparent bg-clip-text'>
             About US

@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import { LampDemo } from './lampeffetc';
-import SectionTitle from '../shared/sectionTitle';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Image from 'next/image';
+import SectionTitle from '../shared/sectionTitle';
 import { useEffect, useRef, useState } from 'react';
 import { DirectionAwareHover } from '../shared/card';
 
@@ -12,42 +11,46 @@ const OurTeam = () => {
     {
       id: 1,
       name: 'Mikias Miessa',
-      image: '/images/girl_behind.png',
+      image: '/images/about/miki.png',
+      role: 'Full Stack Developer',
     },
     {
       id: 2,
-      name: 'Dagim Asnake',
-      image: '/images/girl_behind.png',
+      name: 'Brook Habte',
+      image: '/images/about/lidya.png',
+      role: 'Full Stack Developer',
     },
     {
       id: 3,
-      name: 'Brook Habte',
-      image: '/images/girl_behind.png',
+      name: 'Dagim Asnake',
+      image: '/images/about/dagim.png',
+      role: 'Full Stack Developer',
     },
     {
       id: 4,
       name: 'Mercy Habte',
-      image: '/images/girl_behind.png',
+      image: '/images/about/miki.png',
+      role: 'Full Stack Developer',
     },
     {
       id: 5,
       name: 'Hanna Kebede',
-      image: '/images/girl_behind.png',
+      image: '/images/about/lidya.png',
+      role: 'Full Stack Developer',
     },
   ];
+
   return (
     <div
-      className='flex w-[1920px] h-screen bg-cover bg-center items-center'
+      className='flex w-[1920px] h-screen bg-cover bg-center items-center relative'
       style={{ backgroundImage: `url('/images/Team_Section.png')` }}
     >
-      {/* <LampDemo /> */}
-      <div className='flex justify-center'>
+      <div className='flex justify-center w-full'>
         <div className='w-[80%]'>
           <div className='mb-10'>
             <SectionTitle title={'OUR TEAM'} color={'black'} />
           </div>
           <Splide
-            // Update activeSlide state on slide change
             options={{
               type: 'loop',
               autoplay: true,
@@ -80,14 +83,22 @@ const OurTeam = () => {
               teams.map((team, index) =>
                 team ? (
                   <SplideSlide key={team.id}>
-                    <Image
-                      quality={100}
-                      src={team.image}
-                      alt='person'
-                      width={300}
-                      height={400}
-                      className='hover:scale-110 duration-200'
-                    />
+                    <div className='relative w-full h-full'>
+                      <Image
+                        quality={100}
+                        src={team.image}
+                        alt='person'
+                        width={300}
+                        height={400}
+                        className='hover:scale-110 duration-200'
+                      />
+                      <div className='absolute inset-0 flex flex-col justify-center items-center bg-gray-50 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300'>
+                        <h1 className='text-white text-xl font-bold mb-1'>
+                          {team.name}
+                        </h1>
+                        <p className='text-white text-lg'>{team.role}</p>
+                      </div>
+                    </div>
                   </SplideSlide>
                 ) : null
               )}
