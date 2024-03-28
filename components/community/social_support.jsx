@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import Faces from '@/public/images/faces.png';
-import Community1 from '@/public/images/community_one.png';
-import Community2 from '@/public/images/community_two.png';
-import Community3 from '@/public/images/community_three.png';
-import Community4 from '@/public/images/community_four.png';
+import Community1 from '@/public/images/community/Ellipse1.png';
+import Community2 from '@/public/images/community/Ellipse2.png';
+import Community3 from '@/public/images/community/Ellipse3.png';
+import Community4 from '@/public/images/community/Ellipse4.png';
 import SectionTitle from '../shared/sectionTitle';
 
 const data = [
@@ -32,6 +32,10 @@ const data = [
     description:
       'Present the job matching services that present the job matching services that.',
   },
+  // {
+  //   id: 5,
+  //   heading: "Yenesew is a global initiative that emerged in response to the COVID-19 pandemic, aiming to support individuals who have lost their jobs by providing them with non-perishable food items and essential sanitization products.",
+  // }
 ];
 
 function SocialSupport() {
@@ -42,11 +46,11 @@ function SocialSupport() {
           {data.map((feature) => (
             <div key={feature.id}>
               <div className='bg-black px-5 pb-3 pt-5 m-5 '>
-                <div className='w-28 h-28 bg-white mx-auto my-auto rounded-full'>
+                <div className='mb-2'>
                   <Image
                     src={feature.imageSrc}
                     alt='community'
-                    className='mx-auto my-auto pt-4'
+                    className='mx-auto my-auto pt-4 size-32'
                   />
                 </div>
                 <p className='text-gray-400 text-center pt-4'>
@@ -59,10 +63,8 @@ function SocialSupport() {
 
         <div className='ml-10 mx-4 mt-5'>
           <SectionTitle title={'Yene Sew'} color={'black'} />
-          <p className='text-gray-800 mt-6'>
-            Present the job matching services that connect talent with creative
-            industry opportunities loream epsum epsum opportunities loream epsum
-            epsum.
+          <p className='text-gray-800 mt-6 mr-14'>
+          Yenesew is a global initiative that emerged in response to the COVID-19 pandemic, aiming to support individuals who have lost their jobs by providing them with non-perishable food items and essential sanitization products.
           </p>
           <button className='mb-16 mt-10 text-xl px-8 py-2 bg-gradient-to-r from-gray-100 to-black rounded'>
             Read More

@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
-import firstImg from '@/public/images/community/aster1.png';
-import secImg from '@/public/images/community/aster2.png';
-import thirdImg from '@/public/images/community/aster3.png';
+import firstImg from '@/public/images/community/aster.png';
+import secImg from '@/public/images/community/enactus.png';
+import thirdImg from '@/public/images/community/doit.png';
 
 const data = [
   {
@@ -13,16 +13,16 @@ const data = [
     imgSrc: firstImg,
   },
   {
-    id: 3,
-    title: 'DoIT',
-    desc: 'This fund is established to honor the life and works of W/ro Aster and her commitment to the well being and empowerment of women. This fund is established to honor the life and works of W/ro Aster and her commitment to the well being and empowerment of women.',
-    imgSrc: thirdImg,
-  },
-  {
     id: 2,
     title: 'Enactus',
     desc: 'Enactus is an international organization that connects student, academic and business leaders through entrepreneurial-based projects that empower people to transform opportunities into real, sustainable progress for themselves and their communities.',
     imgSrc: secImg,
+  },
+  {
+    id: 3,
+    title: 'DoIT',
+    desc: 'This fund is established to honor the life and works of W/ro Aster and her commitment to the well being and empowerment of women. This fund is established to honor the life and works of W/ro Aster and her commitment to the well being and empowerment of women.',
+    imgSrc: thirdImg,
   },
 ];
 
@@ -36,7 +36,7 @@ const Education = () => {
   return (
     <div className='md:flex max-w-screen-lg mx-auto gap-14 md:pt-24 overflow-hidden p-10 md:h-[30rem]'>
         <div className='md:w-1/2'>
-          <Image src={selectedItem.imgSrc} alt='aster' className='' />
+          <Image src={selectedItem.imgSrc} alt='aster' className='h-full' />
         </div>
         <div className='md:w-1/2 mt-5'>
           <div className='mb-5'>

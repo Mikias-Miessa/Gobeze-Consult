@@ -4,7 +4,7 @@ import Image from "next/image"
 function Firstsec() {
   return (
     <div
-    className='bg-cover bg-center w-full md:h-96 h-60 overflow-hidden md:mb-6 mb-3'
+    className='bg-cover bg-center w-full md:h-96 h-60 overflow-hidden md:mb-0 mb-3'
       style={{
         backgroundImage: `url("/images/community/our_community.jpg")`, 
       }}>
