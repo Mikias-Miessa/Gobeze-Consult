@@ -92,7 +92,7 @@ const OurTeam = () => {
                         height={400}
                         className='hover:scale-110 duration-200'
                       />
-                      <div className='absolute inset-0 flex flex-col justify-center items-center bg-gray-100 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300'>
+                      <div className='absolute inset-0 flex flex-col justify-center items-center bg-gray-50 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300'>
                         <h1 className='text-white text-xl font-bold mb-1'>
                           {team.name}
                         </h1>
