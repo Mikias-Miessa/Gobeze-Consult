@@ -15,8 +15,8 @@ import {
 
 const ViewPartner = () => {
   const dispatch = useDispatch();
-  const partners = useSelector(selectAllPartners);
-  const loading = useSelector(selectLoading);
+  const partners = useSelector((state) => selectAllPartners(state));
+  const loading = useSelector((state) => selectLoading(state));
 
   useEffect(() => {
     dispatch(getAllPartners());
@@ -52,7 +52,6 @@ const ViewPartner = () => {
             key={item._id}
             className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
           >
-
             <Image
               className='rounded-t-lg'
               src={item.logo}
@@ -78,7 +77,7 @@ const ViewPartner = () => {
               </div>
 
               <div className='flex justify-between gap-10 mt-4'>
-                <Link href={`/partner/edit/${item._id}`} className=''>
+                <Link href={`/partners/edit/${item._id}`} className=''>
                   <FaEdit
                     size={25}
                     className='text-gray-500 hover:text-gray-700'

@@ -16,8 +16,8 @@ const editPartner = ({ params }) => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const partner = useSelector((state) => selectPartnerById(state, partnerId));
-  const loading = useSelector(selectLoading);
+  const partner = useSelector((state) => selectPartnerById(state));
+  const loading = useSelector((state) => selectLoading(state));
 
   useEffect(() => {
     dispatch(getPartnerById(partnerId));
@@ -31,7 +31,7 @@ const editPartner = ({ params }) => {
   useEffect(() => {
     if (partner) {
       setName(partner.name || '');
-      setDescription(partner.content || '');
+      setDescription(partner.description || '');
       setImage(partner.image || '');
       setLogo(partner.logo || '');
     }
@@ -137,7 +137,7 @@ const editPartner = ({ params }) => {
             />
           </div>
           <div>
-            <img src={logo} alt='' className='w-full p-2 rounded-md'/>
+            <img src={logo} alt='' className='w-full p-2 rounded-md' />
           </div>
           <div className='mb-4'>
             <label

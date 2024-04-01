@@ -1,19 +1,19 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import FileBase64 from 'react-file-base64';
 import { useRouter } from 'next/navigation';
-import { useDispatch } from 'react-redux';
-import { addPartner } from '@/store/partnerSlice';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { addPartner, reset } from '@/store/partnerSlice';
+import { toast, ToastContainer } from 'react-toastify';
 const AddPartner = () => {
   const dispatch = useDispatch();
   const router = useRouter();
-
+  const { newPartnerAdded } = useSelector((state) => state.partner);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
   const [logo, setLogo] = useState('');
-
+  const id = useRef(null);
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -33,13 +33,42 @@ const AddPartner = () => {
     };
 
     dispatch(addPartner(cardData));
-    router.push('/partners/view');
+    // router.push('/partners/view');
 
     setName('');
     setDescription('');
     setImage('');
     setLogo('');
   };
+  useEffect(() => {
+    if (newPartnerAdded === 'pending') {
+      id.current = toast.loading('Adding partners...'); // Display loading toast
+    } else {
+      // Dismiss loading toast if it's already shown
+      if (id.current !== null) {
+        toast.dismiss(id.current);
+      }
+    }
+
+    if (newPartnerAdded === 'success') {
+      toast.update(id.current, {
+        render: 'Partner Added Successfully',
+        type: 'success',
+        isLoading: false,
+        autoClose: 4000,
+      });
+      dispatch(reset());
+    }
+    if (newPartnerAdded === 'failed') {
+      toast.update(id.current, {
+        render: 'Failed to add partner',
+        type: 'error',
+        isLoading: false,
+        autoClose: 4000,
+      });
+      dispatch(reset());
+    }
+  }, [newPartnerAdded]);
 
   return (
     <div className='flex justify-start pl-10 items-center bg-white py-5'>
@@ -48,14 +77,14 @@ const AddPartner = () => {
         <form onSubmit={handleSubmit}>
           <div className='mb-4'>
             <label
-              htmlFor='title'
+              htmlFor='name'
               className='block text-orange-500 font-bold mb-2'
             >
               Title
             </label>
             <input
               type='text'
-              id='title'
+              id='name'
               className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               placeholder='Enter title'
               value={name}
@@ -71,7 +100,7 @@ const AddPartner = () => {
               Description
             </label>
             <textarea
-              id='content'
+              id='description'
               className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               placeholder='Enter content'
               value={description}
@@ -82,7 +111,7 @@ const AddPartner = () => {
           </div>
           <div className='mb-4'>
             <label
-              htmlFor='image'
+              htmlFor='logo'
               className='block text-orange-500 font-bold mb-2'
             >
               Logo URL
@@ -117,12 +146,14 @@ const AddPartner = () => {
           <div className=''>
             <button
               type='submit'
-              className='mt-6  bg-black hover:bg-orange-500 hover:text-black text-orange-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-36 tracking-wider'>
+              className='mt-6  bg-black hover:bg-orange-500 hover:text-black text-orange-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-36 tracking-wider'
+            >
               POST
             </button>
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

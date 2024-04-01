@@ -1,8 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose';
 
-// Define the Post schema
-const partnerSchema = new Schema({
+const PartnerSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -11,19 +9,21 @@ const partnerSchema = new Schema({
     type: String,
     required: true,
   },
-  logo: {
-    type: String,
-    required: true,
-  },
   image: {
     type: String,
-    required: true,
+    require: true,
+  },
+  logo: {
+    type: String,
+    require: true,
   },
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
-const Partner = mongoose.models.Test || mongoose.model("Partner", partnerSchema);
+
+const Partner =
+  mongoose.models.Partner || mongoose.model('Partner', PartnerSchema);
 
 export default Partner;

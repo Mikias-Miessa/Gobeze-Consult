@@ -5,6 +5,7 @@ import './globals.css';
 import './font.css';
 import '@splidejs/splide/css';
 import StoreProvider from '@/store/storeProvider';
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

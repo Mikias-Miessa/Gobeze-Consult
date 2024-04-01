@@ -14,7 +14,9 @@ export const addBlog = createAsyncThunk(
       const res = await axios.post('/api/blogs', blogData);
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -26,7 +28,9 @@ export const getAllBlogs = createAsyncThunk(
       const res = await axios.get('/api/blogs');
       return res.data.blogs;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -38,7 +42,9 @@ export const getBlogById = createAsyncThunk(
       const response = await axios.get(`/api/blogs/${blogId}`);
       return response.data.blog;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -50,7 +56,9 @@ export const updateBlog = createAsyncThunk(
       const response = await axios.put(`/api/blogs/${blogId}`, blogData);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -62,7 +70,9 @@ export const deleteBlog = createAsyncThunk(
       await axios.delete(`/api/blogs/${blogId}`);
       return blogId;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -79,6 +89,7 @@ export const blogSlice = createSlice({
     builder
       .addCase(addBlog.pending, (state) => {
         state.loading = true;
+        state.newBlogAdded = 'pending';
       })
       .addCase(addBlog.fulfilled, (state, action) => {
         state.loading = false;
@@ -142,3 +153,4 @@ export default blogSlice.reducer;
 export const selectAllBlogs = (state) => state.blog.blogs;
 export const selectLoading = (state) => state.blog.loading;
 export const selectBlogById = (state) => state.blog.blogs[0];
+export const selectNewBlogAdded = (state) => state.blog.newBlogAdded;

@@ -16,7 +16,7 @@ const editBlog = ({ params }) => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const blog = useSelector((state) => selectBlogById(state, blogId));
+  const blog = useSelector((state) => selectBlogById(state));
   const loading = useSelector(selectLoading);
 
   useEffect(() => {

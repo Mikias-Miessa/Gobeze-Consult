@@ -11,10 +11,13 @@ export const addPartner = createAsyncThunk(
   'partner/add',
   async (partnerData, thunkAPI) => {
     try {
+      console.log(partnerData);
       const res = await axios.post('/api/partners', partnerData);
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -26,7 +29,9 @@ export const getAllPartners = createAsyncThunk(
       const res = await axios.get('/api/partners');
       return res.data.partners;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -35,10 +40,13 @@ export const getPartnerById = createAsyncThunk(
   'partner/getPartnerById',
   async (partnerId, thunkAPI) => {
     try {
-      const response = await axios.get(`/api/partners/${partnerId}`);
-      return response.data.partner;
+      console.log(partnerId);
+      // const response = await axios.get(`/api/partners/${partnerId}`);
+      // return response.data.partner;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -47,10 +55,16 @@ export const updatePartner = createAsyncThunk(
   'posts/updatePartner',
   async ({ partnerId, partnerData }, thunkAPI) => {
     try {
-      const response = await axios.put(`/api/partners/${partnerId}`, partnerData);
-      return response.data;
+      const response = await axios.put(
+        `/api/partners/${partnerId}`,
+        partnerData
+      );
+      console.log(response.data);
+      return response.data.partner;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -62,7 +76,9 @@ export const deletePartner = createAsyncThunk(
       await axios.delete(`/api/partners/${partnerId}`);
       return partnerId;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.errors || error.message || error.toString());
+      return thunkAPI.rejectWithValue(
+        error.response.data.errors || error.message || error.toString()
+      );
     }
   }
 );
@@ -79,6 +95,7 @@ export const partnerSlice = createSlice({
     builder
       .addCase(addPartner.pending, (state) => {
         state.loading = true;
+        state.newPartnerAdded = 'pending';
       })
       .addCase(addPartner.fulfilled, (state, action) => {
         state.loading = false;
@@ -115,7 +132,7 @@ export const partnerSlice = createSlice({
       .addCase(updatePartner.fulfilled, (state, action) => {
         state.loading = false;
         state.partners = state.partners.map((partner) =>
-          partner.id === action.payload.id ? action.payload : partner
+          partner._id === action.payload._id ? action.payload : partner
         );
       })
       .addCase(updatePartner.rejected, (state, action) => {
@@ -126,7 +143,9 @@ export const partnerSlice = createSlice({
       })
       .addCase(deletePartner.fulfilled, (state, action) => {
         state.loading = false;
-        state.partners = state.partners.filter((partner) => partner.id !== action.payload);
+        state.partners = state.partners.filter(
+          (partner) => partner.id !== action.payload
+        );
       })
       .addCase(deletePartner.rejected, (state, action) => {
         state.loading = false;
