@@ -92,7 +92,7 @@ const page = () => {
             <div className='md:mb-7 mb-3'>
               <p className='text-base'>{item.description}</p>
             </div>
-            <div className='bg-black text-center'>
+            <div className='bg-black text-center py-3'>
               <a href='/insights/detail' className='text-white text-2xl py-2'>Read More</a>
             </div>
           </div>
