@@ -33,7 +33,7 @@ const AddTestimonial = () => {
       image,
       name,
       title,
-      description
+      description,
     };
 
     dispatch(addTest(cardData));
@@ -48,7 +48,7 @@ const AddTestimonial = () => {
   return (
     <div className='flex justify-start pl-10 items-center bg-white py-5'>
       <div className='max-w-md  px-4 py-8 bg-white '>
-        <h1 className='text-black font-bold text-2xl mb-4'>Add Blog</h1>
+        <h1 className='text-black font-bold text-2xl mb-4'>Add Testimonial</h1>
         <form onSubmit={handleSubmit}>
           <div className='mb-4'>
             <label
@@ -116,7 +116,7 @@ const AddTestimonial = () => {
             />
           </div>
           <div>
-            <img src={image} alt='' className='w-full p-2 rounded-md' />
+            <img src={image} alt='Testimonial' className='w-full p-2 rounded-md' />
           </div>
           <div className=''>
             <button
