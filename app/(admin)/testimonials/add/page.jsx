@@ -11,11 +11,11 @@ const AddTestimonial = () => {
 
   const [title, setTitle] = useState('');
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('')
+  const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
-
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
+  const [qualification, setQualification] = useState('');
+  const handleQualificationChange = (e) => {
+    setQualification(e.target.value);
   };
 
   const handleNameChange = (e) => {
@@ -32,14 +32,14 @@ const AddTestimonial = () => {
     const cardData = {
       image,
       name,
-      title,
+      qualification,
       description,
     };
 
     dispatch(addTest(cardData));
     router.push('/testimonials/view');
 
-    setTitle('');
+    setQualification('');
     setName('');
     setImage('');
     setDescription('');
@@ -69,18 +69,18 @@ const AddTestimonial = () => {
           </div>
           <div className='mb-4'>
             <label
-              htmlFor='title'
+              htmlFor='qualification'
               className='block text-orange-500 font-bold mb-2'
             >
-              Title
+              Qualification
             </label>
             <input
               type='text'
-              id='title'
+              id='qualification'
               className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-              placeholder='Enter Title'
-              value={title}
-              onChange={handleTitleChange}
+              placeholder='Enter Qualification'
+              value={qualification}
+              onChange={handleQualificationChange}
               required
             />
           </div>
@@ -89,12 +89,12 @@ const AddTestimonial = () => {
               htmlFor='descritpion'
               className='block text-orange-500 font-bold mb-2'
             >
-              Description
+              Message
             </label>
             <textarea
               id='description'
               className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-              placeholder='Enter Descritption'
+              placeholder='Enter Message'
               value={description}
               onChange={handleDescriptionChange}
               rows={8}
@@ -116,7 +116,7 @@ const AddTestimonial = () => {
             />
           </div>
           <div>
-            <img src={image} alt='Testimonial' className='w-full p-2 rounded-md' />
+            <img src={image} alt='' className='w-full p-2 rounded-md' />
           </div>
           <div className=''>
             <button
