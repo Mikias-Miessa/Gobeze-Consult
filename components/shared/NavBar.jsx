@@ -150,141 +150,66 @@ const NavBar = () => {
                 <div
                   className='absolute  -top-1 flex justify-start 2xl:-left-[550px] xl:-left-[410px] lg:-left-[340px] md:-left-[240px] transition group-hover:translate-y-5 translate-y-0
                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out
-                            group-hover:transform z-50 min-w-fit transform w-screen h-fit font-Dax'
+                            group-hover:transform z-50 min-w-fit transform w-screen h-[300px] font-Dax'
                 >
-                    <div className='relative top-6 p-6 bg-white rounded shadow-xl flex flex-row w-screen h-fit 2xl:gap-16 xl:gap-14 lg:gap-10 md:gap-6 justify-evenly'>
-                    <div className='relative -left-[30px] w-[70%] h-[700px] flex justify-evenly -mt-16'>
+                  <div className='relative top-6 px-6 bg-white rounded shadow-xl flex flex-row w-screen h-[300px] 2xl:gap-16 xl:gap-14 lg:gap-10 md:gap-6 justify-evenly'>
+                    <div className='relative -left-[30px] w-[70%] h-[300px] flex justify-evenly -mt-16'>
                       <div className=' my-20 flex flex-col gap-4 pl-10  '>
-                        <div className='flex flex-col gap-8 ml-8 mt-5 '>
-                          <div className='flex flex-col items-start gap-2 text-start'>
-                            <h1 className='font-bold lg:text-lg text-base'>
-                              Career Services
-                            </h1>
+                        <div className='flex flex-col gap-8 ml-8 mt-24 '>
+                          <div className='flex flex-col items-center gap-6 text-start'>
                             <a
                               href='/work#work'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                              className='text-gray-900 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
                               Our Work
                             </a>
                             <a
+                              href='/work#recruitment'
+                              className='text-gray-900 lg:text-base text-sm opacity-60 hover:opacity-100'
+                            >
+                              Recruitment and job matching
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='border-r h-[100px] w-1 self-center mt-28'></div>
+                      <div className=' text-center my-20'>
+                        <div className='flex flex-col gap-8  mt-24 '>
+                          <div className='flex flex-col items-center gap-6 text-start'>
+                            {/* <div className='h-7'></div> */}
+                            <a
                               href='/about#vision'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                              className='text-gray-900 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
                               Our vision
                             </a>
                             <a
                               href='/work#workspace'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                              className='text-gray-900 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
                               Workspace meeting and conference
                             </a>
-                            <a
-                              href='/work#recruitment'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
-                            >
-                              Recruitment and job matching
-                            </a>
-                            <a
-                              href='/work#businesProcess'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
-                            >
-                              Business Process Outsourcing Solutions
-                            </a>
-                            <a
-                              href='/work#go'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
-                            >
-                              Go-Gobeze's
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='border-r h-[60%] w-1 self-center'></div>
-                      <div className=' text-center my-20'>
-                        <div className='flex flex-col gap-8  mt-4 '>
-                          <div className='flex flex-col items-start gap-4 text-start'>
-                            <h1 className='font-bold lg:text-lg text-base'>
-                              Learning Paths
-                            </h1>
-                            <h1 className='text-black text-base opacity-90 font-medium'>
-                              Entrepreneurship Track
-                            </h1>
-                            <a
-                              href='/learners#learningpath'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
-                            >
-                              Become a Tech Entrepreneur
-                            </a>
-                            <a
-                              href='/learners#learningpath'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
-                            >
-                              Become a Creative Entrepreneur
-                            </a>
-                            <h1 className='text-black text-base opacity-90 font-medium'>
-                              Career Track
-                            </h1>
-                            <a
-                              href='/learners#learningpath'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
-                            >
-                              Software Engineer
-                            </a>
-                            <a
-                              href='/learners#learningpath'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
-                            >
-                              Data Analyst
-                            </a>
-                            <a
-                              href='/learners#learningpath'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
-                            >
-                              Creative Director
-                            </a>
-                            <h1 className='text-black text-base opacity-90 font-medium'>
-                              Gig Economy Track
-                            </h1>
-                            <a
-                              href='/learners#learningpath'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100 ml-5'
-                            >
-                              Become a Freelance
-                            </a>
+
                             {/* <a href="#" className='text-gray-700 text-base opacity-60 hover:opacity-100 ml-5'>Become a Creative Entrepreneur</a> */}
                           </div>
                         </div>
                       </div>
-                      <div className='border-r h-[60%] w-1 self-center'></div>
+                      <div className='border-r h-[100px] w-1 self-center mt-28'></div>
                       <div className='col-span-1 text-center  my-20'>
-                        <div className='flex flex-col gap-8  mt-4'>
-                          <div className='flex flex-col items-start gap-4 text-start'>
-                            <h1 className='font-bold lg:text-lg text-base'>
-                              ALUMNI
-                            </h1>
+                        <div className='flex flex-col gap-8  mt-24'>
+                          <div className='flex flex-col items-center gap-6 text-start'>
+                            {/* <div className='h-7'></div> */}
                             <a
-                              href='/learners#alumni'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                              href='/work#go'
+                              className='text-gray-900 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
-                              Volunteer
+                              Go-Gobeze's
                             </a>
                             <a
-                              href='/learners#events'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
+                              href='/work#businesProcess'
+                              className='text-gray-900 lg:text-base text-sm opacity-60 hover:opacity-100'
                             >
-                              Events
-                            </a>
-                            <a
-                              href='/learners#alumni'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
-                            >
-                              Career resources
-                            </a>
-                            <a
-                              href='/learners#alumni'
-                              className='text-gray-700 lg:text-base text-sm opacity-60 hover:opacity-100'
-                            >
-                              Verify a certificate
+                              Business Process Outsourcing Solutions
                             </a>
                           </div>
                         </div>

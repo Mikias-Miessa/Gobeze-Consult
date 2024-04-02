@@ -1,9 +1,11 @@
 'use client';
-const { cn } = require('@/utils/cn');
-const { motion, AnimatePresence } = require('framer-motion');
-const React = require('react');
-const { useEffect, useState } = React;
-
+// const { cn } = require('@/utils/cn');
+// const { motion, AnimatePresence } = require('framer-motion');
+// const React = require('react');
+// const { useEffect, useState } = React;
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/utils/cn';
 const ImagesSlider = ({
   images,
   children,
@@ -52,20 +54,20 @@ const ImagesSlider = ({
       .catch((error) => console.error('Failed to load images', error));
   };
 
- useEffect(() => {
-   // autoplay
-   let interval;
-   if (autoplay) {
-     interval = setInterval(() => {
-       handleNext();
-     }, 5000);
-   }
+  useEffect(() => {
+    // autoplay
+    let interval;
+    if (autoplay) {
+      interval = setInterval(() => {
+        handleNext();
+      }, 5000);
+    }
 
-   return () => {
-     clearInterval(interval);
-   };
- }, [autoplay]);
-// Make sure to include 'autoplay' in the dependency array if it's being referenced inside useEffect
+    return () => {
+      clearInterval(interval);
+    };
+  }, [autoplay]);
+  // Make sure to include 'autoplay' in the dependency array if it's being referenced inside useEffect
 
   useEffect(() => {}, []);
 
