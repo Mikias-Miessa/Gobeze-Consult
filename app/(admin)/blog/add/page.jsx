@@ -13,6 +13,8 @@ const AddBlog = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [image, setImage] = useState('');
+  const [quote, setQuote] = useState('');
+  const [tag, setTag] = useState('');
   const newBlogAdded = useSelector((state) => selectNewBlogAdded(state));
   const id = useRef(null);
   const handleTitleChange = (e) => {
@@ -22,6 +24,12 @@ const AddBlog = () => {
   const handleContentChange = (e) => {
     setContent(e.target.value);
   };
+  const handleQuoteChange = (e) => {
+    setQuote(e.target.value);
+  };
+  const handleTagChange = (e) => {
+    setTag(e.target.value);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,14 +38,19 @@ const AddBlog = () => {
       image,
       content,
       title,
+      quote,
+      tag,
     };
 
     dispatch(addBlog(cardData));
+    // console.log(cardData);
     // router.push('/blog/view');
 
     setTitle('');
     setContent('');
     setImage('');
+    setQuote('');
+    setTag('');
   };
   useEffect(() => {
     if (newBlogAdded === 'pending') {
@@ -92,6 +105,40 @@ const AddBlog = () => {
           </div>
           <div className='mb-4'>
             <label
+              htmlFor='quote'
+              className='block text-orange-500 font-bold mb-2'
+            >
+              Quote
+            </label>
+            <input
+              id='quote'
+              className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              placeholder='Enter quote'
+              value={quote}
+              onChange={handleQuoteChange}
+              rows={8}
+              required
+            />
+          </div>
+          <div className='mb-4'>
+            <label
+              htmlFor='tag'
+              className='block text-orange-500 font-bold mb-2'
+            >
+              Tag
+            </label>
+            <input
+              id='tag'
+              className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              placeholder='Enter tag'
+              value={tag}
+              onChange={handleTagChange}
+              rows={8}
+              required
+            />
+          </div>
+          <div className='mb-4'>
+            <label
               htmlFor='content'
               className='block text-orange-500 font-bold mb-2'
             >
@@ -107,6 +154,7 @@ const AddBlog = () => {
               required
             />
           </div>
+
           <div className='mb-4'>
             <label
               htmlFor='image'
