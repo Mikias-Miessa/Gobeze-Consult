@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+// import { selectNewTeamAdded } from './teamSlice';
 
 const initialState = {
   teams: [],
@@ -8,7 +9,7 @@ const initialState = {
 };
 
 export const addTeam = createAsyncThunk(
-  'teams/add',
+  'team/add',
   async (teamData, thunkAPI) => {
     try {
       const res = await axios.post('/api/teams', teamData);
@@ -126,7 +127,7 @@ export const teamSlice = createSlice({
       .addCase(updateTeam.fulfilled, (state, action) => {
         state.loading = false;
         state.teams = state.teams.map((team) =>
-          team.id === action.payload.id ? action.payload : team
+          team.id === action.payload.id ? action.payload : blog
         );
       })
       .addCase(updateTeam.rejected, (state, action) => {
@@ -150,7 +151,7 @@ export const { reset } = teamSlice.actions;
 export default teamSlice.reducer;
 
 // Selectors
-export const selectTeams = (state) => state.team.teams;
+export const selectAllTeams = (state) => state.team.teams;
 export const selectLoading = (state) => state.team.loading;
 export const selectTeamById = (state) => state.team.teams[0];
 export const selectNewTeamAdded = (state) => state.team.newTeamAdded;

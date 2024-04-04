@@ -15,8 +15,8 @@ import {
 
 const ViewTeam = () => {
   const dispatch = useDispatch();
-  const teams = useSelector(selectAllTeams);
-  const loading = useSelector(selectLoading);
+  const teams = useSelector((state) => selectAllTeams(state));
+  const loading = useSelector((state) => selectLoading(state));
 
   useEffect(() => {
     dispatch(getAllTeams());
@@ -47,7 +47,7 @@ const ViewTeam = () => {
   return (
     <div className='bg-white flex justify-center items-center py-10'>
       <div className='flex flex-wrap justify-center items-center gap-10'>
-        {teams.map((item) => (
+        {teams && teams.map((item) => (
           <div
             key={item._id}
             className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
@@ -61,7 +61,7 @@ const ViewTeam = () => {
             />
             <div className='p-5'>
               <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
-                {item.title}
+                {item.name}
               </h5>
               <div className='h-24 overflow-hidden'>
                 <p className='text-sm mb-3 font-normal text-gray-700 overflow-hidden overflow-ellipsis'>
@@ -70,7 +70,7 @@ const ViewTeam = () => {
               </div>
 
               <div className='flex justify-between gap-10 mt-4'>
-                <Link href={`/teams/edit/${item._id}`} className=''>
+                <Link href={`/team/edit/${item._id}`} className=''>
                   <FaEdit
                     size={25}
                     className='text-gray-500 hover:text-gray-700'

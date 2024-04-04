@@ -78,12 +78,12 @@ export const DashboardTop = [
       {
         key: 'TeamsSublink1',
         label: 'Add Team',
-        path: '/teams/add',
+        path: '/team/add',
       },
       {
         key: 'TeamsSublink2',
         label: 'View Teams',
-        path: '/teams/view',
+        path: '/team/view',
       },
     ],
   },
