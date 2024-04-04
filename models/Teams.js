@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Define the Post schema
 const teamsSchema = new Schema({
   name: {
     type: String,
@@ -20,6 +19,6 @@ const teamsSchema = new Schema({
     default: Date.now,
   },
 });
-const Teams = mongoose.models.Teams || mongoose.model("Teams", blogSchema);
+const Teams = mongoose.models.Teams || mongoose.model("Teams", teamsSchema);
 
 export default Teams;

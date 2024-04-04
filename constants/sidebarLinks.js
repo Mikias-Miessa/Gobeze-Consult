@@ -69,6 +69,24 @@ export const DashboardTop = [
       },
     ],
   },
+  {
+    key: 'Teams',
+    label: 'Teams',
+    path: '/teams',
+    icon: <HiOutlineUsers />,
+    sublinks: [
+      {
+        key: 'TeamsSublink1',
+        label: 'Add Team',
+        path: '/team/add',
+      },
+      {
+        key: 'TeamsSublink2',
+        label: 'View Teams',
+        path: '/team/view',
+      },
+    ],
+  },
 ];
 
 export const DashboardBottom = [
