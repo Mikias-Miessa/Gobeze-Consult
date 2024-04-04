@@ -4,9 +4,9 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
-    const { title, content, image, tag, quote } = await request.json();
+    const { title, content, image, tag, quote, author } = await request.json();
     await connectMongoDB();
-    await Blog.create({ title, content, image, tag, quote });
+    await Blog.create({ title, content, image, tag, quote, author });
     return NextResponse.json({ message: 'Topic Created' }, { status: 201 });
   } catch (error) {
     return NextResponse.json(
@@ -17,7 +17,14 @@ export async function POST(request) {
 }
 
 export async function GET() {
-  await connectMongoDB();
-  const blogs = await Blog.find().sort({ createdAt: -1 });
-  return NextResponse.json({ blogs });
+  try {
+    await connectMongoDB();
+    const blogs = await Blog.find().sort({ createdAt: -1 });
+    return NextResponse.json({ blogs });
+  } catch (error) {
+    return NextResponse.json(
+      { message: 'failed to get blogs' },
+      { status: 500 }
+    );
+  }
 }

@@ -11,6 +11,7 @@ import {
   getBlogById,
   selectAllBlogs,
   selectBlogById,
+  selectLoading,
 } from '@/store/blogSlice';
 import { Bars } from 'react-loader-spinner';
 const data = [
@@ -67,7 +68,7 @@ const blogs = () => {
     dispatch(getAllBlogs());
   }, []);
   const blogs = useSelector((state) => selectAllBlogs(state));
-  const loading = useSelector((state) => selectAllBlogs(state));
+  const loading = useSelector((state) => selectLoading(state));
   if (loading) {
     return (
       <div className=' h-screen bg-white flex justify-center items-center'>
@@ -89,7 +90,7 @@ const blogs = () => {
       <h1 className='text-center text-2xl font-semibold mb-5'>
         Check out the blogs you might have missed
       </h1>
-      <h1 className='h-1 md:w-28 w-10 bg-orange-500 md:mt-6 mt-2 mx-auto my-auto'></h1>
+      <h1 className='h-1 md:w-28 w-10 bg-orange-500 md:mt-6 mt-2 mb-10 mx-auto my-auto'></h1>
       <div className='flex flex-wrap justify-center items-center gap-10'>
         {blogs.map((item) => (
           <div
@@ -98,21 +99,22 @@ const blogs = () => {
           >
             <div className='relative overflow-hidden bg-cover bg-no-repeat'>
               <Image
-                className='mb-7'
+                className='mb-7 max-w-[18rem]'
                 src={item.image && item.image}
                 alt='the image'
+                width={288}
+                height={151}
               />
             </div>
             <div className='mb-7'>
-              <p>{item.title}</p>
-              <p className='font-semibold py-3'>{item.tag}</p>
-              <p className='text-base'>{item.content}</p>
+              <p className='font-light italic text-sm'>"{item.title}"</p>
+              <p className='font-semibold py-2 text-sm'>{item.tag}</p>
+              <p className='text-base h-[120px] overflow-hidden  overflow-ellipsis'>
+                {item.content}
+              </p>
             </div>
-            <div className='bg-black text-center py-4'>
-              <a
-                href={'/insights/' + item._id}
-                className='text-white text-2xl py-4'
-              >
+            <div className='bg-black text-white text-2xl text-center py-4 hover:text-gray-400 cursor-pointer'>
+              <a href={'/insights/' + item._id} className=' py-4 '>
                 Read More
               </a>
             </div>
@@ -120,7 +122,7 @@ const blogs = () => {
         ))}
       </div>
 
-      <div className='mt-10'>
+      {/* <div className='mt-10'>
         <h1 className='text-center text-lg font-semibold'>RECENT BLOGS</h1>
         <h1 className='text-center text-2xl font-semibold mb-5'>
           Check out the blogs you might have missed
@@ -146,7 +148,7 @@ const blogs = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
