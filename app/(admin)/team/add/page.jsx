@@ -33,7 +33,7 @@ const AddTeam = () => {
     };
 
     dispatch(addTeam(cardData));
-    // router.push('/blog/view');
+    // router.push('/team/view');
 
     setName('');
     setPosition('');
@@ -71,7 +71,7 @@ const AddTeam = () => {
   return (
     <div className='flex justify-start pl-10 items-center bg-white py-5'>
       <div className='max-w-md  px-4 py-8 bg-white '>
-        <h1 className='text-black font-bold text-2xl mb-4'>Add Team</h1>
+        <h1 className='text-black font-bold text-2xl mb-4'>Add Team Memeber</h1>
         <form onSubmit={handleSubmit}>
           <div className='mb-4'>
             <label

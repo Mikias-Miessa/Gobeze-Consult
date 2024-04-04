@@ -29,9 +29,9 @@ const editTeam = ({ params }) => {
 
   useEffect(() => {
     if (team) {
-      setTitle(team.name || '');
-      setPosition(team.option || '');
-      setImage(team.option|| '');
+      setName(team.name || '');
+      setPosition(team.opition || '');
+      setImage(team.image|| '');
     }
   }, [team]);
 

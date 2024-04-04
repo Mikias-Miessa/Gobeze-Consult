@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Define the Post schema
 const teamsSchema = new Schema({
   name: {
     type: String,
