@@ -11,11 +11,18 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
   const { id } = params;
-  const { title, content, image } = await request.json();
+  const { title, content, image, author, tag, quote } = await request.json();
   await connectMongoDB();
   await Blog.findByIdAndUpdate(
     id,
-    { title: title, content: content, image: image },
+    {
+      title: title,
+      content: content,
+      image: image,
+      author: author,
+      tag: tag,
+      quote: quote,
+    },
     { new: true }
   );
   return NextResponse.json({ message: 'Blog updated' }, { status: 200 });

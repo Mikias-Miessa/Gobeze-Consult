@@ -11,15 +11,28 @@ const blogSchema = new Schema({
     type: String,
     required: true,
   },
+  tag: {
+    type: String,
+    required: true,
+  },
+  quote: {
+    type: String,
+    required: true,
+  },
+  author: {
+    type: String,
+    required: true,
+  },
   image: {
     type: String,
     require: true,
   },
+
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
-const Blog = mongoose.models.Blog || mongoose.model("Blog", blogSchema);
+const Blog = mongoose.models.Blog || mongoose.model('Blog', blogSchema);
 
 export default Blog;

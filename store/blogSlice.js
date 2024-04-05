@@ -5,6 +5,9 @@ const initialState = {
   blogs: [],
   loading: false,
   newBlogAdded: null,
+  getBlogByIdStatus: '',
+  selectedBlog: null,
+  blogEdited: null,
 };
 
 export const addBlog = createAsyncThunk(
@@ -39,6 +42,7 @@ export const getBlogById = createAsyncThunk(
   'blog/getBlogById',
   async (blogId, thunkAPI) => {
     try {
+      console.log(blogId);
       const response = await axios.get(`/api/blogs/${blogId}`);
       return response.data.blog;
     } catch (error) {
@@ -83,6 +87,7 @@ export const blogSlice = createSlice({
   reducers: {
     reset: (state) => {
       state.newBlogAdded = null;
+      state.blogEdited = null;
     },
   },
   extraReducers: (builder) => {
@@ -112,25 +117,31 @@ export const blogSlice = createSlice({
       })
       .addCase(getBlogById.pending, (state) => {
         state.loading = true;
+        state.getBlogByIdStatus = 'loading';
       })
       .addCase(getBlogById.fulfilled, (state, action) => {
         state.loading = false;
-        state.blogs = [action.payload];
+        state.getBlogByIdStatus = 'success';
+        state.selectedBlog = action.payload;
       })
       .addCase(getBlogById.rejected, (state, action) => {
         state.loading = false;
+        state.getBlogByIdStatus = 'failed';
       })
       .addCase(updateBlog.pending, (state) => {
         state.loading = true;
+        state.blogEdited = 'pending';
       })
       .addCase(updateBlog.fulfilled, (state, action) => {
         state.loading = false;
         state.blogs = state.blogs.map((blog) =>
           blog.id === action.payload.id ? action.payload : blog
         );
+        state.blogEdited = 'success';
       })
       .addCase(updateBlog.rejected, (state, action) => {
         state.loading = false;
+        state.blogEdited = 'failed';
       })
       .addCase(deleteBlog.pending, (state) => {
         state.loading = true;
@@ -154,3 +165,4 @@ export const selectAllBlogs = (state) => state.blog.blogs;
 export const selectLoading = (state) => state.blog.loading;
 export const selectBlogById = (state) => state.blog.blogs[0];
 export const selectNewBlogAdded = (state) => state.blog.newBlogAdded;
+export const selectBlogEdited = (state) => state.blog.blogEdited;
