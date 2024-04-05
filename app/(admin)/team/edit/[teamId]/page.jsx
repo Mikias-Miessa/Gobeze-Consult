@@ -30,8 +30,8 @@ const editTeam = ({ params }) => {
   useEffect(() => {
     if (team) {
       setName(team.name || '');
-      setPosition(team.opition || '');
-      setImage(team.image|| '');
+      setPosition(team.position || '');
+      setImage(team.image || '');
     }
   }, [team]);
 
