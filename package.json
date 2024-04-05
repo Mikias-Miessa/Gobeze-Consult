@@ -16,6 +16,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "cors": "^2.8.5",

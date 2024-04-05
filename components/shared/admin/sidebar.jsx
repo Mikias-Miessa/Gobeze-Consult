@@ -9,6 +9,8 @@ import { useState } from 'react';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { signOut } from 'next-auth/react';
+
 const linkClasses =
   'flex items-center gap-2 font-light px-3 py-2 hover:bg-neutral-200 hover:no-underline active:bg-neutral-100 rounded-md text-base';
 
@@ -45,6 +47,7 @@ function Sidebar() {
         })}
         <div
           // onClick={logoutHandler}
+          onClick={() => signOut()}
           className={classNames(
             'text-slate-500 hover:text-slate-700 cursor-pointer pl-6',
             linkClasses
@@ -54,7 +57,7 @@ function Sidebar() {
             <HiOutlineLogout />
           </span>
           <span className='hidden md:inline text-base font-bold'>
-            <Link href='/api/auth/signout'>Logout</Link>{' '}
+            <button>Logout</button>{' '}
           </span>
         </div>
       </div>
