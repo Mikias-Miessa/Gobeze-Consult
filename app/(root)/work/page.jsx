@@ -7,12 +7,16 @@ import Recuritment from '@/components/ourWork/recruitmentJobMatch';
 import BusinessProcess from '@/components/ourWork/businessProcess';
 import Go from '@/components/ourWork/go';
 import TrainingSkill from '@/components/ourWork/TrainingSkill';
+import Training from '@/components/ourWork/training';
 
 const page = () => {
   return (
     <div>
       <Work />
       <TrainingSkill />
+      <div className='py-48'>
+        <Training />
+      </div>
       <Consultancy />
       <div className='py-32'>
         <WorkSpace />
