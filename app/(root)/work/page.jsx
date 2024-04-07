@@ -21,7 +21,9 @@ const page = () => {
       <div className='py-32'>
         <WorkSpace />
       </div>
-      <Recuritment />
+      <div className='pb-32'>
+        <Recuritment />
+      </div>
       <Incubation />
       <BusinessProcess />
       <Go />
