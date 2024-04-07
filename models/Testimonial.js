@@ -7,7 +7,7 @@ const testSchema = new Schema({
     type: String,
     required: true,
   },
-  title: {
+  qualification: {
     type: String,
     required: true,
   },
@@ -24,6 +24,6 @@ const testSchema = new Schema({
     default: Date.now,
   },
 });
-const Test = mongoose.models.Test || mongoose.model("Test", testSchema);
+const Test = mongoose.models.Test || mongoose.model('Test', testSchema);
 
 export default Test;

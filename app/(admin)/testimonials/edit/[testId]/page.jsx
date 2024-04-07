@@ -23,22 +23,22 @@ const editTest = ({ params }) => {
     dispatch(getTestById(testId));
   }, [dispatch, testId]);
 
-  const [title, setTitle] = useState('');
+  const [qualification, setQualification] = useState('');
   const [description, setDescription] = useState('');
-  const [name, setName] = useState('')
+  const [name, setName] = useState('');
   const [image, setImage] = useState('');
 
   useEffect(() => {
     if (test) {
-      setTitle(test.title || '');
+      setQualification(test.qualification || '');
       setDescription(test.description || '');
       setImage(test.image || '');
       setName(test.name || '');
     }
   }, [test]);
 
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
+  const handleQualificationChange = (e) => {
+    setQualification(e.target.value);
   };
 
   const handleNameChange = (e) => {
@@ -55,20 +55,20 @@ const editTest = ({ params }) => {
     const updatedTestData = {
       testId: testId,
       testData: {
-        title: title,
+        qualification: qualification,
         description: description,
         image: image,
-        name: name
+        name: name,
       },
     };
 
     dispatch(updateTest(updatedTestData));
     router.push('/testimonials/view');
 
-    setTitle('');
+    setQualification('');
     setDescription('');
     setImage('');
-    setName('')
+    setName('');
   };
 
   if (loading) {
@@ -94,18 +94,18 @@ const editTest = ({ params }) => {
         <form onSubmit={handleSubmit}>
           <div className='mb-4'>
             <label
-              htmlFor='title'
+              htmlFor='qualification'
               className='block text-orange-500 font-bold mb-2'
             >
-              Title
+              Qualification
             </label>
             <input
               type='text'
-              id='title'
+              id='qualification'
               className='appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-              placeholder='Enter Title'
-              value={title}
-              onChange={handleTitleChange}
+              placeholder='Enter qualification'
+              value={qualification}
+              onChange={handleQualificationChange}
               required
             />
           </div>
