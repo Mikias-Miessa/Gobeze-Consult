@@ -62,7 +62,7 @@ function Go() {
       >
         {data.map((item) => (
           <SplideSlide key={item.id}>
-            <div className={item.id % 2 === 0 ? 'text-black bg-white' : 'bg-black text-white'}>
+            <div className={item.id % 2 === 0 ? 'text-black bg-white py-28' : 'bg-black text-white py-20'}>
               <h1 className='text-center font-extrabold mb-3 mt-3 pt-5'>{item.title}</h1>
               <h1 className='text-center text-2xl font-semibold mb-2'>Radically Better Hiring</h1>
               <h3 className='text-center text-sm text-gray-400'>Gobeze Consult is radically improving the hiring process for candidates, recruiters and employers.</h3>

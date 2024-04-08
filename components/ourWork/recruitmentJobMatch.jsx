@@ -32,7 +32,7 @@ function RecruitmentJobMatch() {
 
       <div className='grid md:grid-cols-2 grid-cols-1 mt-5'>
         {data.map(item => (
-          <div key={item.id} className={item.id === 1 ? 'bg-black text-white pl-16 pr-8' : 'pl-14 pr-8'}>
+          <div key={item.id} className={item.id === 1 ? 'bg-black text-white pl-16 pr-8 py-28' : 'pl-14 pr-8 py-28'}>
             <h1 className='font-extrabold pt-5 text-3xl'>{item.title}</h1>
             <h1 className='font-extrabold text-3xl'>SERVICES</h1>
             <h1 className='pt-2 pb-14 font-semibold'>{item.title}</h1>

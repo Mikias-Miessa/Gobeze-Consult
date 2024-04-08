@@ -4,32 +4,32 @@ const data = [
   {
     id: '1',
     imageSrc: '/images/about/training/Rectangle51.png',
-    desc: "Full Stack development for girls",
+    desc: 'Full Stack development for girls',
   },
   {
     id: '2',
     imageSrc: '/images/about/training/Rectangle52.png',
-    desc: "Graphic design",
+    desc: 'Graphic design',
   },
   {
     id: '3',
     imageSrc: '/images/about/training/Rectangle53.png',
-    desc: "ACCA Examination",
+    desc: 'ACCA Examination',
   },
   {
     id: '4',
     imageSrc: '/images/about/training/Rectangle54.png',
-    desc: "Digital Marketing",
+    desc: 'Digital Marketing',
   },
   {
     id: '5',
     imageSrc: '/images/about/training/Rectangle55.png',
-    desc: "Tech Entrepreneurship.",
+    desc: 'Tech Entrepreneurship.',
   },
   {
     id: '6',
     imageSrc: '/images/about/training/Rectangle56.png',
-    desc: "Digital Marketing",
+    desc: 'Digital Marketing',
   },
 ];
 
@@ -43,11 +43,17 @@ const Training = () => {
         {data.map((item) => (
           <div key={item.id} className='w-1/2 md:w-1/3 p-1 md:p-4'>
             <div
-              className='bg-cover bg-center h-96 overflow-hidden relative'
-              style={{ backgroundImage: `url(${item.imageSrc})` }}
+              className='bg-cover bg-center h-72 md:h-96 overflow-hidden relative w-full'
+              style={{
+                backgroundImage: `url(${item.imageSrc})`,
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat' 
+              }}
             >
               <div className='absolute bottom-0 left-0 right-0 flex justify-center items-end bg-black bg-opacity-50'>
-                <p className='text-center py-5 text-white font-bold'>{item.desc}</p>
+                <p className='text-center py-5 text-white font-bold'>
+                  {item.desc}
+                </p>
               </div>
             </div>
           </div>

@@ -24,9 +24,15 @@ const page = () => {
       <div className='pb-32'>
         <Recuritment />
       </div>
-      <Incubation />
-      <BusinessProcess />
-      <Go />
+      <div className='pb-32'>
+        <Incubation />
+      </div>
+      <div className='pb-32'>
+        <BusinessProcess />
+      </div>
+      <div className='pb-32'>
+        <Go />
+      </div>
     </div>
   );
 };
