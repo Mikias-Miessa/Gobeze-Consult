@@ -9,7 +9,7 @@ const AddTestimonial = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const [title, setTitle] = useState('');
+  const [job, setJob] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
@@ -20,6 +20,10 @@ const AddTestimonial = () => {
 
   const handleNameChange = (e) => {
     setName(e.target.value);
+  };
+
+  const handleJobChange = (e) => {
+    setJob(e.target.value);
   };
 
   const handleDescriptionChange = (e) => {
@@ -34,6 +38,7 @@ const AddTestimonial = () => {
       name,
       qualification,
       description,
+      job,
     };
 
     dispatch(addTest(cardData));
@@ -43,6 +48,7 @@ const AddTestimonial = () => {
     setName('');
     setImage('');
     setDescription('');
+    setJob('');
   };
 
   return (
@@ -64,6 +70,23 @@ const AddTestimonial = () => {
               placeholder='Enter Name'
               value={name}
               onChange={handleNameChange}
+              required
+            />
+          </div>
+          <div className='mb-4'>
+            <label
+              htmlFor='name'
+              className='block text-orange-500 font-bold mb-2'
+            >
+              Job
+            </label>
+            <input
+              type='text'
+              id='job'
+              className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              placeholder='Enter Job'
+              value={name}
+              onChange={handleJobChange}
               required
             />
           </div>

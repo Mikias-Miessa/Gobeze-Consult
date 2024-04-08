@@ -20,7 +20,7 @@ function Partners() {
   }, []);
   const partners = useSelector(selectAllPartners);
   const loading = useSelector(selectLoading);
-  console.log(partners);
+  // console.log(partners);
 
   // const data = [
   //   {

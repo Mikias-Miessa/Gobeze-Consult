@@ -6,29 +6,39 @@ import Rectangle2 from '@/public/testimonial/Rect2.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import SectionTitle from '../shared/sectionTitle';
 import { FaQuoteRight } from 'react-icons/fa';
+import {getAllTests,selectAllTests,selectLoading} from '@/store/testSlice';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-const test = [
-  {
-    id: '1',
-    name: 'Jane Eyre',
-    title: 'What is the format of a testimonial?',
-    description:
-      "Keep it short and conversational. Your testimonial should only be two or three paragraphs, at most. They should be written in your customer's tone so that your testimonial doesn't seem overly formal or technical.",
-    job: 'Digital Marketer',
-    imageSrc: Rectangle1,
-  },
-  {
-    id: '2',
-    name: 'Jane Eyre',
-    title: 'What is the format of a testimonial?',
-    description:
-      "Keep it short and conversational. Your testimonial should only be two or three paragraphs, at most. They should be written in your customer's tone so that your testimonial doesn't seem overly formal or technical.",
-    job: 'Digital Marketer',
-    imageSrc: Rectangle2,
-  },
-];
+// const test = [
+//   {
+//     id: '1',
+//     name: 'Jane Eyre',
+//     title: 'What is the format of a testimonial?',
+//     description:
+//       "Keep it short and conversational. Your testimonial should only be two or three paragraphs, at most. They should be written in your customer's tone so that your testimonial doesn't seem overly formal or technical.",
+//     job: 'Digital Marketer',
+//     imageSrc: Rectangle1,
+//   },
+//   {
+//     id: '2',
+//     name: 'Jane Eyre',
+//     title: 'What is the format of a testimonial?',
+//     description:
+//       "Keep it short and conversational. Your testimonial should only be two or three paragraphs, at most. They should be written in your customer's tone so that your testimonial doesn't seem overly formal or technical.",
+//     job: 'Digital Marketer',
+//     imageSrc: Rectangle2,
+//   },
+// ];
 
 const Testimonial = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllTests());
+  }, []);
+  const tests = useSelector(selectAllTests);
+  const loading = useSelector(selectLoading);
+
   return (
     <div className='max-w-screen-lg mx-auto mt-10'>
       <div className='ml-20'>
@@ -47,8 +57,8 @@ const Testimonial = () => {
             gap: '',
           }}
         >
-          {test.length > 0 &&
-            test.map(
+          {tests.length > 0 &&
+            tests.map(
               (tes) =>
                 tes && (
                   <SplideSlide key={tes.id}>
@@ -57,9 +67,9 @@ const Testimonial = () => {
                         <div className='block rounded-lg bg-gradient-to-r from-black to-gray-500 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:flex md:flex-wrap'>
                           <div className='md:flex md:flex-wrap md:items-center'>
                             <div className='w-full md:w-auto md:h-52 md:ml-0'>
-                              <Image
+                              <img
                                 quality={100}
-                                src={tes.imageSrc}
+                                src={tes.image}
                                 alt='person'
                                 className='w-full h-full rounded-lg'
                                 width={200}
@@ -70,7 +80,7 @@ const Testimonial = () => {
                                 <FaQuoteRight className='text-neutral-600 text-6xl' />
                                 <div className='-mt-7'>
                                   <p className='mb-1 text-neutral-400'>
-                                    {tes.title}
+                                    {tes.qualification}
                                   </p>
                                   <p className='mb-4 text-sm text-neutral-400'>
                                     {tes.description}

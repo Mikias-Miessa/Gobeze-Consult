@@ -66,6 +66,9 @@ const ViewTestimonial = () => {
               <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
                 {item.name}
               </h5>
+              <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
+                {item.job}
+              </h5>
               <div className='h-24 overflow-hidden'>
                 <p className='text-sm mb-3 font-normal text-gray-700 overflow-hidden overflow-ellipsis'>
                   {item.description}
