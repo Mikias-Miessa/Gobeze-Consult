@@ -18,12 +18,12 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
   const { id } = params;
-  const { title, name, image, qualification, job } = await request.json();
+  const { title, name, image, qualification } = await request.json();
   try {
     await connectMongoDB();
     await Test.findByIdAndUpdate(
       id,
-      { title: title, name: name, image: image, qualification: qualification, job, job},
+      { title: title, name: name, image: image, qualification: qualification },
       { new: true }
     );
     return NextResponse.json({ message: 'Test updated' }, { status: 200 });

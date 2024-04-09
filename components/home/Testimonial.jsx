@@ -88,9 +88,9 @@ const Testimonial = () => {
                                   <h2 className='text-xl text-neutral-300 font-bold text-primary'>
                                     {tes.name}
                                   </h2>
-                                  <p className='mb-2 text-base text-neutral-400'>
+                                  {/* <p className='mb-2 text-base text-neutral-400'>
                                     {tes.job}
-                                  </p>
+                                  </p> */}
                                 </div>
                               </div>
                             </div>

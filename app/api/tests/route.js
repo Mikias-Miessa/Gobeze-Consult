@@ -6,7 +6,7 @@ export async function POST(request) {
   try {
     const { qualification, name, image, description } = await request.json();
     await connectMongoDB();
-    await Test.create({ qualification, name, image, description, job });
+    await Test.create({ qualification, name, image, description });
     return NextResponse.json(
       { message: 'Testimonial Created' },
       { status: 201 }
