@@ -34,9 +34,9 @@ const Education = () => {
   };
 
   return (
-    <div className='md:flex max-w-screen-lg mx-auto gap-14 md:pt-24 overflow-hidden p-10 md:h-[30rem]'>
+    <div className='md:flex max-w-screen-lg mx-auto gap-14 md:pt-24 overflow-hidden p-10 md:h-[39rem]'>
         <div className='md:w-1/2'>
-          <Image src={selectedItem.imgSrc} alt='aster' className='h-full' />
+          <Image src={selectedItem.imgSrc} alt='aster' className='h-[90%]' />
         </div>
         <div className='md:w-1/2 mt-5'>
           <div className='mb-5'>

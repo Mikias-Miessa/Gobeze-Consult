@@ -59,6 +59,9 @@ export const authOptions = {
   pages: {
     signIn: '/login',
   },
+  session: {
+    maxAge: 60 * 60 * 24, // 24 hours in seconds
+  },
 };
 
 const handler = NextAuth(authOptions);
