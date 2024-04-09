@@ -5,10 +5,9 @@ import { NextResponse } from 'next/server';
 export async function GET(request, { params }) {
   try {
     const { id } = params;
-    console.log(id);
     await connectMongoDB();
     const team = await Team.findOne({ _id: id });
-    return NextResponse.json({ partner }, { status: 200 });
+    return NextResponse.json({ team }, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       { message: 'Failed to get the specific team' },

@@ -123,7 +123,7 @@ export const blogSlice = createSlice({
       .addCase(getBlogById.fulfilled, (state, action) => {
         state.loading = false;
         state.getBlogByIdStatus = 'success';
-        state.blogs = action.payload;
+        state.blogs = [action.payload];
       })
       .addCase(getBlogById.rejected, (state, action) => {
         state.loading = false;

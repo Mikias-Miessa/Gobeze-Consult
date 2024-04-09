@@ -17,6 +17,7 @@ const ViewBlog = () => {
   const dispatch = useDispatch();
   const blogs = useSelector(selectAllBlogs);
   const loading = useSelector(selectLoading);
+  console.log(blogs)
 
   useEffect(() => {
     dispatch(getAllBlogs());
