@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import Rectangle1 from '@/public/testimonial/Rect1.png';
-import Rectangle2 from '@/public/testimonial/Rect2.png';
+// import Rectangle1 from '@/public/testimonial/Rect1.png';
+// import Rectangle2 from '@/public/testimonial/Rect2.png';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import SectionTitle from '../shared/sectionTitle';
 import { FaQuoteRight } from 'react-icons/fa';
@@ -89,9 +89,6 @@ const Testimonial = () => {
                                   <h2 className='text-xl text-neutral-300 font-bold text-primary'>
                                     {tes.name}
                                   </h2>
-                                  {/* <p className='mb-2 text-base text-neutral-400'>
-                                    {tes.job}
-                                  </p> */}
                                 </div>
                               </div>
                             </div>
