@@ -67,12 +67,13 @@ const Testimonial = () => {
                         <div className='block rounded-lg bg-gradient-to-r from-black to-gray-500 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:flex md:flex-wrap'>
                           <div className='md:flex md:flex-wrap md:items-center'>
                             <div className='w-full md:w-auto md:h-52 md:ml-0'>
-                              <img
+                              <Image
                                 quality={100}
                                 src={tes.image}
                                 alt='person'
                                 className='w-full h-full rounded-lg'
                                 width={200}
+                                height={200}
                               />
                             </div>
                             <div className='w-full md:w-6/12 xl:w-8/12 md:ml-4'>
@@ -88,9 +89,9 @@ const Testimonial = () => {
                                   <h2 className='text-xl text-neutral-300 font-bold text-primary'>
                                     {tes.name}
                                   </h2>
-                                  <p className='mb-2 text-base text-neutral-400'>
+                                  {/* <p className='mb-2 text-base text-neutral-400'>
                                     {tes.job}
-                                  </p>
+                                  </p> */}
                                 </div>
                               </div>
                             </div>
