@@ -49,35 +49,35 @@ const ViewPartner = () => {
       <div className='flex flex-wrap justify-center items-center gap-10'>
         {partners.map((item) => (
           <div
-            key={item._id}
+            key={item?._id}
             className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
           >
             <Image
               className='rounded-t-lg'
-              src={item.logo}
+              src={item?.logo}
               width={100}
               height={100}
               alt='Logo'
             />
             <Image
               className='rounded-t-lg'
-              src={item.image}
+              src={item?.image}
               width={500}
               height={500}
               alt='Partner img'
             />
             <div className='p-5'>
               <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
-                {item.name}
+                {item?.name}
               </h5>
               <div className='h-24 overflow-hidden'>
                 <p className='text-sm mb-3 font-normal text-gray-700 overflow-hidden overflow-ellipsis'>
-                  {item.description}
+                  {item?.description}
                 </p>
               </div>
 
               <div className='flex justify-between gap-10 mt-4'>
-                <Link href={`/partners/edit/${item._id}`} className=''>
+                <Link href={`/partners/edit/${item?._id}`} className=''>
                   <FaEdit
                     size={25}
                     className='text-gray-500 hover:text-gray-700'
@@ -85,7 +85,7 @@ const ViewPartner = () => {
                 </Link>
                 <MdDelete
                   size={25}
-                  onClick={() => handleDelete(item._id)}
+                  onClick={() => handleDelete(item?._id)}
                   className='text-gray-500 hover:text-gray-700 cursor-pointer'
                 />
               </div>
