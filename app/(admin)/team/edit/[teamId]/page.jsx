@@ -15,8 +15,10 @@ const editTeam = ({ params }) => {
   const { teamId } = params;
   const dispatch = useDispatch();
   const router = useRouter();
+  console.log(teamId)
 
-  const team = useSelector((state) => selectTeamById(state));
+  const team = useSelector((state) => selectTeamById(state, teamId));
+  console.log(team)
   const loading = useSelector(selectLoading);
 
   useEffect(() => {
