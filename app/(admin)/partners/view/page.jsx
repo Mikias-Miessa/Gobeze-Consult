@@ -52,18 +52,21 @@ const ViewPartner = () => {
             key={item._id}
             className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
           >
+            <div className='flex justify-center items-center'>
+              <Image
+                className='w-44 h-24 my-4 object-cover'
+                src={item.logo && item.logo}
+                width={200}
+                height={200}
+                alt='Logo'
+              />
+            </div>
+
             <Image
-              className='rounded-t-lg'
-              src={item.logo}
+              className='w-full h-40 object-cover rounded-t-lg'
+              src={item.image && item.image}
               width={100}
               height={100}
-              alt='Logo'
-            />
-            <Image
-              className='rounded-t-lg'
-              src={item.image}
-              width={500}
-              height={500}
               alt='Partner img'
             />
             <div className='p-5'>
