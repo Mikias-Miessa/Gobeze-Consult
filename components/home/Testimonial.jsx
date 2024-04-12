@@ -62,33 +62,36 @@ const Testimonial = () => {
               (tes) =>
                 tes && (
                   <SplideSlide key={tes.id}>
-                    <div className='container my-24 mx-auto md:flex md:items-center md:justify-between md:px-6'>
+                    <div className='container my-24 mx-auto'>
                       <section className='mb-32 text-center md:text-left mx-8 pt-20'>
-                        <div className='block rounded-lg bg-gradient-to-r from-black to-gray-500 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:flex md:flex-wrap'>
-                          <div className='md:flex md:flex-wrap md:items-center'>
-                            <div className='w-full md:w-auto md:h-52 md:ml-0'>
+                        <div className='block rounded-lg bg-gradient-to-r from-black to-gray-500'>
+                          <div className='flex flex-wrap items-center p-5 px-16'>
+                            <div className='h-[35%] w-[30%]'>
                               <Image
                                 quality={100}
                                 src={tes.image}
                                 alt='person'
                                 className='w-full h-full rounded-lg'
-                                width={200}
-                                height={200}
+                                width={100}
+                                height={100}
                               />
                             </div>
-                            <div className='w-full md:w-6/12 xl:w-8/12 md:ml-4'>
+                            <div className='w-[65%] pl-3'>
                               <div className='px-6 py-12 md:px-2 rounded-b-lg'>
                                 <FaQuoteRight className='text-neutral-600 text-6xl' />
                                 <div className='-mt-7'>
-                                  <p className='mb-1 text-neutral-400'>
+                                  {/* <p className='mb-1 text-neutral-400'>
                                     {tes.qualification}
-                                  </p>
-                                  <p className='mb-4 text-sm text-neutral-400'>
+                                  </p> */}
+                                  <p className='mb-3 text-sm text-neutral-400'>
                                     {tes.description}
                                   </p>
                                   <h2 className='text-xl text-neutral-300 font-bold text-primary'>
                                     {tes.name}
                                   </h2>
+                                  <p className='mb-2 text-base text-neutral-400'>
+                                    {tes.qualification}
+                                  </p>
                                 </div>
                               </div>
                             </div>
