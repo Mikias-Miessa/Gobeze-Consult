@@ -35,7 +35,7 @@ const data = [
 
 const Training = () => {
   return (
-    <div>
+    <div className='bg-black py-20'>
       <div
         id='training'
         className='max-w-screen-lg mx-auto flex justify-center items-center flex-wrap'
@@ -50,8 +50,8 @@ const Training = () => {
                 backgroundRepeat: 'no-repeat' 
               }}
             >
-              <div className='absolute bottom-0 left-0 right-0 flex justify-center items-end bg-black bg-opacity-50'>
-                <p className='text-center py-5 text-white font-bold'>
+              <div className='absolute bottom-0 left-0 right-0 flex justify-center items-end bg-white'>
+                <p className='text-center py-5 text-black font-bold'>
                   {item.desc}
                 </p>
               </div>
@@ -61,8 +61,8 @@ const Training = () => {
       </div>
 
       <div className='flex justify-center items-center my-5'>
-        <button className='px-8 py-2 text-base font-semibold border-gray-600 border text-center text-black'>
-          Read More
+        <button className='px-8 py-2 text-base font-semibold border-gray-600 border text-center text-black bg-white'>
+          Learn More
         </button>
       </div>
     </div>

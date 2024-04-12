@@ -1,16 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
-import Rectangle from '@/public/images/work/training1.png';
-import Rectangle2 from '@/public/images/work/traing2.png';
+import Rectangle2 from '@/public/images/work/workGo.png';
+import Rectangle from '@/public/images/work/enabla.png';
 import Rectangle3 from '@/public/images/work/traing3.png';
 
 const TrainingSkill = () => {
   return (
-    <div className='bg-black py-36'>
+    <div className=''>
       <div className='md:flex items-center max-w-screen-lg mx-auto gap-14 overflow-hidden md:px-0 px-14'>
         <div className='md:w-1/2'>
           <Image src={Rectangle2} alt='aster' className='' />
-          <div className='flex gap-3'>
+          <div className='flex md:gap-0 gap-3'>
             <Image src={Rectangle} alt='aster' className='md:w-full w-36' />
             <Image src={Rectangle3} alt='aster' className='md:w-full w-36' />
           </div>
@@ -21,7 +21,7 @@ const TrainingSkill = () => {
               Why We Do It
             </h1>
           </div>
-          <div className='text-xl text-gray-400'>
+          <div className='text-xl text-black'>
             Our aim at Gobeze Consult is firmly anchored in the conviction that
             good people deserve to succeed. Here, we highlight the concrete
             actions we do to assist people and organisations that are working to
