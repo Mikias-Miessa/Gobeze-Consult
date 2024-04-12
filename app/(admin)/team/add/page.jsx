@@ -33,7 +33,7 @@ const AddTeam = () => {
     };
 
     dispatch(addTeam(cardData));
-    // router.push('/team/view');
+    router.push('/team/view');
 
     setName('');
     setPosition('');

@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+  import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
@@ -41,8 +41,8 @@ export const getPartnerById = createAsyncThunk(
   async (partnerId, thunkAPI) => {
     try {
       console.log(partnerId);
-      // const response = await axios.get(`/api/partners/${partnerId}`);
-      // return response.data.partner;
+      const response = await axios.get(`/api/partners/${partnerId}`);
+      return response.data.partner;
     } catch (error) {
       return thunkAPI.rejectWithValue(
         error.response.data.errors || error.message || error.toString()
