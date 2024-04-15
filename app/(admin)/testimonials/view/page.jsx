@@ -53,7 +53,7 @@ const ViewTestimonial = () => {
             className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
           >
             <Image
-              className='rounded-t-lg'
+              className='rounded-t-lg h-[300px] object-cover'
               src={item.image}
               width={500}
               height={500}

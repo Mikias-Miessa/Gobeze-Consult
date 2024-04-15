@@ -54,7 +54,7 @@ const ViewPartner = () => {
           >
             <div className='flex justify-center items-center'>
               <Image
-                className='w-44 h-24 my-4 object-cover'
+                className='w-28 h-16 my-4 object-cover'
                 src={item.logo && item.logo}
                 width={200}
                 height={200}
@@ -62,25 +62,18 @@ const ViewPartner = () => {
               />
             </div>
 
-            <Image
-<<<<<<< HEAD
-              className='w-full h-40 object-cover rounded-t-lg'
-              src={item.image && item.image}
-              width={100}
-              height={100}
-=======
+            {/* <Image
               className='rounded-t-lg'
               src={item?.logo}
               width={100}
               height={100}
               alt='Logo'
-            />
+            /> */}
             <Image
-              className='rounded-t-lg'
+              className='rounded-t-lg h-[300px] object-contain'
               src={item?.image}
               width={500}
               height={500}
->>>>>>> 8b184dd12997b8e41ee862025a0fdf269fd44485
               alt='Partner img'
             />
             <div className='p-5'>
