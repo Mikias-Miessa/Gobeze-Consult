@@ -35,7 +35,7 @@ const data = [
 
 const Training = () => {
   return (
-    <div className='bg-black py-20'>
+    <div className='bg-black py-20 px-1'>
       <div
         id='training'
         className='max-w-screen-lg mx-auto flex justify-center items-center flex-wrap'

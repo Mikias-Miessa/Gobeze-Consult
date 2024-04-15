@@ -16,7 +16,7 @@ const TrainingSkill = () => {
           </div>
         </div>
         <div className='md:w-1/2'>
-          <div className='mb-5'>
+          <div className='mb-5 md:mt-0 mt-5'>
             <h1 className='text-5xl md:text-7xl font-bold text-center md:text-start bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 inline-block text-transparent bg-clip-text'>
               Why We Do It
             </h1>

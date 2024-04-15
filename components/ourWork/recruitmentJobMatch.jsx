@@ -49,7 +49,7 @@ function RecruitmentJobMatch() {
           >
             <div className={
               item.id === 1
-                ? 'pl-16'
+                ? 'pl-16 '
                 : 'pr-20'
             }>
               <h1 className='font-extrabold pt-5 text-3xl'>{item.title}</h1>
