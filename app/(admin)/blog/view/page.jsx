@@ -17,7 +17,7 @@ const ViewBlog = () => {
   const dispatch = useDispatch();
   const blogs = useSelector(selectAllBlogs);
   const loading = useSelector(selectLoading);
-  console.log(blogs)
+  console.log(blogs);
 
   useEffect(() => {
     dispatch(getAllBlogs());
@@ -54,7 +54,7 @@ const ViewBlog = () => {
             className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
           >
             <Image
-              className='rounded-t-lg'
+              className='w-[400px] h-[250px] rounded-t-lg'
               src={item.image}
               width={500}
               height={500}

@@ -67,8 +67,10 @@ const blogs = () => {
   useEffect(() => {
     dispatch(getAllBlogs());
   }, []);
+
   const blogs = useSelector((state) => selectAllBlogs(state));
   const loading = useSelector((state) => selectLoading(state));
+  console.log(blogs);
   if (loading) {
     return (
       <div className=' h-screen bg-white flex justify-center items-center'>
@@ -94,27 +96,27 @@ const blogs = () => {
       <div className='flex flex-wrap justify-center items-center gap-10'>
         {blogs.map((item) => (
           <div
-            key={item._id}
+            key={item?._id}
             className='block max-w-[18rem] text-surface shadow-secondary-1 m-4'
           >
             <div className='relative overflow-hidden bg-cover bg-no-repeat'>
               <Image
                 className='mb-7 max-w-[18rem]'
-                src={item.image && item.image}
+                src={item?.image && item.image}
                 alt='the image'
                 width={288}
                 height={151}
               />
             </div>
             <div className='mb-7'>
-              <p className='font-light italic text-sm'>"{item.title}"</p>
-              <p className='font-semibold py-2 text-sm'>{item.tag}</p>
+              <p className='font-light italic text-sm'>"{item?.title}"</p>
+              <p className='font-semibold py-2 text-sm'>{item?.tag}</p>
               <p className='text-base h-[120px] overflow-hidden  overflow-ellipsis'>
-                {item.content}
+                {item?.content}
               </p>
             </div>
             <div className='bg-black text-white text-2xl text-center py-4 hover:text-gray-400 cursor-pointer'>
-              <a href={'/insights/' + item._id} className=' py-4 '>
+              <a href={'/insights/' + item?._id} className=' py-4 '>
                 Read More
               </a>
             </div>

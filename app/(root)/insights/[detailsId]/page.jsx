@@ -8,7 +8,12 @@ import Rectangle1 from '@/public/images/insights/blog3.png';
 import SectionTitle from '@/components/shared/sectionTitle';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getBlogById, selectBlogById, selectLoading } from '@/store/blogSlice';
+import {
+  getBlogById,
+  selectBlogById,
+  selectBlogEdited,
+  selectLoading,
+} from '@/store/blogSlice';
 import { Bars } from 'react-loader-spinner';
 import moment from 'moment';
 const data = [
@@ -46,10 +51,9 @@ const page = ({ params }) => {
     dispatch(getBlogById(detailsId));
   }, []);
 
-  const { getBlogByIdStatus, selectedBlog } = useSelector(
-    (state) => state.blog
-  );
-
+  const { getBlogByIdStatus } = useSelector((state) => state.blog);
+  const selectedBlog = useSelector(selectBlogById);
+  console.log(selectedBlog);
   return (
     <div>
       <div className='w-full bg-black h-20'></div>
@@ -58,13 +62,13 @@ const page = ({ params }) => {
           <div className='flex md:mb-16 mb-5'>
             <div className='md:mr-40 mr-5'>
               Posted on{' '}
-              {selectedBlog.createdAt &&
-                moment(selectedBlog.createdAt).format('LL')}
+              {selectedBlog?.createdAt &&
+                moment(selectedBlog?.createdAt).format('LL')}
             </div>
-            <div className='md:ml-80'>Posted by : {selectedBlog.author}</div>
+            <div className='md:ml-80'>Posted by : {selectedBlog?.author}</div>
           </div>
           <div className='md:text-7xl text-3xl font-bold'>
-            {selectedBlog.title && selectedBlog.title}
+            {selectedBlog?.title && selectedBlog.title}
           </div>
           <Image
             src={selectedBlog.image ? selectedBlog.image : Detail}
@@ -76,9 +80,9 @@ const page = ({ params }) => {
           <div className='grid  grid-cols-1 md:gap-10 gap-3 md:mb-8 mb-3'>
             <div className='md:mr-5 mr-2'>
               <h1 className='md:text-4xl text-2xl font-semibold mb-10 ml-5'>
-                “ {selectedBlog.quote && selectedBlog.quote} “
+                “ {selectedBlog?.quote && selectedBlog.quote} “
               </h1>
-              <h3>{selectedBlog.content}</h3>
+              <h3>{selectedBlog?.content}</h3>
             </div>
           </div>
         </div>
