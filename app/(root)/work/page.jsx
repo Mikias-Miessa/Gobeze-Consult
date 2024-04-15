@@ -13,8 +13,10 @@ const page = () => {
   return (
     <div>
       <Work />
-      <TrainingSkill />
-      <div className='py-48'>
+      <div className='py-32'>
+        <TrainingSkill />
+      </div>
+      <div className=''>
         <Training />
       </div>
       <Consultancy />
