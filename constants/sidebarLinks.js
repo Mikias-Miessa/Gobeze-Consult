@@ -12,7 +12,7 @@ export const DashboardTop = [
     key: 'Home',
     label: 'Home',
     path: '/dashboard',
-    icon: < HiOutlineHome />,
+    icon: <HiOutlineHome />,
     sublinks: [],
   },
   {
@@ -91,9 +91,9 @@ export const DashboardTop = [
 
 export const DashboardBottom = [
   {
-    key: 'settings',
-    label: 'Settings',
-    path: '/settings',
+    key: 'register',
+    label: 'Register',
+    path: '/register',
     icon: <HiOutlineCog />,
   },
 ];
