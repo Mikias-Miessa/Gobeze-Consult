@@ -23,7 +23,7 @@ function Feature() {
   return (
     <div>
       <div className='md:mx-40 md:my-20 mx-0 my-0'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-0 bg-black'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-0 bg-black pt-28'>
           <div className='md:pl-20 pl-10 text-white'>
             <h1 className='pt-20  text-3xl font-semibold '>FEATURED VIEWS</h1>
             <h2 className='pb-10 pt-2 text-gray-400 text-2xl '>

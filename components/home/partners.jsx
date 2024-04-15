@@ -54,7 +54,7 @@ function Partners() {
     );
   }
   return (
-    <div className='bg-black md:px-28 px-5 md:py-20 py-5'>
+    <div className='bg-black md:px-28 px-5 py-32'>
       <div>
         <SectionTitle title={'OUR PARTNERS'} color={'white'} />
         
