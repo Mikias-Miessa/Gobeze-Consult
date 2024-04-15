@@ -22,7 +22,7 @@ const Hero = () => {
       <ThirdSec />
       <Benefit />
       <div className='flex justify-center'> 
-        <OurTeam />
+      <OurTeam />
       </div>
       {/* <div className='flex justify-center pt-28 bg-black'>
         <LogoSection />

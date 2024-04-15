@@ -27,6 +27,7 @@ const editPartner = ({ params }) => {
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
   const [logo, setLogo] = useState('');
+  const [link, setLink] = useState('');
 
   useEffect(() => {
     if (partner) {
@@ -34,11 +35,16 @@ const editPartner = ({ params }) => {
       setDescription(partner.description || '');
       setImage(partner.image || '');
       setLogo(partner.logo || '');
+      setLink(partner.link || '');
     }
   }, [partner]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
+  };
+
+  const handleLinkChange = (e) => {
+    setLink(e.target.value);
   };
 
   const handleDescriptionChange = (e) => {
@@ -55,6 +61,7 @@ const editPartner = ({ params }) => {
         description: description,
         image: image,
         logo: logo,
+        link: link,
       },
     };
 
@@ -65,6 +72,7 @@ const editPartner = ({ params }) => {
     setDescription('');
     setImage('');
     setLogo('');
+    setLink('');
   };
 
   if (loading) {
@@ -119,6 +127,23 @@ const editPartner = ({ params }) => {
               value={description}
               onChange={handleDescriptionChange}
               rows={8}
+              required
+            />
+          </div>
+          <div className='mb-4'>
+            <label
+              htmlFor='weblink'
+              className='block text-orange-500 font-bold mb-2'
+            >
+              Enter web Link
+            </label>
+            <input
+              type='text'
+              id='link'
+              className='appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              placeholder='Enter Web Link'
+              value={link}
+              onChange={handleLinkChange}
               required
             />
           </div>

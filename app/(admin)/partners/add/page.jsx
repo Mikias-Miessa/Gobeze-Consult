@@ -13,6 +13,7 @@ const AddPartner = () => {
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
   const [logo, setLogo] = useState('');
+  const [link, setLink] = useState('');
   const id = useRef(null);
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -20,6 +21,10 @@ const AddPartner = () => {
 
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
+  };
+
+  const handleLinkChange = (e) => {
+    setLink(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -30,6 +35,7 @@ const AddPartner = () => {
       image,
       description,
       name,
+      link,
     };
 
     dispatch(addPartner(cardData));
@@ -39,6 +45,7 @@ const AddPartner = () => {
     setDescription('');
     setImage('');
     setLogo('');
+    setLink('');
   };
   useEffect(() => {
     if (newPartnerAdded === 'pending') {
@@ -106,6 +113,23 @@ const AddPartner = () => {
               value={description}
               onChange={handleDescriptionChange}
               rows={8}
+              required
+            />
+          </div>
+          <div className='mb-4'>
+            <label
+              htmlFor='name'
+              className='block text-orange-500 font-bold mb-2'
+            >
+              Website Link
+            </label>
+            <input
+              type='text'
+              id='link'
+              className=' appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+              placeholder='Enter web Link'
+              value={link}
+              onChange={handleLinkChange}
               required
             />
           </div>

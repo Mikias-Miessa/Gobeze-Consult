@@ -3,11 +3,11 @@ import Partner from '@/models/Partner';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
-  const { name, description, logo, image } = await req.json();
+  const { name, description, logo, image, link } = await req.json();
   try {
     // console.log(name);
     await connectMongoDB();
-    await Partner.create({ name, description, logo, image });
+    await Partner.create({ name, description, logo, image, link });
     return NextResponse.json({ message: 'Partner Created' }, { status: 201 });
   } catch (error) {
     return NextResponse.json(

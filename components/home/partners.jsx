@@ -91,6 +91,7 @@ function Partners() {
               <button className='bg-black hover:bg-gray-300 hover:text-black text-white flex items-center w-full px-5 py-4 pl-20'>
                 Learn More <FiArrowRight className='ml-3' size={20} />
               </button>
+
             </div>
             <div className='col-span-2'>
               <Image

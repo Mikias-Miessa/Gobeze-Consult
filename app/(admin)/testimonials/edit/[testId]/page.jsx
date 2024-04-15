@@ -133,7 +133,7 @@ const editTest = ({ params }) => {
             >
               Description
             </label>
-            <input
+            <textarea
               id='description'
               className='appearance-none border rounded w-full md:w-[500px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               placeholder='Enter Description'

@@ -86,7 +86,7 @@ const AddTestimonial = () => {
           </div>
           <div className='mb-4'>
             <label
-              htmlFor='descritpion'
+              htmlFor='description'
               className='block text-orange-500 font-bold mb-2'
             >
               Message

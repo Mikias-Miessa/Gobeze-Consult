@@ -20,13 +20,13 @@ export async function GET(request, { params }) {
 export async function PUT(request, { params }) {
   try {
     const { id } = params;
-    const { name, description, logo, image } = await request.json();
+    const { name, description, logo, image, link} = await request.json();
 
     await connectMongoDB();
 
     const partner = await Partner.findByIdAndUpdate(
       id,
-      { name, description, logo, image },
+      { name, description, logo, image, link },
       { new: true }
     );
 
