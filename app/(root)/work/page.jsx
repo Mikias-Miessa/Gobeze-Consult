@@ -16,7 +16,7 @@ const page = () => {
       <div className='py-32'>
         <TrainingSkill />
       </div>
-      <div className='pb-32'>
+      <div className=''>
         <Training />
       </div>
       <Consultancy />

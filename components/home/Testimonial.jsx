@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import SectionTitle from '../shared/sectionTitle';
 import { FaQuoteRight } from 'react-icons/fa';
-import {getAllTests,selectAllTests,selectLoading} from '@/store/testSlice';
+import { getAllTests, selectAllTests, selectLoading } from '@/store/testSlice';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -65,8 +65,8 @@ const Testimonial = () => {
                     <div className='container my-24 mx-auto'>
                       <section className='mb-32 text-center md:text-left mx-8 pt-20'>
                         <div className='block rounded-lg bg-gradient-to-r from-black to-gray-500'>
-                          <div className='flex flex-wrap items-center p-5 px-16'>
-                            <div className='h-[35%] w-[30%]'>
+                          <div className='flex flex-wrap items-center p-5 md:px-16'>
+                            <div className='h-[35%] md:w-[30%]'>
                               <Image
                                 quality={100}
                                 src={tes.image}
@@ -76,13 +76,13 @@ const Testimonial = () => {
                                 height={100}
                               />
                             </div>
-                            <div className='w-[65%] pl-3'>
+                            <div className='w-full md:w-[65%] md:pl-3'>
                               <div className='px-6 py-12 md:px-2 rounded-b-lg'>
                                 <FaQuoteRight className='text-neutral-600 text-6xl' />
                                 <div className='-mt-7'>
                                   {/* <p className='mb-1 text-neutral-400'>
-                                    {tes.qualification}
-                                  </p> */}
+                                      {tes.qualification}
+                                    </p> */}
                                   <p className='mb-3 text-sm text-neutral-400'>
                                     {tes.description}
                                   </p>

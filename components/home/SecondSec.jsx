@@ -47,7 +47,7 @@ const SecondSec = () => {
   };
 
   return (
-    <div className='md:h-screen h-fit py-24 md:py-0 bg-black text-white overflow-x-hidden'>
+    <div className='md:h-screen h-fit py-24 md:py-0 bg-black text-white overflow-x-hidden pb-32'>
       <div className='text-center font-bold text-4xl pt-10 pb-5 px-1'>
         Second Features Section
       </div>

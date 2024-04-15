@@ -44,6 +44,7 @@ export const getBlogById = createAsyncThunk(
     try {
       console.log(blogId);
       const response = await axios.get(`/api/blogs/${blogId}`);
+      // console.log(response.data.blog);
       return response.data.blog;
     } catch (error) {
       return thunkAPI.rejectWithValue(
