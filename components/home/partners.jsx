@@ -69,9 +69,10 @@ function Partners() {
                   <span className='font-extrabold'>{item.name}</span> is a leading economic development consulting firm implementing projects in Ethiopia.
                 </h3>
               </div>
-              <button className='bg-black text-white flex items-center w-full px-5 py-4 pl-20'>
+              <button className='bg-black text-white flex items-center w-full px-5 py-4 pl-20' onClick={() => window.location.href = item.link}>
                 Learn More <FiArrowRight className='ml-3' size={20} />
               </button>
+
             </div>
             <div className='col-span-2'>
               <img src={item.image && item.image} alt={`partner${item.id}`} className='h-full' />

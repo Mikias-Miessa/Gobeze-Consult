@@ -75,6 +75,9 @@ const ViewPartner = () => {
                   {item?.description}
                 </p>
               </div>
+              <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900'>
+                {item?.link}
+              </h5>
 
               <div className='flex justify-between gap-10 mt-4'>
                 <Link href={`/partners/edit/${item?._id}`} className=''>
