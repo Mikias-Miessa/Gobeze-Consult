@@ -30,7 +30,7 @@ function Go() {
         title: 'RECRUITMENT SERVICES',
         description: 'Founded in 1998, The Christopher Group (TCG) has become one of the nation’s largest and most respected boutique Contained Executive HR Search firms and HR Direct Staffing Solutions firms. As an HR direct staffing agency, we specialize in the sourcing, assessment.',
         button: {
-          label: 'Read More3',
+          label: 'Read More',
           color: 'gray',
         },
       },
@@ -62,12 +62,12 @@ function Go() {
       >
         {data.map((item) => (
           <SplideSlide key={item.id}>
-            <div className={item.id % 2 === 0 ? 'text-black bg-white py-28' : 'bg-black text-white py-20'}>
+            <div className={item.id % 2 === 0 ? 'text-black bg-white py-28' : 'bg-black text-white py-28'}>
               <h1 className='text-center font-extrabold mb-3 mt-3 pt-5'>{item.title}</h1>
               <h1 className='text-center text-2xl font-semibold mb-2'>Radically Better Hiring</h1>
               <h3 className='text-center text-sm text-gray-400'>Gobeze Consult is radically improving the hiring process for candidates, recruiters and employers.</h3>
-              <div className={item.id % 2 === 0 ? 'px-10 pt-5' : 'pl-16 pt-5'}>
-                <h1 className={item.id % 2 === 0 ? 'md:font-extrabold font-bold pt-5 md:text-3xl text-2xl' : 'font-extrabold md:text-3xl text-2xl'}>
+              <div className={item.id % 2 === 0 ? 'md:px-10 px-5 pt-5' : 'md:pl-16 pl-8 px-2 pt-5'}>
+                <h1 className={item.id % 2 === 0 ? 'md:font-extrabold font-bold md:text-3xl text-2xl' : 'font-extrabold md:text-3xl text-2xl'}>
                   {item.title}
                 </h1>
                 <h1 className={item.id % 2 === 0 ? 'md:font-extrabold font-bold md:text-3xl text-2xl' : 'font-extrabold md:text-3xl text-2xl'}>
