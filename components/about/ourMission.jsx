@@ -23,7 +23,7 @@ import ImageCenter2 from '@/public/images/about/training_c.png';
 function OurMission() {
   return (
     <div id='vision' className=''>
-      <div className='grid md:grid-cols-7 grid-cols-1 md:mt-20 mt-4 bg-black md:pr-20 pr-5 py-32 '>
+      <div className='grid md:grid-cols-7 grid-cols-1 md:mt-20 mt-4 bg-black md:pr-20 pr-5 py-24 '>
         <div className='col-span-5'>
           <h1 className='md:text-7xl text-4xl md:font-bold font-medium text-gray-500'>
             <span className='bg-orange-500 pl-28 text-white'>OUR </span>MISSION
@@ -37,7 +37,7 @@ function OurMission() {
             </h3>
           </div>
 
-          <div>
+          <div className='md:block hidden'>
             <Image
               src={ImageCenter2}
               alt='VisionPerson'
@@ -46,7 +46,7 @@ function OurMission() {
           </div>
         </div>
 
-        <div className='col-span-2'>
+        <div className='col-span-2 md:block hidden'>
           <Image
             src={ImageCenter}
             alt='VissionGirlImage'
