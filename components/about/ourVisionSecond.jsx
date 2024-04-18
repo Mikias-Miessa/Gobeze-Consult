@@ -63,11 +63,11 @@ const OurVisionSecond = () => {
         </div>
       </div>
 
-      <div className='flex justify-center gap-2'>
+      <div className='flex flex-wrap justify-center gap-2'>
         {data.map((items) => (
           <div
             key={items.id}
-            className='md:w-1/5 md:p-6 p-2 text-center flex flex-col items-center'
+            className='md:w-1/5 md:p-6 md:px-0 px-10 md:py-5 pb-10 p-2 text-center flex flex-col items-center'
           >
             <div className='text-center mb-3'>
               <div className='bg-gray-300 rounded-full p-4'>

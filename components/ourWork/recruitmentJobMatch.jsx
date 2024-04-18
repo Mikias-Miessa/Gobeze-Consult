@@ -43,14 +43,14 @@ function RecruitmentJobMatch() {
             key={item.id}
             className={
               item.id === 1
-                ? 'bg-black text-white pl-16 pr-8 py-28'
-                : 'pl-14 pr-8 py-28'
+                ? 'bg-black text-white pl-8 md:pl-16 pr-8 py-28'
+                : 'md:pl-14 pl-7 pr-8 py-28'
             }
           >
             <div className={
               item.id === 1
-                ? 'pl-16'
-                : 'pr-20'
+                ? 'md:pl-16 pl-0 '
+                : 'md:pr-20 pr-0'
             }>
               <h1 className='font-extrabold pt-5 text-3xl'>{item.title}</h1>
               <h1 className='font-extrabold text-3xl'>SERVICES</h1>
