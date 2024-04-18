@@ -87,6 +87,19 @@ export const DashboardTop = [
       },
     ],
   },
+  {
+    key: 'Subscribers',
+    label: 'Subscribers',
+    path: '/subscriber',
+    icon: <HiOutlineUsers />,
+    sublinks: [
+      {
+        key: 'SubscriberSublink2',
+        label: 'View Subscribers',
+        path: '/subscriber',
+      },
+    ],
+  },
 ];
 
 export const DashboardBottom = [

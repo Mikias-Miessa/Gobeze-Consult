@@ -1,5 +1,3 @@
-// models/Email.js
-
 import mongoose from 'mongoose';
 
 const emailSchema = new mongoose.Schema({
@@ -10,6 +8,6 @@ const emailSchema = new mongoose.Schema({
   },
 });
 
-const Email = mongoose.models.Email | mongoose.model('Email', emailSchema);
+const Email = mongoose.models.Email || mongoose.model('Email', emailSchema);
 
 export default Email;
