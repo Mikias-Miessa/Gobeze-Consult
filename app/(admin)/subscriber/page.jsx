@@ -20,7 +20,7 @@ const DashboardPage = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold ">Subscriber Emails</h1>
+      <h1 className="text-3xl font-bold ">Subscribers Email</h1>
       <ul>
         {emails.map((email) => (
           <li key={email._id}>{email.email}</li>
