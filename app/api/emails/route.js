@@ -1,24 +1,23 @@
-// pages/api/emails/route.js
+import dbConnect from "@/utils/db";
+import EmailModel from '@/models/Email';
 
-import dbConnect from '@/utils/db';
-import Email from '/models/Email';
-
-export async function getEmails(req, res) {
+export default async function handler(req, res) {
   await dbConnect();
 
-  if (req.method === 'GET') {
+  if (req.method === 'POST') {
+    const { email } = req.body;
+
     try {
-      // Fetch all emails from MongoDB
-      const emails = await Email.find({});
-      res.status(200).json(emails);
+      // Create a new email document and save it to MongoDB
+      const newEmail = new EmailModel({ email });
+      await newEmail.save();
+
+      res.status(200).json({ message: 'Email submitted successfully' });
     } catch (error) {
-      console.error('Error fetching emails:', error);
+      console.error('Error submitting email:', error);
       res.status(500).json({ message: 'Internal Server Error' });
     }
   } else {
     res.status(405).json({ message: 'Method Not Allowed' });
   }
 }
-
-// Export the getEmails function as the default export
-export default getEmails;
