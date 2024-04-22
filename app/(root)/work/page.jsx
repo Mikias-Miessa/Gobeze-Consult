@@ -23,7 +23,7 @@ const page = () => {
       <div className='py-32'>
         <WorkSpace />
       </div>
-      <div className='pb-32'>
+      <div className='md:pb-32 pb-0'>
         <Recuritment />
       </div>
       <div className='pb-32'>
