@@ -77,7 +77,7 @@ function Go() {
                 </h1>
                 <h1 className='pt-2 pb-14 font-semibold'>{item.heading}</h1>
                 <p className=''>{item.description}</p>
-                <button className={`border border-${item.button.color} text-${item.button.color} font-bold text-sm px-10 py-3 mb-8 mt-16`}>
+                <button className={`border border-${item.button.color} text-${item.button.color} font-bold text-sm px-10 py-3 mt-20`}>
                   {item.button.label}
                 </button>
               </div>
