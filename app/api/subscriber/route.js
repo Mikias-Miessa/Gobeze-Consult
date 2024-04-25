@@ -1,23 +1,32 @@
-import dbConnect from "@/utils/db";
-import EmailModel from '@/models/Email';
 
-export default async function handler(req, res) {
-  await dbConnect();
+import connectMongoDB from '@/utils/db';
+import Email from '@/models/Email';
+import { NextResponse } from 'next/server';
 
-  if (req.method === 'POST') {
-    const { email } = req.body;
-
-    try {
-      // Create a new email document and save it to MongoDB
-      const newEmail = new EmailModel({ email });
-      await newEmail.save();
-
-      res.status(200).json({ message: 'Email submitted successfully' });
-    } catch (error) {
-      console.error('Error submitting email:', error);
-      res.status(500).json({ message: 'Internal Server Error' });
-    }
-  } else {
-    res.status(405).json({ message: 'Method Not Allowed' });
+export async function POST(request) {
+  try {
+    const { email } = await request.json();
+    await connectMongoDB();
+    await Email.create({ email });
+    return NextResponse.json({ message: 'Subscribed' }, { status: 201 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: 'Subscribtion failed' },
+      { status: 500 }
+    );
   }
 }
+
+export async function GET() {
+  try {
+    await connectMongoDB();
+    const emails = await Email.find().sort({ createdAt: -1 });
+    return NextResponse.json({ emails });
+  } catch (error) {
+    return NextResponse.json(
+      { message: 'failed to get emails' },
+      { status: 500 }
+    );
+  }
+}
+

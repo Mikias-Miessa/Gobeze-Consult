@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
 // import FileBase64 from 'react-file-base64';
@@ -18,8 +17,8 @@ const NewsLetter = () => {
   const {newSubscriberAdded } = useSelector((state) => state.subscriber);
   const id = useRef(null);
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -30,7 +29,7 @@ const NewsLetter = () => {
     };
 
     dispatch(addSubscriber(cardData));
-    // console.log(cardData);
+    router.push('/subscriber');
 
     setEmail('');
   };
@@ -56,7 +55,7 @@ const NewsLetter = () => {
 
     if (newSubscriberAdded === 'failed') {
       toast.update(id.current, {
-        render: 'Failed to Subscriber',
+        render: 'Failed to Subscribe',
         type: 'error',
         isLoading: false,
         autoClose: 4000,
