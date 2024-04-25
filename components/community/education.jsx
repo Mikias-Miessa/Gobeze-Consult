@@ -50,7 +50,7 @@ const Education = () => {
               </button>
             </div>
           </div>
-          <div>
+          <div className='pr-56'>
             <div className='flex gap-2 md:gap-10'>
               {data.map((item) => (
                 <Image
