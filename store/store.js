@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import blogReducer from './blogSlice';
 import testReducer from './testSlice';
-import partnerReducer from "./partnerSlice"
-import teamReducer from "./teamSlice"
+import partnerReducer from "./partnerSlice";
+import teamReducer from "./teamSlice";
+import SubscriberReducer from './subscriber'
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     test: testReducer,
     partner: partnerReducer,
     team: teamReducer,
+    subscriber: SubscriberReducer,
   },
 });
