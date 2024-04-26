@@ -29,7 +29,7 @@ const NewsLetter = () => {
     };
 
     dispatch(addSubscriber(cardData));
-    router.push('/subscriber');
+    // router.push('/subscriber');
 
     setEmail('');
   };

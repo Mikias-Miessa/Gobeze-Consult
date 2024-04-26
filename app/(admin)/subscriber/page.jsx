@@ -1,23 +1,30 @@
 'use client';
 import React, { useEffect } from 'react';
 import { Bars } from 'react-loader-spinner';
+// import { FaEdit } from 'react-icons/fa';
+// import { MdDelete } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getAllSubscribers,
   selectAllSubscribers,
   selectLoading,
-  deleteSubscriber,
+  // deletePartner,
 } from '@/store/subscriber';
 
 const ViewSubscriber = () => {
   const dispatch = useDispatch();
-  const subscribers = useSelector(selectAllSubscribers);
-  const loading = useSelector(selectLoading);
-  console.log(subscribers);
+  const subscribers = useSelector((state) => selectAllSubscribers(state));
+  const loading = useSelector((state) => selectLoading(state));
 
   useEffect(() => {
     dispatch(getAllSubscribers());
   }, [dispatch]);
+
+  // const handleDelete = (id) => {
+  //   dispatch(deletePartner(id)).then(() => {
+  //     dispatch(getAllPartners());
+  //   });
+  // };
 
   if (loading) {
     return (
@@ -38,19 +45,25 @@ const ViewSubscriber = () => {
     return <div>No subscribers available</div>;
   }
 
+const totalEmails = subscribers.reduce((total, item) => total + (item.email ? 1 : 0), 0);
+
+
   return (
-    <div className='bg-white flex justify-center items-center py-10'>
-      <div className='flex flex-wrap justify-center items-center gap-10'>
-        {subscribers.map((item) => (
+    <div className='pl-20 py-5'>
+      <h5 className='text-4xl font-bold'>Subscribers Email:</h5>
+      <p className='py-3 text-2xl'>{totalEmails} Total Subscribers</p>
+      <div className='pt-10'>
+        {subscribers?.map((item) => (
           <div
             key={item._id}
-            className='h-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow'
+            className='h-fit max-w-sm border-gray-200 rounded shadow'
           >
             <div className='p-5'>
-              <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
+              <ol className=' mb-2 text-2xl font-semibold text-gray-900'>
                 {item.email}
-              </h5>
+              </ol>
             </div>
+            
           </div>
         ))}
       </div>
