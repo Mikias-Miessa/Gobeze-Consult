@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addBlog } from '@/store/blogSlice';
 import { toast, ToastContainer } from 'react-toastify';
 import { selectNewBlogAdded, reset } from '@/store/blogSlice';
+
 const AddBlog = () => {
   const dispatch = useDispatch();
   const router = useRouter();
