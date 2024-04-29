@@ -144,16 +144,16 @@ export const subscriberSlice = createSlice({
         state.loading = false;
         state.subscriberEdited = 'failed';
       })
-    //   .addCase(deleteSubscriber.pending, (state) => {
-    //     state.loading = true;
-    //   })
-    //   .addCase(deleteSubscriber.fulfilled, (state, action) => {
-    //     state.loading = false;
-    //     state.subscribers = state.subscribers.filter((subscriber) => subscriber.id !== action.payload);
-    //   })
-    //   .addCase(deleteSubscriber.rejected, (state, action) => {
-    //     state.loading = false;
-    //   });
+      .addCase(deleteSubscriber.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(deleteSubscriber.fulfilled, (state, action) => {
+        state.loading = false;
+        state.subscribers = state.subscribers.filter((subscriber) => subscriber.id !== action.payload);
+      })
+      .addCase(deleteSubscriber.rejected, (state, action) => {
+        state.loading = false;
+      });
   },
 });
 

@@ -75,7 +75,7 @@ export const deleteBlog = createAsyncThunk(
       await axios.delete(`/api/blogs/${blogId}`);
       return blogId;
     } catch (error) {
-      return thunkAPI.rejectWithValue(
+      return thunkAPI.rejectWithValue( 
         error.response.data.errors || error.message || error.toString()
       );
     }

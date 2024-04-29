@@ -7,7 +7,7 @@ export async function getEmails(req, res) {
   if (req.method === 'GET') {
     try {
       // Fetch all emails from MongoDB
-      const emails = await Email.find({});
+      const {emails} = await Email.find({});
       res.status(200).json(emails);
     } catch (error) {
       console.error('Error fetching emails:', error);
@@ -18,5 +18,10 @@ export async function getEmails(req, res) {
   }
 }
 
-// Export the getEmails function as the default export
-export default getEmails;
+
+export async function DELETE(request, { params }) {
+  const { id } = params;
+  await connectMongoDB();
+  await Email.findByIdAndDelete(id);
+  return NextResponse.json({ message: 'Email deleted' }, { status: 200 });
+}

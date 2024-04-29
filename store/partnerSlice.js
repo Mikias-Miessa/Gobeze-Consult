@@ -35,7 +35,6 @@ export const getAllPartners = createAsyncThunk(
     }
   }
 );
-
 export const getPartnerById = createAsyncThunk(
   'partner/getPartnerById',
   async (partnerId, thunkAPI) => {

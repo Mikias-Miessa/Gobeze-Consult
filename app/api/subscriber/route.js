@@ -5,9 +5,9 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
-    const { email } = await request.json();
+    const { email} = await request.json();
     await connectMongoDB();
-    await Email.create({ email });
+    await Email.create({ email});
     return NextResponse.json({ message: 'Subscribed' }, { status: 201 });
   } catch (error) {
     return NextResponse.json(
