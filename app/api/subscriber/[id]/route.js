@@ -1,23 +1,21 @@
-import dbConnect from '@/utils/db';
+import connectMongoDB from '@/utils/db';
 import Email from '/models/Email';
+import { NextResponse } from 'next/server';
 
-export async function getEmails(req, res) {
-  await dbConnect();
-
-  if (req.method === 'GET') {
-    try {
-      // Fetch all emails from MongoDB
-      const {emails} = await Email.find({});
-      res.status(200).json(emails);
-    } catch (error) {
-      console.error('Error fetching emails:', error);
-      res.status(500).json({ message: 'Internal Server Error' });
-    }
-  } else {
-    res.status(405).json({ message: 'Method Not Allowed' });
+export async function GET(request, { params }) {
+  try {
+    const { id } = params;
+    console.log(id);
+    await connectMongoDB();
+    const email = await Email.findOne({ _id: id });
+    return NextResponse.json({ email }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: 'Failed to get the specific email' },
+      { status: 500 }
+    );
   }
 }
-
 
 export async function DELETE(request, { params }) {
   const { id } = params;
